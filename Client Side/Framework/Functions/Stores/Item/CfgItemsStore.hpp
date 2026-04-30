@@ -4,13 +4,13 @@ class CfgItemsStore {
 	itemCfg = "CfgItems";
 
 	class Police {
-		storeName = "Equipment Store";
+		storeName = "装备商店（Equipment Store）";
 		condition = "[player, [""Police""]] call ULP_fnc_isFaction";
 		allowPayByBank = true;
 		class Rifles {
 			// SPECIAL
 			class arifle_Mk20C_plain_F {
-				displayName = "Rubber Bullet Gun";
+				displayName = "橡胶弹发射枪（Rubber Bullet Gun）";
 				class textures { class arifle_Mk20C_plain_F {}; };
 			};
 			class arifle_SDAR_F { condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess || { [""Police_Main"", 2] call ULP_fnc_hasAccess && !(missionNamespace getVariable [""ULP_SRV_Crime_HMSLiberty"", false]) }"; };
@@ -174,13 +174,13 @@ class CfgItemsStore {
 			};
 		};
 		class Magazines {
-			class 16Rnd_9x21_Mag { displayName = "Taser Cartridge"; };
+			class 16Rnd_9x21_Mag { displayName = "电击枪弹匣（Taser Cartridge）"; };
 			class 30Rnd_9x21_Mag_SMG_02 {};
 			class 30Rnd_45ACP_Mag_SMG_01 : 30Rnd_9x21_Mag_SMG_02 {};
 			class 9Rnd_45ACP_Mag { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess || { [""Police_SEG"", 1] call ULP_fnc_hasAccess }"; };
 			class 50Rnd_570x28_SMG_03 { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
 			class 30Rnd_556x45_Stanag_Tracer_Red { 
-				displayName = "Rubber Bullet Mag"; 
+				displayName = "橡胶弹弹匣（Rubber Bullet Mag）";
 				class textures { class 30Rnd_556x45_Stanag_Tracer_Green {}; }; 
 			};
 			class 20Rnd_556x45_UW_mag { condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess || { [""Police_Main"", 2] call ULP_fnc_hasAccess && { missionNamespace getVariable [""ULP_SRV_Crime_HMSLiberty"", false] } }"; };
@@ -274,7 +274,7 @@ class CfgItemsStore {
 	};
 
 	class Dunamis {
-		storeName = "Dunamis Equipment Store";
+		storeName = "Dunamis 装备商店（Dunamis Equipment Store）";
 		condition = "[] call ULP_fnc_isDunamis";
 		class Rifles {
 			// SMGs
@@ -483,7 +483,7 @@ class CfgItemsStore {
 	};
 
 	class Civilian {
-		storeName = "General Store";
+		storeName = "综合商店（General Store）";
 		default = 4;
 		condition = "true";
 		class Rifles {};
@@ -502,7 +502,7 @@ class CfgItemsStore {
 	};
 
 	class Gun {
-		storeName = "Gun Store";
+		storeName = "枪械商店（Gun Store）";
 		condition = "[""Handgun""] call ULP_fnc_hasLicense || { [""SMG""] call ULP_fnc_hasLicense }";
 		class Rifles {
 			class hgun_PDW2000_F { condition = "[""SMG""] call ULP_fnc_hasLicense"; };
@@ -533,7 +533,7 @@ class CfgItemsStore {
 	};
 
 	class Hunting {
-		storeName = "Hunting Store";
+		storeName = "狩猎商店（Hunting Store）";
 		condition = "[""Hunting""] call ULP_fnc_hasLicense";
 		class Rifles {
 			class sgun_HunterShotgun_01_F {};
@@ -557,7 +557,7 @@ class CfgItemsStore {
 	};
 
 	class Security {
-		storeName = "Company Security Store";
+		storeName = "企业安保商店（Company Security Store）";
 		condition = "[] call ULP_fnc_isSecurity";
 		allowPayByBank = true;
 		class Rifles {
@@ -643,7 +643,7 @@ class CfgItemsStore {
 	};
 
 	class Protection {
-		storeName = "Govenor Protection Store";
+		storeName = "Governor 保卫商店（Govenor Protection Store）";
 		condition = "[] call ULP_fnc_isProtection";
 		allowPayByBank = true;
 		class Rifles {
@@ -729,7 +729,7 @@ class CfgItemsStore {
 	};
 
 	class Safehouse {
-		storeName = "Safehouse Store";
+		storeName = "安全屋商店（Safehouse Store）";
 		condition = "[] call ULP_fnc_isProtection && { [""GovernmenSafehousestSafehouses""] call ULP_fnc_hasGroupPerk }";
 		allowPayByBank = true;
 		class Rifles {
@@ -756,7 +756,7 @@ class CfgItemsStore {
 	};
 
 	class Hideout {
-		storeName = "Criminal Hideout";
+		storeName = "罪犯藏身处（Criminal Hideout）";
 		condition = "[""hideout_flag_1""] call ULP_fnc_ownsSite || { [""hideout_flag_2""] call ULP_fnc_ownsSite }";
 		class Rifles {
 			class hgun_PDW2000_F {};
@@ -816,7 +816,7 @@ class CfgItemsStore {
 	};
 
 	class Rebel {
-		storeName = "Rebel Outpost";
+		storeName = "Rebel 前哨站（Rebel Outpost）";
 		condition = "[""Rebel""] call ULP_fnc_hasLicense";
 		class Rifles {
 			class hgun_PDW2000_F {};
@@ -912,7 +912,7 @@ class CfgItemsStore {
 	};
 
 	class Blackmarket {
-		storeName = "Blackmarket";
+		storeName = "黑市（Blackmarket）";
 		condition = "[""Blackmarket""] call ULP_fnc_hasLicense && { [""Blackmarketer""] call ULP_fnc_hasPerk || [""Blackmarket""] call ULP_fnc_hasGroupPerk }";
 		class Rifles {
 			class hgun_PDW2000_F {};
@@ -1044,7 +1044,7 @@ class CfgItemsStore {
 	};
 
 	class Base {
-		storeName = "Gang Base";
+		storeName = "帮派基地（Gang Base）";
 		condition = "true";
 		class Rifles {
 			class hgun_PDW2000_F {};
@@ -1196,7 +1196,7 @@ class CfgItemsStore {
 	};
 
 	class PVP {
-		storeName = "PVP Store";
+		storeName = "PVP 商店（PVP Store）";
 		condition = "true";
 		allowPayByBank = true;
 		class Rifles {

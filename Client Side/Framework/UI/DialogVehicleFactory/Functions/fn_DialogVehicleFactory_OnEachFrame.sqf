@@ -21,12 +21,12 @@ if !(_factoryOrder isEqualTo []) then {
 	_factoryOrder params [ "_productCfg", "", "", "_startTime" ];
 
 	private _itemCfg = [configName _productCfg] call ULP_fnc_vehicleCfg;
-	private _displayName = _itemCfg param [3, "Unknown", [""]];
+	private _displayName = _itemCfg param [3, "未知载具", [""]];
 
-	_ctrlText ctrlSetText format ["Producing %1", _displayName];
+	_ctrlText ctrlSetText format ["正在生产 %1", _displayName];
 	_ctrlProgress progressSetPosition ((serverTime - _startTime) / getNumber (_productCfg >> "tickTime"));
 } else {
-	_ctrlText ctrlSetText "No current order...";
+	_ctrlText ctrlSetText "当前没有生产订单...";
 };
 
 private _index = lbCurSel _list;

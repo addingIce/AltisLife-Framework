@@ -130,7 +130,7 @@ class CfgVehicles {
 
 	// TEXTURES --------------------------------------------------------------------------------------
 	class BaseTexture {
-		displayName = "Default";
+		displayName = "默认（Default）";
 		buyPrice = 0;
 		factions[] = { "Civilian", "Dunamis" };
 		textures[] = {};
@@ -208,30 +208,30 @@ class CfgVehicles {
 	};
 
 	class BaseChromeGreen : BaseTexture {
-		displayName = "Chrome Green";
+		displayName = "镀铬绿（Chrome Green）";
 		materials[] = { "Data\Textures\Vehicles\Global\Chrome\green.rvmat" };
 		locked = true;
 	};
 	class BaseChromeBlue : BaseChromeGreen {
-		displayName = "Chrome Blue";
+		displayName = "镀铬蓝（Chrome Blue）";
 		materials[] = { "Data\Textures\Vehicles\Global\Chrome\blue.rvmat" };
 	};
 	class BaseChromeRed : BaseChromeGreen {
-		displayName = "Chrome Red";
+		displayName = "镀铬红（Chrome Red）";
 		materials[] = { "Data\Textures\Vehicles\Global\Chrome\red.rvmat" };
 	};
 	class BaseChromeSilver : BaseChromeGreen {
-		displayName = "Chrome Silver";
+		displayName = "镀铬银（Chrome Silver）";
 		materials[] = { "Data\Textures\Vehicles\Global\Chrome\silver.rvmat" };
 	};
 	class BaseChromeGold : BaseChromeGreen {
-		displayName = "Chrome Gold";
+		displayName = "镀铬金（Chrome Gold）";
 		materials[] = { "Data\Textures\Vehicles\Global\Chrome\gold.rvmat" };
 	};
 
 	// CARS --------------------------------------------------------------------------------------
 	class C_Kart_01_Blu_F : Base {
-		description = "Kart is a small four-wheeled vehicle propelled by gravity, gas or electricity. It has 4-stroke engine offering up to 20 hp and should not be operated by drivers under 18 years old.";
+		description = "Kart 是一种小型四轮车，可由重力、燃油或电力驱动。它配备 4 冲程发动机，最大可输出约 20 马力，不建议未满 18 岁的驾驶者操作。";
 		buyPrice = 2500;
 	};
 	class C_Kart_01_Fuel_F : C_Kart_01_Blu_F{};
@@ -244,28 +244,28 @@ class CfgVehicles {
     class C_Kart_01_yellow_F : C_Kart_01_Blu_F{};
 
 	class C_Quadbike_01_F : Base {
-		description = "A Quadbike is an all-terrain vehicle with low-pressure tires and handlebars for steering. The military uses quad bikes for reconnaissance and to access terrain difficult for heavier vehicles.";
+		description = "Quadbike 是一款全地形四轮车，采用低压轮胎和车把转向。军方常用它执行侦察任务，并进入重型载具难以到达的地形。";
 		buyPrice = 9300;
 		virtualSpace = 15;
 		class Textures {
 			class Black : BaseTexture {
-				displayName = "Black"; 
+				displayName = "黑色（Black）";
 				textures[] = { "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_civ_black_co.paa" }; 
 			};
 			class White : BaseTexture { 
-				displayName = "White";
+				displayName = "白色（White）";
 				textures[] = { "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_civ_white_co.paa" }; 
 			};
 			class Red : BaseTexture { 
-				displayName = "Red";
+				displayName = "红色（Red）";
 				textures[] = { "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_civ_red_co.paa" }; 
 			};
 			class Blue : BaseTexture { 
-				displayName = "Blue";
+				displayName = "蓝色（Blue）";
 				textures[] = { "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_civ_blue_co.paa" }; 
 			};
 			class Tan : BaseTexture { 
-				displayName = "Tan";
+				displayName = "沙色（Tan）";
 				textures[] = { "\A3\Soft_F\Quadbike_01\Data\Quadbike_01_co.paa" }; 
 			};
 
@@ -278,13 +278,13 @@ class CfgVehicles {
 	};
 
 	class C_Hatchback_01_F : Base {
-		description = "A four-seat hatchback car mass-produced in the Far East to satisfy increasing demand for family cars. Also comes in a sporty version.";
+		description = "这是一款在远东地区大规模量产的四座掀背车，用来满足不断增长的家用车需求，同时也提供运动版本。";
 		buyPrice = 17450;
 		virtualSpace = 25;
 		class Textures {
 			// Police
 			class PoliceWhite : PoliceTexture { 
-				displayName = "General Response";
+				displayName = "常规巡逻（General Response）";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\hatchback_white.paa" }; 
 				class Lights : PoliceColour {
 					leftPos[] = {0.458496,1.77002,-0.899953};
@@ -292,7 +292,7 @@ class CfgVehicles {
 				};
 			};
 			class PoliceBlack : PoliceWhite { 
-				displayName = "Armed Response";
+				displayName = "武装巡逻（Armed Response）";
 				conditions = "[""Police_RPU"", 1] call ULP_fnc_hasAccess && { [""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } }";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\hatchback_black.paa" }; 
 				class Lights : PoliceColour {
@@ -301,7 +301,7 @@ class CfgVehicles {
 				};
 			};
 			class PoliceANPR : PoliceWhite { 
-				displayName = "ANPR Interceptor";
+				displayName = "ANPR 拦截车（ANPR Interceptor）";
 				anpr = true;
 				textures[] = { "Data\Textures\Vehicles\Land\Police\hatchback_ANPR.paa" }; 
 				inventory[] = { 
@@ -314,7 +314,7 @@ class CfgVehicles {
 				};
 			};
 			class UnmarkedBlack : PoliceTexture {
-				displayName = "Black";
+				displayName = "黑色（Black）";
 				anpr = true;
 				conditions = "[""Police_RPU"", 2] call ULP_fnc_hasAccess || { [""Police_RPU"", 1] call ULP_fnc_hasAccess && { [""Police_NCA"", 1] call ULP_fnc_hasAccess } }";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa" };
@@ -328,72 +328,72 @@ class CfgVehicles {
 				};
 			};
 			class UnmarkedBlackWhiteSport : UnmarkedBlack {
-				displayName = "Black/White Sport";
+				displayName = "黑白运动款（Black/White Sport）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport04_co.paa" }; 
 				class Lights : Lights {};
 			};
 			class UnmarkedGrey : UnmarkedBlack {
-				displayName = "Grey";
+				displayName = "灰色（Grey）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base08_co.paa" }; 
 				class Lights : Lights {};
 			};
 			class UnmarkedWhite : UnmarkedBlack {
-				displayName = "White";
+				displayName = "白色（White）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base07_co.paa" };
 				class Lights : Lights {}; 
 			};
 			class UnmarkedBeige : UnmarkedBlack {
-				displayName = "Beige";
+				displayName = "米色（Beige）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base01_co.paa" }; 
 				class Lights : Lights {};
 			};
 			class UnmarkedBeigeSport : UnmarkedBlack {
-				displayName = "Beige Sport";
+				displayName = "米色运动款（Beige Sport）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport05_co.paa" }; 
 				class Lights : Lights {};
 			};
 			class UnmarkedRedSport : UnmarkedBlack {
-				displayName = "Red Sport";
+				displayName = "红色运动款（Red Sport）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport01_co.paa" };
 				class Lights : Lights {}; 
 			};
 			class UnmarkedBlue : UnmarkedBlack {
-				displayName = "Blue";
+				displayName = "蓝色（Blue）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base03_co.paa" }; 
 				class Lights : Lights {};
 			};
 			class UnmarkedBlueSport : UnmarkedBlack {
-				displayName = "Blue Sport";
+				displayName = "蓝色运动款（Blue Sport）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\Hatchback_01_ext_BASE04_CO.paa" }; 
 				class Lights : Lights {};
 			};
 			class UnmarkedDarkBlue : UnmarkedBlack {
-				displayName = "Dark Blue";
+				displayName = "深蓝色（Dark Blue）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base04_co.paa" }; 
 				class Lights : Lights {};
 			};
 			class UnmarkedDarkBlueSport : UnmarkedBlack {
-				displayName = "Dark Blue Sport";
+				displayName = "深蓝运动款（Dark Blue Sport）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport02_co.paa" }; 
 				class Lights : Lights {};
 			};
 			class UnmarkedGreen : UnmarkedBlack {
-				displayName = "Green";
+				displayName = "绿色（Green）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base02_co.paa" };
 				class Lights : Lights {};
 			};
 			class UnmarkedGreenSport : UnmarkedBlack {
-				displayName = "Green Sport";
+				displayName = "绿色运动款（Green Sport）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\Hatchback_01_ext_BASE02_CO.paa" }; 
 				class Lights : Lights {};
 			};
 			class UnmarkedYellow : UnmarkedBlack {
-				displayName = "Yellow";
+				displayName = "黄色（Yellow）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base06_co.paa" }; 
 				class Lights : Lights {};
 			};
 			class UnmarkedOrangeSport : UnmarkedBlack {
-				displayName = "Orange Sport";
+				displayName = "橙色运动款（Orange Sport）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport03_co.paa" }; 
 				class Lights : Lights {};
 			};
@@ -423,63 +423,63 @@ class CfgVehicles {
 
 			// Civilian
 			class Black : BaseTexture {
-				displayName = "Black";
+				displayName = "黑色（Black）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa" };
 			};
 			class BlackWhiteSport : BaseTexture {
-				displayName = "Black/White Sport"; 
+				displayName = "黑白运动款（Black/White Sport）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport04_co.paa" }; 
 			};
 			class Grey : BaseTexture {
-				displayName = "Grey"; 
+				displayName = "灰色（Grey）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base08_co.paa" }; 
 			};
 			class White : BaseTexture { 
-				displayName = "White";
+				displayName = "白色（White）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base07_co.paa" }; 
 			};
 			class Beige : BaseTexture { 
-				displayName = "Beige";
+				displayName = "米色（Beige）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base01_co.paa" }; 
 			};
 			class BeigeSport : BaseTexture { 
-				displayName = "Beige Sport";
+				displayName = "米色运动款（Beige Sport）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport05_co.paa" }; 
 			};
 			class RedSport : BaseTexture { 
-				displayName = "Red Sport";
+				displayName = "红色运动款（Red Sport）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport01_co.paa" }; 
 			};
 			class Blue : BaseTexture { 
-				displayName = "Blue";
+				displayName = "蓝色（Blue）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base03_co.paa" }; 
 			};
 			class BlueSport : BaseTexture { 
-				displayName = "Blue Sport";
+				displayName = "蓝色运动款（Blue Sport）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\Hatchback_01_ext_BASE04_CO.paa" }; 
 			};
 			class DarkBlue : BaseTexture { 
-				displayName = "Dark Blue";
+				displayName = "深蓝色（Dark Blue）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base04_co.paa" }; 
 			};
 			class DarkBlueSport : BaseTexture { 
-				displayName = "Dark Blue Sport";
+				displayName = "深蓝运动款（Dark Blue Sport）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport02_co.paa" }; 
 			};
 			class Green : BaseTexture { 
-				displayName = "Green";
+				displayName = "绿色（Green）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base02_co.paa" }; 
 			};
 			class GreenSport : BaseTexture { 
-				displayName = "Green Sport";
+				displayName = "绿色运动款（Green Sport）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\Hatchback_01_ext_BASE02_CO.paa" }; 
 			};
 			class Yellow : BaseTexture { 
-				displayName = "Yellow";
+				displayName = "黄色（Yellow）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base06_co.paa" }; 
 			};
 			class OrangeSport : BaseTexture { 
-				displayName = "Orange Sport";
+				displayName = "橙色运动款（Orange Sport）";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport03_co.paa" }; 
 			};
 
@@ -500,41 +500,41 @@ class CfgVehicles {
 	class C_Hatchback_01_sport_F : C_Hatchback_01_F { buyPrice = 276500; };
 
 	class C_Offroad_01_F : Base {
-		description = "The 4x4 pickup by Generic Motors has a durable chassis and powerful engine and has been designed to withstand the rugged terrain of the Mediterranean.";
+		description = "这款由 Generic Motors 推出的 4x4 皮卡拥有耐用底盘和强劲发动机，专为应对地中海地区崎岖地形而设计。";
 		buyPrice = 35800;
 		virtualSpace = 60;
 		class Textures {
 			// Civilian
 			class White : BaseTexture {
-				displayName = "White"; 
+				displayName = "白色（White）";
 				textures[] = { 
 					"\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE02_CO.paa", 
 					"\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE02_CO.paa" 
 				}; 
 			};
 			class Red : BaseTexture { 
-				displayName = "Red";
+				displayName = "红色（Red）";
 				textures[] = { 
 					"\A3\soft_F\Offroad_01\Data\offroad_01_ext_co.paa", 
 					"\A3\soft_F\Offroad_01\Data\offroad_01_ext_co.paa" 
 				}; 
 			};
 			class DarkRed : BaseTexture { 
-				displayName = "DarkRed";
+				displayName = "深红色（DarkRed）";
 				textures[] = { 
 					"\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE04_CO.paa", 
 					"\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE04_CO.paa" 
 				}; 
 			};
 			class Blue : BaseTexture { 
-				displayName = "Blue";
+				displayName = "蓝色（Blue）";
 				textures[] = { 
 					"\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE03_CO.paa", 
 					"\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE03_CO.paa" 
 				}; 
 			};
 			class BlueWhite : BaseTexture { 
-				displayName = "Blue/White";
+				displayName = "蓝白配色（Blue/White）";
 				textures[] = { 
 					"\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05_CO.paa", 
 					"\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05_CO.paa" 
@@ -556,7 +556,7 @@ class CfgVehicles {
 
 			// Groups
 			class Ridge : BaseTexture { 
-				displayName = "Ridge";
+				displayName = "山脊涂装（Ridge）";
 				locked = true;
 				textures[] = { "Data\Textures\Vehicles\Land\Civilian\Offroad\ridge.paa" }; 
 			};
@@ -574,7 +574,7 @@ class CfgVehicles {
 		whitelistedItems[] = { "HumanitarianSupplies" };
 		class Textures {
 			class IDAP : BaseTexture {
-				displayName = "IDAP"; 
+				displayName = "IDAP（IDAP）";
 				textures[] = { 
 					"\a3\soft_f_orange\Data\Offroad_01_ext_IDAP_CO.paa"
 				}; 
@@ -587,13 +587,13 @@ class CfgVehicles {
 		class Textures {
 			// Highways
 			class Hato : HatoTexture { 
-				displayName = "HATO"; 
+				displayName = "HATO（HATO）";
 				textures[] = { "Data\Textures\Vehicles\Land\Hato\offroad.paa" }; 
 			};
 
 			// Civilian
 			class Black : BaseTexture {
-				displayName = "Black"; 
+				displayName = "黑色（Black）";
 				textures[] = {
 					"\a3\soft_f_enoch\offroad_01\data\offroad_01_ext_blk_co.paa",
 					"\a3\soft_f_enoch\offroad_01\data\offroad_01_ext_blk_co.paa",
@@ -601,7 +601,7 @@ class CfgVehicles {
 				}; 
 			};
 			class Green : BaseTexture { 
-				displayName = "Green";
+				displayName = "绿色（Green）";
 				textures[] = { 
 					"\a3\soft_f_enoch\offroad_01\data\offroad_01_ext_grn_co.paa",
 					"\a3\soft_f_enoch\offroad_01\data\offroad_01_ext_grn_co.paa",
@@ -620,13 +620,13 @@ class CfgVehicles {
 	class C_Offroad_01_repair_F : C_Offroad_01_covered_F { buyPrice = 44450; };
 
 	class C_Offroad_02_unarmed_F : Base {
-		description = "The MB 4WD is a modern four-wheel drive off-road vehicle with a distinctive construction, powerful engine, durable chassis and great maneuverability.";
+		description = "MB 4WD 是一款现代四驱越野车，拥有独特车身结构、强劲发动机、坚固底盘以及出色的机动性。";
 		buyPrice = 31750;
 		virtualSpace = 55;
 		class Textures {
 			// Police
 			class Police : PoliceTexture { 
-				displayName = "General Response";
+				displayName = "常规巡逻（General Response）";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\MB4.paa" };
 				class Lights : PoliceColour {
 					leftPos[] = {0.757324,1.83252,-0.379596};
@@ -650,23 +650,23 @@ class CfgVehicles {
 
 			// Civilian
 			class Black : BaseTexture {
-				displayName = "Black"; 
+				displayName = "黑色（Black）";
 				textures[] = { "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_black_co.paa" }; 
 			};
 			class White : BaseTexture { 
-				displayName = "White";
+				displayName = "白色（White）";
 				textures[] = { "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_white_co.paa" }; 
 			};
 			class Red : BaseTexture { 
-				displayName = "Red";
+				displayName = "红色（Red）";
 				textures[] = { "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_red_co.paa" }; 
 			};
 			class Blue : BaseTexture { 
-				displayName = "Blue";
+				displayName = "蓝色（Blue）";
 				textures[] = { "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_blue_co.paa" }; 
 			};
 			class Orange : BaseTexture { 
-				displayName = "Orange";
+				displayName = "橙色（Orange）";
 				textures[] = { "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_orange_co.paa" }; 
 			};
 
@@ -685,7 +685,7 @@ class CfgVehicles {
 
 			// Groups
 			class Ridge : BaseTexture { 
-				displayName = "Ridge";
+				displayName = "山脊涂装（Ridge）";
 				locked = true;
 				textures[] = { "Data\Textures\Vehicles\Land\Civilian\MB4_WD\ridge.paa" }; 
 			};
@@ -695,7 +695,7 @@ class CfgVehicles {
 		whitelistedItems[] = { "HumanitarianSupplies" };
 		class Textures {
 			class IDAP : BaseTexture {
-				displayName = "IDAP"; 
+				displayName = "IDAP（IDAP）";
 				textures[] = { 
 					"\a3\soft_f_orange\Data\Offroad_02_ext_IDAP_CO.paa"
 				}; 
@@ -711,13 +711,13 @@ class CfgVehicles {
 	};
 
 	class C_SUV_01_F : Base {
-		description = "A full-size luxury crossover SUV, not particularly suitable for off-road but with good on-road ability. Its powerful engine and 4x4 contribute to the enjoyable rides in higher speeds.";
+		description = "这是一款全尺寸豪华跨界 SUV，虽然并不特别适合重度越野，但公路表现优秀。强劲发动机和 4x4 系统让高速驾驶也十分从容。";
 		buyPrice = 54200;
 		virtualSpace = 45;
 		class Textures {
 			// Police
 			class PoliceWhite : PoliceTexture { 
-				displayName = "General Response";
+				displayName = "常规巡逻（General Response）";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\SUV_white.paa" };
 				class Lights : PoliceColour {
 					leftPos[] = {0.370605,2.22021,-0.531462};
@@ -725,7 +725,7 @@ class CfgVehicles {
 				};
 			};
 			class PoliceBlack : PoliceWhite { 
-				displayName = "Armed Response";
+				displayName = "武装巡逻（Armed Response）";
 				conditions = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\SUV_black.paa" };
 				class Lights : PoliceColour {
@@ -734,7 +734,7 @@ class CfgVehicles {
 				}; 
 			};
 			class PoliceANPR : PoliceWhite { 
-				displayName = "ANPR Interceptor";
+				displayName = "ANPR 拦截车（ANPR Interceptor）";
 				conditions = "[""Police_RPU"", 1] call ULP_fnc_hasAccess";
 				anpr = true;
 				textures[] = { "Data\Textures\Vehicles\Land\Police\SUV_ANPR.paa" };
@@ -748,7 +748,7 @@ class CfgVehicles {
 				}; 
 			};
 			class UnmarkedBlack : PoliceTexture {
-				displayName = "Black";
+				displayName = "黑色（Black）";
 				conditions = "[""Police_RPU"", 2] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_SEG"", 1] call ULP_fnc_hasAccess }";
 				anpr = true;
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa" }; 
@@ -762,17 +762,17 @@ class CfgVehicles {
 				};
 			};
 			class UnmarkedSilver : UnmarkedBlack {
-				displayName = "Silver";
+				displayName = "银色（Silver）";
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_03_co.paa" }; 
 				class Lights : Lights {};
 			};
 			class UnmarkedRed : UnmarkedBlack {
-				displayName = "Red";
+				displayName = "红色（Red）";
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_co.paa" };  
 				class Lights : Lights {};
 			};
 			class UnmarkedOrange : UnmarkedBlack {
-				displayName = "Orange";
+				displayName = "橙色（Orange）";
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa" }; 
 				class Lights : Lights {};
 			};
@@ -802,19 +802,19 @@ class CfgVehicles {
 
 			// Civilian
 			class Black : BaseTexture {
-				displayName = "Black"; 
+				displayName = "黑色（Black）";
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa" }; 
 			};
 			class Silver : BaseTexture { 
-				displayName = "Silver";
+				displayName = "银色（Silver）";
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_03_co.paa" }; 
 			};
 			class Red : BaseTexture { 
-				displayName = "Red";
+				displayName = "红色（Red）";
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_co.paa" }; 
 			};
 			class Orange : BaseTexture { 
-				displayName = "Orange";
+				displayName = "橙色（Orange）";
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa" };
 			};
 
@@ -834,38 +834,38 @@ class CfgVehicles {
 	};
 
 	class C_Van_02_transport_F : Base {
-		description = "The van can be used for a variety of practical purposes. Featuring a long load length and excellent roof height, allowing for the transport of passengers, cargo and smaller vehicles.";
+		description = "这款厢式车用途广泛，拥有较长的装载空间和出色的车内高度，可用于运送乘客、货物，甚至小型载具。";
 		buyPrice = 68000;
 		virtualSpace = 90;
 		enableRope = false;
 		class Textures {
 			// Police
 			class PoliceWhite : PoliceTexture { 
-				displayName = "Public Order";
+				displayName = "公共秩序（Public Order）";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\van.paa" }; 
 				animations[] = { { "beacon_front_hide", 0 }, { "beacon_rear_hide", 0 }, { "lights_em_hide", 0 } };
 			};
 			class UnmarkedBlack : PoliceTexture {
-				displayName = "Black";
+				displayName = "黑色（Black）";
 				conditions = "[""Police_RPU"", 2] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_black_CO.paa" }; 
 			};
 			class UnmarkedWhite : UnmarkedBlack {
-				displayName = "White";
+				displayName = "白色（White）";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_white_CO.paa" }; 
 			};
 			class UnmarkedRed : UnmarkedBlack {
-				displayName = "Red";
+				displayName = "红色（Red）";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_Red_CO.paa" }; 
 			};
 			class UnmarkedOrange : UnmarkedBlack {
-				displayName = "Orange";
+				displayName = "橙色（Orange）";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_Orange_CO.paa" }; 
 			};
 
 			// Medic
 			class Medic : MedicTexture { 
-				displayName = "Ambulance"; 
+				displayName = "救护车（Ambulance）";
 				conditions = "[""Medic_Main"", 1] call ULP_fnc_hasAccess";
 				textures[] = { "Data\Textures\Vehicles\Land\Medic\van.paa" }; 
 				inventory[] = { 
@@ -878,30 +878,30 @@ class CfgVehicles {
 
 			// Highways
 			class Hato : HatoTexture { 
-				displayName = "HATO"; 
+				displayName = "HATO（HATO）";
 				conditions = "[""Hato_Main"", 1] call ULP_fnc_hasAccess";
 				textures[] = { "Data\Textures\Vehicles\Land\Hato\van.paa" }; 
 			};
 
 			// Civilian
 			class Black : BaseTexture {
-				displayName = "Black"; 
+				displayName = "黑色（Black）";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_black_CO.paa" }; 
 			};
 			class White : BaseTexture { 
-				displayName = "White";
+				displayName = "白色（White）";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_white_CO.paa" }; 
 			};
 			class Red : BaseTexture { 
-				displayName = "Red";
+				displayName = "红色（Red）";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_Red_CO.paa" }; 
 			};
 			class Orange : BaseTexture { 
-				displayName = "Orange";
+				displayName = "橙色（Orange）";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_Orange_CO.paa" }; 
 			};
 			class Press : BaseTexture { 
-				displayName = "Press";
+				displayName = "媒体（Press）";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_AAN_CO.paa" }; 
 			};
 
@@ -925,7 +925,7 @@ class CfgVehicles {
 		whitelistedItems[] = { "HumanitarianSupplies" };
 		class Textures {
 			class IDAP : BaseTexture { 
-				displayName = "IDAP";
+				displayName = "IDAP（IDAP）";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_IDAP_CO.paa" }; 
 			};
 		};
@@ -939,7 +939,7 @@ class CfgVehicles {
 		whitelistedItems[] = { "HumanitarianSupplies" };
 		class Textures {
 			class IDAP : BaseTexture { 
-				displayName = "IDAP";
+				displayName = "IDAP（IDAP）";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_IDAP_CO.paa" }; 
 			};
 		};
@@ -947,7 +947,7 @@ class CfgVehicles {
 	class C_Van_02_service_F : C_Van_02_vehicle_F {};
 
 	class B_CTRG_LSV_01_light_F : Base {
-		description = "The Prowler is agile, lightly armored and uses speed, maneuverability, and off-road mobility to avoid threats.";
+		description = "Prowler 机动灵活、装甲较轻，主要依靠速度、操控性和越野能力来规避威胁。";
 		buyPrice = 380000;
 		virtualSpace = 50;
 		class Textures {
@@ -962,7 +962,7 @@ class CfgVehicles {
 
 			// Civilian
 			class Black : BaseTexture {
-				displayName = "Black"; 
+				displayName = "黑色（Black）";
 				textures[] = { 
 					"\a3\soft_f_exp\lsv_01\data\nato_lsv_01_black_co.paa",
 					"\a3\soft_f_exp\lsv_01\data\nato_lsv_02_black_co.paa",
@@ -971,7 +971,7 @@ class CfgVehicles {
 				}; 
 			};
 			class Sand : BaseTexture { 
-				displayName = "Sand";
+				displayName = "沙地色（Sand）";
 				textures[] = { 
 					"\a3\soft_f_exp\lsv_01\data\nato_lsv_01_sand_co.paa",
 					"\a3\soft_f_exp\lsv_01\data\nato_lsv_02_sand_co.paa",
@@ -980,7 +980,7 @@ class CfgVehicles {
 				}; 
 			};
 			class Olive : BaseTexture { 
-				displayName = "Olive";
+				displayName = "橄榄绿（Olive）";
 				textures[] = { 
 					"\a3\soft_f_exp\lsv_01\data\nato_lsv_01_olive_co.paa",
 					"\a3\soft_f_exp\lsv_01\data\nato_lsv_02_olive_co.paa",
@@ -999,7 +999,7 @@ class CfgVehicles {
 	class B_LSV_01_unarmed_black_F : B_CTRG_LSV_01_light_F { buyPrice = 385000; };
 
 	class O_LSV_02_unarmed_F : Base {
-		description = "Qilin offers safe and fast operating speeds with superior levels of mobility and maneuverability. It is adaptable to severe rugged and restrictive terrains.";
+		description = "Qilin 兼顾安全与速度，拥有优秀的机动性和操控性，能够适应严苛、崎岖且受限的复杂地形。";
 		buyPrice = 475000;
 		virtualSpace = 50;
 		class Textures {
@@ -1014,11 +1014,11 @@ class CfgVehicles {
 
 			// Civilian
 			class Black : BaseTexture { 
-				displayName = "Black";
+				displayName = "黑色（Black）";
 				textures[] = { "\a3\soft_f_exp\LSV_02\Data\CSAT_LSV_01_black_CO.paa", }; 
 			};
 			class Hex : BaseTexture { 
-				displayName = "Hex";
+				displayName = "六角迷彩（Hex）";
 				textures[] = { "\a3\soft_f_exp\LSV_02\Data\CSAT_LSV_01_arid_CO.paa", }; 
 			};
 
@@ -1044,7 +1044,7 @@ class CfgVehicles {
 	};
 
 	class B_MRAP_01_F : Base {
-		description = "The Hunter is a MRAP vehicle with an armored hull that can withstand light weapons and offers a powerful engine.";
+		description = "Hunter 是一款 MRAP 防雷反伏击载具，装甲车体能够抵御轻型武器攻击，同时搭载强劲发动机。";
 		buyPrice = 9800000;
 		virtualSpace = 65;
 		garageLimit = 2;
@@ -1101,21 +1101,21 @@ class CfgVehicles {
 	};
 
 	class O_MRAP_02_F : B_MRAP_01_F {
-		description = "The Ifrit is a MRAP vehicle designed and manufactured in Russia. Its strengths lie in reliability in extreme weather conditions and crew protection.";
+		description = "Ifrit 是一款在俄罗斯设计制造的 MRAP 载具，其优势在于极端天气下的可靠性以及对乘员的良好保护。";
 		buyPrice = 5500000;
 		virtualSpace = 65;
 		turrets[] = {};
 		class Textures {
 			// Civilian
 			class Hex : BaseTexture { 
-				displayName = "Hex";
+				displayName = "六角迷彩（Hex）";
 				textures[] = { 
 					"\A3\soft_F\MRAP_02\data\MRAP_02_ext_01_CO.paa", 
 					"\A3\soft_F\MRAP_02\data\MRAP_02_ext_02_CO.paa"
 				}; 
 			};
 			class GoldLine : BaseTexture { 
-				displayName = "Gold Line";
+				displayName = "金线涂装（Gold Line）";
 				buyPrice = 450000;
 				condition = "[] call ULP_fnc_donatorLevel >= 2"; 
 				textures[] = { 
@@ -1124,7 +1124,7 @@ class CfgVehicles {
 				}; 
 			};
 			class Oil : GoldLine { 
-				displayName = "Oil Spill";
+				displayName = "油污涂装（Oil Spill）";
 				buyPrice = 315700;
 				textures[] = { 
 					"Data\Textures\Vehicles\Land\Civilian\Ifrit\oil_01.paa",
@@ -1176,20 +1176,20 @@ class CfgVehicles {
 	};
 
 	class I_MRAP_03_F : B_MRAP_01_F {
-		description = "The Strider is a medium all-terrain vehicle with amphibious capability and enhanced crew protection, designed for reconnaissance and troop transport roles.";
+		description = "Strider 是一款中型全地形载具，具备两栖能力并强化了乘员防护，适合执行侦察与运兵任务。";
 		buyPrice = 3550000;
 		virtualSpace = 65;
 		turrets[] = {};
 		class Textures {
 			class Tan : BaseTexture { 
-				displayName = "Tan";
+				displayName = "沙色（Tan）";
 				textures[] = { 
 					"\A3\soft_f_beta\mrap_03\data\mrap_03_ext_co.paa", 
 					"\A3\data_f\vehicles\turret_co.paa"
 				}; 
 			};
 			class Asiimov : BaseTexture { 
-				displayName = "Asiimov";
+				displayName = "艾西莫夫（Asiimov）";
 				locked = true;
 				textures[] = { "Data\Textures\Vehicles\Land\Civilian\Strider\asiimov.paa" }; 
 			};
@@ -1204,20 +1204,20 @@ class CfgVehicles {
 
 	// TRUCKS --------------------------------------------------------------------------------------
 	class C_Tractor_01_F : BaseTruck {
-		description = "Found in farm barns across the globe, the common tractor is a reliable high torque engineering vehicle, used for towing trailers and many other agricultural tasks.";
+		description = "这种常见拖拉机遍布世界各地的农场与谷仓，是一款高扭矩且可靠的工程车辆，可用于牵引拖车和执行多种农业任务。";
 		buyPrice = 23150;
 		virtualSpace = 10;
 		class Textures {
 			class Red : BaseTexture {
-				displayName = "Red"; 
+				displayName = "红色（Red）";
 				textures[] = { "\a3\soft_f_enoch\tractor_01\data\tractor_01_2_red_co.paa" }; 
 			};
 			class Blue : BaseTexture { 
-				displayName = "Blue";
+				displayName = "蓝色（Blue）";
 				textures[] = { "\a3\soft_f_enoch\tractor_01\data\tractor_01_2_blue_co.paa" }; 
 			};
 			class Green : BaseTexture { 
-				displayName = "Green";
+				displayName = "绿色（Green）";
 				textures[] = { "\a3\soft_f_enoch\tractor_01\data\tractor_01_2_green_co.paa" }; 
 			};
 
@@ -1230,32 +1230,32 @@ class CfgVehicles {
 	};
 
 	class C_Van_01_transport_F : BaseTruck {
-		description = "The civilian 4x4 truck is a highly customizable truck with off-road capabilities. It builds on retro design, but utilizes a modern engine and electronics.";
+		description = "这款民用 4x4 卡车具备很高的可定制性和越野能力。它延续了复古外观设计，同时采用现代发动机与电子系统。";
 		buyPrice = 105500;
 		virtualSpace = 125;
 		class Textures {
 			class Black : BaseTexture {
-				displayName = "Black"; 
+				displayName = "黑色（Black）";
 				textures[] = { "\a3\soft_f_gamma\Van_01\Data\van_01_ext_black_co.paa" }; 
 			};
 			class White : BaseTexture { 
-				displayName = "White";
+				displayName = "白色（White）";
 				textures[] = { "\a3\soft_f_gamma\Van_01\Data\van_01_ext_co.paa" }; 
 			};
 			class Red : BaseTexture { 
-				displayName = "Red";
+				displayName = "红色（Red）";
 				textures[] = { "\a3\soft_f_gamma\Van_01\Data\van_01_ext_red_co.paa" }; 
 			};
 			class Brown : BaseTexture { 
-				displayName = "Brown";
+				displayName = "棕色（Brown）";
 				textures[] = { "\a3\soft_f_exp\van_01\data\van_01_ext_brn_co.paa" }; 
 			};
 			class Olive : BaseTexture { 
-				displayName = "Olive";
+				displayName = "橄榄绿（Olive）";
 				textures[] = { "\a3\soft_f_exp\van_01\data\van_01_ext_oli_co.paa" }; 
 			};
 			class Aldsa : BaseTexture {
-				displayName = "Aldsa"; 
+				displayName = "阿尔德萨（Aldsa）";
 				locked = true;
 				textures[] = { 
 					"Data\Textures\Vehicles\Land\Civilian\Truck\aldsa_01.paa", 
@@ -1277,35 +1277,35 @@ class CfgVehicles {
 		};
 		class Textures {
 			class Black : BaseTexture {
-				displayName = "Black"; 
+				displayName = "黑色（Black）";
 				textures[] = { 
 					"\a3\soft_f_gamma\Van_01\Data\van_01_ext_black_co.paa", 
 					"\a3\soft_f_gamma\Van_01\Data\Van_01_tank_CO.paa"
 				}; 
 			};
 			class White : BaseTexture { 
-				displayName = "White";
+				displayName = "白色（White）";
 				textures[] = { 
 					"\a3\soft_f_gamma\Van_01\Data\van_01_ext_co.paa", 
 					"\a3\soft_f_gamma\Van_01\Data\Van_01_tank_CO.paa" 
 				}; 
 			};
 			class Red : BaseTexture { 
-				displayName = "Red";
+				displayName = "红色（Red）";
 				textures[] = { 
 					"\a3\soft_f_gamma\Van_01\Data\van_01_ext_red_co.paa", 
 					"\a3\soft_f_gamma\Van_01\Data\Van_01_tank_red_CO.paa" 
 				}; 
 			};
 			class Brown : BaseTexture { 
-				displayName = "Brown";
+				displayName = "棕色（Brown）";
 				textures[] = { 
 					"\a3\soft_f_exp\van_01\data\van_01_ext_brn_co.paa", 
 					"\a3\soft_f_gamma\Van_01\Data\Van_01_tank_IG_CO.paa"  
 				}; 
 			};
 			class Olive : BaseTexture { 
-				displayName = "Olive";
+				displayName = "橄榄绿（Olive）";
 				textures[] = { 
 					"\a3\soft_f_exp\van_01\data\van_01_ext_oli_co.paa", 
 					"\a3\soft_f_gamma\Van_01\Data\Van_01_tank_IG_CO.paa"  
@@ -1315,19 +1315,19 @@ class CfgVehicles {
 	};
 
 	class I_Truck_02_transport_F : BaseTruck {
-		description = "The Zamak heavy truck is a 6x6 vehicle used for transport and utility. Fitted with a powerful V8 engine, these trucks are reliable even in harsh conditions.";
+		description = "Zamak 重型卡车是一款 6x6 运输与多用途载具。它配备强劲的 V8 发动机，即使在恶劣环境下也依然可靠。";
 		buyPrice = 505000;
 		virtualSpace = 280;
 		class Textures {
 			class Orange : BaseTexture {
-				displayName = "Orange"; 
+				displayName = "橙色（Orange）";
 				textures[] = { 
 					"\A3\Soft_F_Beta\Truck_02\data\truck_02_kab_co.paa", 
 					"\a3\soft_f_beta\Truck_02\data\truck_02_kuz_co.paa"
 				 }; 
 			};
 			class Blue : BaseTexture { 
-				displayName = "Blue";
+				displayName = "蓝色（Blue）";
 				textures[] = { 
 					"\a3\soft_f_beta\truck_02\data\truck_02_kab_blue_co.paa",
 					"\a3\soft_f_beta\truck_02\data\truck_02_kuz_co.paa",
@@ -1340,7 +1340,7 @@ class CfgVehicles {
 		whitelistedItems[] = { "HumanitarianSupplies" };
 		class Textures {
 			class IDAP : BaseTexture {
-				displayName = "IDAP"; 
+				displayName = "IDAP（IDAP）";
 				textures[] = { 
 					"\a3\soft_f_orange\Truck_02\Data\truck_02_kab_IDAP_CO.paa",
 					"\a3\soft_f_orange\Truck_02\Data\truck_02_kuz_IDAP_CO.paa", 
@@ -1356,7 +1356,7 @@ class CfgVehicles {
 		whitelistedItems[] = { "HumanitarianSupplies" };
 		class Textures {
 			class IDAP : BaseTexture {
-				displayName = "IDAP"; 
+				displayName = "IDAP（IDAP）";
 				textures[] = { 
 					"\a3\soft_f_orange\Truck_02\Data\truck_02_kab_IDAP_CO.paa", 
 					"\a3\soft_f_orange\Truck_02\Data\truck_02_kuz_IDAP_CO.paa", 
@@ -1374,14 +1374,14 @@ class CfgVehicles {
 		};
 		class Textures {
 			class Orange : BaseTexture {
-				displayName = "Orange"; 
+				displayName = "橙色（Orange）";
 				textures[] = { 
 					"\A3\Soft_F_Beta\Truck_02\data\truck_02_kab_co.paa", 
 					"\a3\soft_f_beta\Truck_02\data\truck_02_fuel_co.paa"
 				 }; 
 			};
 			class Blue : BaseTexture { 
-				displayName = "Blue";
+				displayName = "蓝色（Blue）";
 				textures[] = { 
 					"\a3\soft_f_beta\truck_02\data\truck_02_kab_blue_co.paa",
 					"\a3\soft_f_beta\truck_02\data\truck_02_fuel_co.paa"
@@ -1392,7 +1392,7 @@ class CfgVehicles {
 	class C_IDAP_Truck_02_water_F : I_Truck_02_fuel_F {
 		class Textures {
 			class IDAP : BaseTexture {
-				displayName = "IDAP"; 
+				displayName = "IDAP（IDAP）";
 				textures[] = { 
 					"\a3\soft_f_orange\Truck_02\Data\truck_02_kab_IDAP_CO.paa", 
 					"\a3\soft_f_orange\Truck_02\Data\truck_02_water_IDAP_CO.paa"
@@ -1402,12 +1402,12 @@ class CfgVehicles {
 	};
 
 	class O_Truck_03_transport_F : BaseTruck {
-		description = "The Tempest is a 6x6 mine resistant standard transport truck. The modular design of the truck allows several transport versions.";
+		description = "Tempest 是一款 6x6 标准运输卡车，并具备防雷能力。模块化设计让它能够衍生出多种运输版本。";
 		buyPrice = 850550;
 		virtualSpace = 370;
 		class Textures {
 			class BrownHex : BaseTexture {
-				displayName = "Brown Hex"; 
+				displayName = "棕色六角迷彩（Brown Hex）";
 				textures[] = { 
 					"\a3\soft_f_epc\truck_03\data\truck_03_ext01_co.paa",
 					"\a3\soft_f_epc\truck_03\data\truck_03_ext02_co.paa",
@@ -1415,7 +1415,7 @@ class CfgVehicles {
 				 }; 
 			};
 			class GreenHex : BaseTexture { 
-				displayName = "Green Hex";
+				displayName = "绿色六角迷彩（Green Hex）";
 				textures[] = { 
 					"\a3\soft_f_exp\truck_03\data\truck_03_ext01_ghex_co.paa",
 					"\a3\soft_f_exp\truck_03\data\truck_03_ext02_ghex_co.paa",
@@ -1429,7 +1429,7 @@ class CfgVehicles {
 		virtualSpace = 410;
 		class Textures {
 			class BrownHex : BaseTexture {
-				displayName = "Brown Hex"; 
+				displayName = "棕色六角迷彩（Brown Hex）";
 				textures[] = { 
 					"\a3\soft_f_epc\truck_03\data\truck_03_ext01_co.paa",
 					"\a3\soft_f_epc\truck_03\data\truck_03_ext02_co.paa",
@@ -1437,7 +1437,7 @@ class CfgVehicles {
 				 }; 
 			};
 			class GreenHex : BaseTexture { 
-				displayName = "Green Hex";
+				displayName = "绿色六角迷彩（Green Hex）";
 				textures[] = { 
 					"\a3\soft_f_exp\truck_03\data\truck_03_ext01_ghex_co.paa",
 					"\a3\soft_f_exp\truck_03\data\truck_03_ext02_ghex_co.paa",
@@ -1463,7 +1463,7 @@ class CfgVehicles {
 		};
 		class Textures {
 			class BrownHex : BaseTexture {
-				displayName = "Brown Hex"; 
+				displayName = "棕色六角迷彩（Brown Hex）";
 				textures[] = { 
 					"\a3\soft_f_epc\truck_03\data\truck_03_ext01_co.paa",
 					"\a3\soft_f_epc\truck_03\data\truck_03_ext02_co.paa",
@@ -1471,7 +1471,7 @@ class CfgVehicles {
 				 }; 
 			};
 			class GreenHex : BaseTexture { 
-				displayName = "Green Hex";
+				displayName = "绿色六角迷彩（Green Hex）";
 				textures[] = { 
 					"\a3\soft_f_exp\truck_03\data\truck_03_ext01_ghex_co.paa",
 					"\a3\soft_f_exp\truck_03\data\truck_03_ext02_ghex_co.paa",
@@ -1487,13 +1487,13 @@ class CfgVehicles {
 	};
 
 	class B_Truck_01_mover_F : BaseTruck {
-		description = "The Heavy Expanded Mobility Tactical Truck is an 8x8 diesel-powered off-road truck. There are several versions covering the basic transport functions.";
+		description = "HEMTT（Heavy Expanded Mobility Tactical Truck）是一款 8x8 柴油越野卡车，拥有多个不同版本，可覆盖基础运输需求。";
 		buyPrice = 478500;
 		virtualSpace = 10;
 		garageLimit = 1;
 		class Textures {
 			class Hato : HatoTexture { 
-				displayName = "HATO";
+				displayName = "HATO（HATO）";
 				textures[] = { 
 					"data\textures\vehicles\land\HATO\hemtt_1.paa",
 					"data\textures\vehicles\land\HATO\hemtt_2.paa",
@@ -1511,7 +1511,7 @@ class CfgVehicles {
 		virtualSpace = 10;
 		class Textures {
 			class Hato : HatoTexture { 
-				displayName = "HATO";
+				displayName = "HATO（HATO）";
 				textures[] = { 
 					"data\textures\vehicles\land\HATO\hemtt_1.paa",
 					"data\textures\vehicles\land\HATO\hemtt_2.paa",
@@ -1529,7 +1529,7 @@ class CfgVehicles {
 		virtualSpace = 450;
 		class Textures {
 			class Sand : BaseTexture {
-				displayName = "Sand"; 
+				displayName = "沙地色（Sand）";
 				textures[] = { 
 					"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_co.paa",
 					"\a3\soft_f_beta\truck_01\data\truck_01_ext_02_co.paa",
@@ -1538,7 +1538,7 @@ class CfgVehicles {
 				 }; 
 			};
 			class Olive : BaseTexture { 
-				displayName = "Olive";
+				displayName = "橄榄绿（Olive）";
 				textures[] = { 
 					"\a3\soft_f_exp\truck_01\data\truck_01_ext_01_olive_co.paa",
 					"\a3\soft_f_exp\truck_01\data\truck_01_ext_02_olive_co.paa",
@@ -1553,7 +1553,7 @@ class CfgVehicles {
 		virtualSpace = 535;
 		class Textures {
 			class Sand : BaseTexture {
-				displayName = "Sand"; 
+				displayName = "沙地色（Sand）";
 				textures[] = { 
 					"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_co.paa",
 					"\a3\soft_f_beta\truck_01\data\truck_01_ext_02_co.paa",
@@ -1561,7 +1561,7 @@ class CfgVehicles {
 				 }; 
 			};
 			class Olive : BaseTexture { 
-				displayName = "Olive";
+				displayName = "橄榄绿（Olive）";
 				textures[] = { 
 					"\a3\soft_f_exp\truck_01\data\truck_01_ext_01_olive_co.paa",
 					"\a3\soft_f_exp\truck_01\data\truck_01_ext_02_olive_co.paa",
@@ -1575,7 +1575,7 @@ class CfgVehicles {
 		virtualSpace = 590;
 		class Textures {
 			class Sand : BaseTexture {
-				displayName = "Sand"; 
+				displayName = "沙地色（Sand）";
 				textures[] = { 
 					"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_co.paa",
 					"\a3\soft_f_beta\truck_01\data\truck_01_ext_02_co.paa",
@@ -1584,7 +1584,7 @@ class CfgVehicles {
 				 }; 
 			};
 			class Olive : BaseTexture { 
-				displayName = "Olive";
+				displayName = "橄榄绿（Olive）";
 				textures[] = { 
 					"\a3\soft_f_exp\truck_01\data\truck_01_ext_01_olive_co.paa",
 					"\a3\soft_f_exp\truck_01\data\truck_01_ext_02_olive_co.paa",
@@ -1599,7 +1599,7 @@ class CfgVehicles {
 		virtualSpace = 650;
 		class Textures {
 			class Sand : BaseTexture {
-				displayName = "Sand"; 
+				displayName = "沙地色（Sand）";
 				textures[] = { 
 					"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_co.paa",
 					"\a3\soft_f_beta\truck_01\data\truck_01_ext_02_co.paa",
@@ -1607,7 +1607,7 @@ class CfgVehicles {
 				 }; 
 			};
 			class Olive : BaseTexture { 
-				displayName = "Olive";
+				displayName = "橄榄绿（Olive）";
 				textures[] = { 
 					"\a3\soft_f_exp\truck_01\data\truck_01_ext_01_olive_co.paa",
 					"\a3\soft_f_exp\truck_01\data\truck_01_ext_02_olive_co.paa",
@@ -1625,7 +1625,7 @@ class CfgVehicles {
 		};
 		class Textures {
 			class Sand : BaseTexture {
-				displayName = "Sand"; 
+				displayName = "沙地色（Sand）";
 				textures[] = { 
 					"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_co.paa",
 					"\a3\soft_f_beta\truck_01\data\truck_01_ext_02_co.paa",
@@ -1633,7 +1633,7 @@ class CfgVehicles {
 				 }; 
 			};
 			class Olive : BaseTexture { 
-				displayName = "Olive";
+				displayName = "橄榄绿（Olive）";
 				textures[] = { 
 					"\a3\soft_f_exp\truck_01\data\truck_01_ext_01_olive_co.paa",
 					"\a3\soft_f_exp\truck_01\data\truck_01_ext_02_olive_co.paa",
@@ -1647,7 +1647,7 @@ class CfgVehicles {
 		virtualSpace = 800;
 		class Textures {
 			class Sand : BaseTexture {
-				displayName = "Sand"; 
+				displayName = "沙地色（Sand）";
 				textures[] = { 
 					"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_co.paa",
 					"\a3\soft_f_beta\truck_01\data\truck_01_ext_02_co.paa",
@@ -1656,7 +1656,7 @@ class CfgVehicles {
 				 }; 
 			};
 			class Olive : BaseTexture { 
-				displayName = "Olive";
+				displayName = "橄榄绿（Olive）";
 				textures[] = { 
 					"\a3\soft_f_exp\truck_01\data\truck_01_ext_01_olive_co.paa",
 					"\a3\soft_f_exp\truck_01\data\truck_01_ext_02_olive_co.paa",
@@ -1665,7 +1665,7 @@ class CfgVehicles {
 				};
 			}; 
 			class Ridge : BaseTexture { 
-				displayName = "Ridge";
+				displayName = "山脊涂装（Ridge）";
 				locked = true;
 				textures[] = { 
 					"data\textures\vehicles\land\civilian\ridge_hemtt_1.paa",
@@ -1679,7 +1679,7 @@ class CfgVehicles {
 
 	// ARMOURED -----------------------------------------------------------------------------------
 	class B_AFV_Wheeled_01_cannon_F : Base {
-		description = "The Rhino MGS is a wheeled tank destroyer designed for easy transportation to crisis regions. Its lightweight 120mm connon uses all convetional rounds and has an effective range of up to 8km.";
+		description = "Rhino MGS 是一款轮式坦克歼击车，便于快速运送到危机地区。其轻量化 120mm 火炮可使用常规炮弹，有效射程最高可达 8km。";
 		buyPrice = 67800000;
 		virtualSpace = 30;
 		garageLimit = 1;
@@ -1688,62 +1688,62 @@ class CfgVehicles {
 		turrets[] = {};
 	};
 	class I_LT_01_scout_F : B_AFV_Wheeled_01_cannon_F {
-		description = "The AWC 300 Nyx is a small and lightly armoured tracked vehicle equipped with a powerful radar, capable of detecting threats from great distances.";
+		description = "AWC 300 Nyx 是一款小型轻装甲履带载具，配备强力雷达，能够在远距离发现潜在威胁。";
 		buyPrice = 20150000;
 		virtualSpace = 5;
 	};
 
 	// BOATS --------------------------------------------------------------------------------------
 	class C_Scooter_Transport_01_F : BaseShip {
-		description = "A Personal WaterCraft of sit-down type. Its powerful engine and great maneuverability make this craft a lot of fun to drive.";
+		description = "这是一种坐式个人水上摩托，强劲的引擎和灵活的操控让它驾驶起来非常有乐趣。";
 		buyPrice = 14300;
 		virtualSpace = 5;
 		whitelistedItems[] = { "StolenCargo" };
 		class Textures {
 			class Black : BaseTexture {
-				displayName = "Black"; 
+				displayName = "黑色（Black）";
 				textures[] = { 
 					"\a3\boat_f_exp\scooter_transport_01\data\scooter_transport_01_black_co.paa",
 					"\a3\boat_f_exp\scooter_transport_01\data\scooter_transport_01_vp_black_co.paa"
 				 }; 
 			};
 			class White : BaseTexture { 
-				displayName = "White";
+				displayName = "白色（White）";
 				textures[] = { 
 					"\a3\boat_f_exp\scooter_transport_01\data\scooter_transport_01_White_co.paa",
 					"\a3\boat_f_exp\scooter_transport_01\data\scooter_transport_01_vp_White_co.paa"
 				};
 			}; 
 			class Grey : BaseTexture { 
-				displayName = "Grey";
+				displayName = "灰色（Grey）";
 				textures[] = { 
 					"\a3\boat_f_exp\scooter_transport_01\data\scooter_transport_01_Grey_co.paa",
 					"\a3\boat_f_exp\scooter_transport_01\data\scooter_transport_01_vp_Grey_co.paa"
 				};
 			}; 
 			class Red : BaseTexture { 
-				displayName = "Red";
+				displayName = "红色（Red）";
 				textures[] = { 
 					"\a3\boat_f_exp\scooter_transport_01\data\scooter_transport_01_Red_co.paa",
 					"\a3\boat_f_exp\scooter_transport_01\data\scooter_transport_01_vp_Red_co.paa"
 				};
 			}; 
 			class Blue : BaseTexture { 
-				displayName = "Blue";
+				displayName = "蓝色（Blue）";
 				textures[] = { 
 					"\a3\boat_f_exp\scooter_transport_01\data\scooter_transport_01_blue_co.paa",
 					"\a3\boat_f_exp\scooter_transport_01\data\scooter_transport_01_vp_blue_co.paa"
 				};
 			}; 
 			class Green : BaseTexture { 
-				displayName = "Green";
+				displayName = "绿色（Green）";
 				textures[] = { 
 					"\a3\boat_f_exp\scooter_transport_01\data\scooter_transport_01_Green_co.paa",
 					"\a3\boat_f_exp\scooter_transport_01\data\scooter_transport_01_vp_Green_co.paa"
 				};
 			}; 
 			class Yellow : BaseTexture { 
-				displayName = "Yellow";
+				displayName = "黄色（Yellow）";
 				textures[] = { 
 					"\a3\boat_f_exp\scooter_transport_01\data\scooter_transport_01_Yellow_co.paa",
 					"\a3\boat_f_exp\scooter_transport_01\data\scooter_transport_01_vp_Yellow_co.paa"
@@ -1759,13 +1759,13 @@ class CfgVehicles {
 	};
 
 	class C_Rubberboat : BaseShip {
-		description = "An inflatable boat, often nicknamed 'rubber duck', is a lightweight boat constructed from tubes containing pressurized gas.";
+		description = "充气艇常被昵称为“rubber duck”，是一种由充气气室构成的轻型船只。";
 		buyPrice = 4150;
 		virtualSpace = 50;
 	};
 
 	class C_Boat_Civil_01_F : BaseShip {
-		description = "The luxury motorboat is an engine powered boat used by the Police and Altis' richest.";
+		description = "这款豪华摩托艇采用引擎驱动，既是 Police 的常用船只之一，也深受阿尔蒂斯富人青睐。";
 		buyPrice = 153200;
 		virtualSpace = 75;
 		class Textures {
@@ -1783,7 +1783,7 @@ class CfgVehicles {
 	class C_Boat_Civil_01_police_F : C_Boat_Civil_01_F {};
 
 	class C_Boat_Transport_02_F : BaseShip {
-		description = "The Naval Special Warfare Rigid Hull Inflatable Boat is a fast, high-buoyancy all weather boat designed to transport a fully equipped team of eight-men and three crew members.";
+		description = "这款海军特种作战 RHIB（刚性充气艇）速度快、浮力高、可全天候使用，设计上可搭载一支全副武装的 8 人小队及 3 名船员。";
 		buyPrice = 297600;
 		virtualSpace = 125;
 		class Textures {
@@ -1806,7 +1806,7 @@ class CfgVehicles {
 	class I_C_Boat_Transport_02_F : C_Boat_Transport_02_F {};
 
 	class B_Boat_Armed_01_minigun_F : BaseShip {
-		description = "This boat excels in speed and maneuverability and is used as a coastline guard boat and for special operations.";
+		description = "这款快艇在速度和机动性方面表现出色，常用于海岸巡防和特种作战任务。";
 		buyPrice = 14360500;
 		virtualSpace = 80;
 		garageLimit = 1;
@@ -1823,12 +1823,12 @@ class CfgVehicles {
 	};
 
 	class B_SDV_01_F : BaseShip {
-		description = "The SDV is a manned submersible vehicle used to transport teams of divers over long distances under water.ply or using their own SCUBA gear.";
+		description = "SDV 是一种有人潜航器，可在水下长距离运送潜水小队，队员既可依附艇体行动，也可使用自带的 SCUBA 装备。";
 		buyPrice = 389500;
 		virtualSpace = 5;
 		class Textures {
 			class Police : PoliceTextureBase {
-				displayName = "MPU"; 
+				displayName = "MPU（MPU）";
 				textures[] = { "Data\Textures\Vehicles\Sea\Police\sdv.paa" }; 
 			};
 
@@ -1842,26 +1842,26 @@ class CfgVehicles {
 
 	// HELICOPTERS --------------------------------------------------------------------------------------
 	class B_UAV_01_F : BaseHeli {
-		description = "The Darter AR-2 is a miniature remote-controlled quadcopter perfect for reconnaissance and surveillance.";
+		description = "Darter AR-2 是一款微型遥控四旋翼无人机，非常适合执行侦察和监视任务。";
 		buyPrice = 98700;
 	};
 	class C_UAV_06_medical_F : B_UAV_01_F {
-		description = "This commercial off-the-shelf utility drone uses 6 rotors to transport small payloads inside its external cargo case.";
+		description = "这款现成商用多用途无人机采用 6 旋翼设计，可在外部货舱中运送小型载荷。";
 		buyPrice = 109700;
 	};
 	
 	class C_Heli_Light_01_civil_F : BaseHeli {
-		description = "A light single-engine helicopter used in special operations by the US Army since the Vietnam War.";
+		description = "这是一款轻型单发直升机，自越战时期起就被美军用于多种特种作战任务。";
 		buyPrice = 465000;
 		virtualSpace = 5;
 		class Textures {
 			// Police
 			class Police : PoliceTextureBase { 
-				displayName = "NPAS"; 
+				displayName = "NPAS（NPAS）";
 				textures[] = { "Data\Textures\Vehicles\Air\Police\hummingbird.paa" }; 
 			};
 			class PoliceSEG : PoliceTextureBase { 
-				displayName = "SEG"; 
+				displayName = "SEG（SEG）";
 				conditions = "[""Police_SEG"", 1] call ULP_fnc_hasAccess";
 				textures[] = { "Data\Textures\Vehicles\Air\Police\PMHummingbird.paa" }; 
 			};
@@ -1871,59 +1871,59 @@ class CfgVehicles {
 
 			// Civilian
 			class TotalRed : BaseTexture {
-				displayName = "Total Red"; 
+				displayName = "全红涂装（Total Red）";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_co.paa" }; 
 			};
 			class TotalBlue : BaseTexture { 
-				displayName = "Total Blue";
+				displayName = "全蓝涂装（Total Blue）";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_blue_co.paa" };
 			}; 
 			class Sheriff : BaseTexture { 
-				displayName = "Sheriff";
+				displayName = "治安官（Sheriff）";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_sheriff_co.paa" };
 			}; 
 			class Blueline : BaseTexture { 
-				displayName = "Blueline";
+				displayName = "蓝线涂装（Blueline）";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_blueline_co.paa" };
 			}; 
 			class Elliptical : BaseTexture { 
-				displayName = "Elliptical";
+				displayName = "椭圆涂装（Elliptical）";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_elliptical_co.paa" };
 			}; 
 			class Furious : BaseTexture { 
-				displayName = "Furious";
+				displayName = "狂怒涂装（Furious）";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_furious_co.paa" };
 			}; 
 			class JeansBlue : BaseTexture { 
-				displayName = "Jeans Blue";
+				displayName = "牛仔蓝（Jeans Blue）";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_jeans_co.paa" };
 			}; 
 			class SpeedyRedline : BaseTexture { 
-				displayName = "Speedy Redline";
+				displayName = "极速红线（Speedy Redline）";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_speedy_co.paa" };
 			}; 
 			class Sunset : BaseTexture { 
-				displayName = "Sunset";
+				displayName = "落日涂装（Sunset）";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_sunset_co.paa" };
 			}; 
 			class Vrana : BaseTexture { 
-				displayName = "Vrana";
+				displayName = "弗拉纳（Vrana）";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_vrana_co.paa" };
 			}; 
 			class WavesBlue : BaseTexture { 
-				displayName = "Waves Blue";
+				displayName = "海浪蓝（Waves Blue）";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wave_co.paa" };
 			}; 
 			class Shadow : BaseTexture { 
-				displayName = "Shadow";
+				displayName = "暗影涂装（Shadow）";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\Heli_Light_01_ext_shadow_co.paa" };
 			}; 
 			class GrayWatcher : BaseTexture { 
-				displayName = "Gray Watcher";
+				displayName = "灰色守望者（Gray Watcher）";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\Heli_Light_01_ext_graywatcher_co.paa" };
 			}; 
 			class Wasp : BaseTexture { 
-				displayName = "Wasp";
+				displayName = "黄蜂涂装（Wasp）";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wasp_co.paa" };
 			}; 
 
@@ -1953,7 +1953,7 @@ class CfgVehicles {
 	};
 
 	class O_Heli_Light_02_unarmed_F : BaseHeli {
-		description = "The PO-30 Orca is a transport and utility helicopter primarily developed for the Russian Air Force.";
+		description = "PO-30 Orca 是一款以运输和通用支援为主的直升机，最初主要为俄罗斯空军开发。";
 		buyPrice = 1850000;
 		virtualSpace = 25;
 		class Textures {
@@ -1969,15 +1969,15 @@ class CfgVehicles {
 
 			// Civilian
 			class Black : BaseTexture {
-				displayName = "Black"; 
+				displayName = "黑色（Black）";
 				textures[] = { "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_CO.paa" }; 
 			};
 			class BlackWhite : BaseTexture {
-				displayName = "Black / White"; 
+				displayName = "黑白配色（Black / White）";
 				textures[] = { "\a3\air_f_heli\heli_light_02\data\heli_light_02_ext_opfor_v2_co.paa" }; 
 			};
 			class WhiteBlue : BaseTexture { 
-				displayName = "White / Blue";
+				displayName = "白蓝配色（White / Blue）";
 				textures[] = { "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa" };
 			}; 
 
@@ -1997,7 +1997,7 @@ class CfgVehicles {
 	};
 
 	class I_Heli_light_03_unarmed_F : BaseHeli {
-		description = "The WY-55 Hellcat is a multipurpose helicopter, most suited for utility and limited transport.";
+		description = "WY-55 Hellcat 是一款多用途直升机，特别适合执行通用支援与有限运载任务。";
 		buyPrice = 2130000;
 		virtualSpace = 20;
 		class Textures {
@@ -2005,11 +2005,11 @@ class CfgVehicles {
 
 			// Civilian
 			class Black : BaseTexture {
-				displayName = "Black"; 
+				displayName = "黑色（Black）";
 				textures[] = { "#(rgb,8,8,3)color(0.03,0.03,0.03,1)" }; 
 			};
 			class Green : BaseTexture {
-				displayName = "Green"; 
+				displayName = "绿色（Green）";
 				textures[] = { "\a3\air_f_epb\Heli_Light_03\data\Heli_Light_03_base_CO.paa" }; 
 			};
 
@@ -2038,7 +2038,7 @@ class CfgVehicles {
 	};
 
 	class B_Heli_Transport_01_F : BaseHeli {
-		description = "The UH-80 Ghost Hawk is a medium-lift utility helicopter with stealth design.";
+		description = "UH-80 Ghost Hawk 是一款具备隐身设计的中型通用运输直升机。";
 		buyPrice = 19450000;
 		virtualSpace = 30;
 		garageLimit = 1;
@@ -2060,7 +2060,7 @@ class CfgVehicles {
 	};
 
 	class I_Heli_Transport_02_F : BaseHeli {
-		description = "A successor to the wide-spread Merlin, the CH-49 Mohawk is a primary transport with many other versions, serving effectively in evac, anti-submarine warfare, or armed air support roles.";
+		description = "CH-49 Mohawk 是广泛服役的 Merlin 后继机型，核心定位为主力运输直升机，同时也衍生出撤离、反潜与武装空中支援等多种版本。";
 		buyPrice = 13240000;
 		virtualSpace = 160;
 		garageLimit = 2;
@@ -2078,7 +2078,7 @@ class CfgVehicles {
 				}; 
 			};
 			class Ion : BaseTexture {
-				displayName = "Ion"; 
+				displayName = "艾昂（Ion）";
 				textures[] = { 
 					"\a3\air_f_beta\heli_transport_02\data\skins\heli_transport_02_1_ion_co.paa",
 					"\a3\air_f_beta\heli_transport_02\data\skins\heli_transport_02_2_ion_co.paa",
@@ -2087,7 +2087,7 @@ class CfgVehicles {
 				 }; 
 			};
 			class Dahoman : BaseTexture {
-				displayName = "Dahoman"; 
+				displayName = "达霍曼（Dahoman）";
 				textures[] = { 
 					"\a3\air_f_beta\heli_transport_02\data\skins\heli_transport_02_1_dahoman_co.paa",
 					"\a3\air_f_beta\heli_transport_02\data\skins\heli_transport_02_2_dahoman_co.paa",
@@ -2102,7 +2102,7 @@ class CfgVehicles {
 		whitelistedItems[] = { "HumanitarianSupplies" };
 		class Textures {
 			class IDAP : BaseTexture {
-				displayName = "IDAP"; 
+				displayName = "IDAP（IDAP）";
 				textures[] = { 
 					"\a3\air_f_orange\heli_transport_02\data\Heli_Transport_02_1_IDAP_CO.paa",
 					"\a3\air_f_orange\heli_transport_02\data\Heli_Transport_02_2_IDAP_CO.paa",
@@ -2114,12 +2114,12 @@ class CfgVehicles {
 	};
 
 	class O_Heli_Transport_04_black_F : BaseHeli {
-		description = "The Mi-290 Taru is a heavy utility helicopter with coaxial rotors and a unique modular construction. Various mission pods allow the Taru to serve many different roles.";
+		description = "Mi-290 Taru 是一款采用共轴旋翼和独特模块化结构的重型通用直升机。不同任务舱让 Taru 能够胜任多种角色。";
 		buyPrice = 11350000;
 		garageLimit = 2;
 		class Textures {
 			class Black : BaseTexture {
-				displayName = "Black"; 
+				displayName = "黑色（Black）";
 				factions[] = { "Civilian", "Police" };
 			};
 		};
@@ -2166,13 +2166,13 @@ class CfgVehicles {
 	};
 
 	class B_Heli_Transport_03_unarmed_F : BaseHeli {
-		description = "A twin-engine, tandem rotor heavy-lift helicopter. Its primary role is the transportation of troops, vehicles and cargo.";
+		description = "这是一款双发串列双旋翼重型运输直升机，主要用于运送部队、载具和货物。";
 		buyPrice = 33400750;
 		virtualSpace = 500;
 		garageLimit = 2;
 		class Textures {
 			class Black : BaseTexture {
-				displayName = "Black"; 
+				displayName = "黑色（Black）";
 				factions[] = { "Civilian", "Police" };
 				textures[] = { 
 					"\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext01_black_co.paa",
@@ -2180,7 +2180,7 @@ class CfgVehicles {
 				 }; 
 			};
 			class Olive : BaseTexture {
-				displayName = "Olive"; 
+				displayName = "橄榄绿（Olive）";
 				textures[] = { 
 					"\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext01_co.paa",
 					"\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext02_co.paa"
@@ -2190,21 +2190,21 @@ class CfgVehicles {
 	};
 
 	class B_Heli_Attack_01_F : BaseHeli {
-		description = "A two-seat reconnaissance and target designation helicopter used to seek targets for gunships.";
+		description = "这是一款双座侦察与目标指示直升机，主要任务是为武装直升机搜索并标定目标。";
 		buyPrice = 146560000;
 		garageLimit = 1;
 		canChop = false;
 		canTransfer = false;
 	};
 	class O_Heli_Attack_02_F : B_Heli_Attack_01_F {
-		description = "A multipurpose successor to the Mi-24, the Mi-48 Kajman (designated 'Hornet') is a large gunship and attack helicopter with troop transport capacity for 8 passengers";
+		description = "Mi-48 Kajman（代号 “Hornet”）是 Mi-24 的多用途后继机型，属于大型武装攻击直升机，并具备 8 名乘客的运兵能力。";
 		buyPrice = 212340000;
 		virtualSpace = 30;
 	};
 
 	// PLANES --------------------------------------------------------------------------------------
 	class C_Plane_Civil_01_F : BasePlane {
-		description = "The Caesar BTT is one of the fastest fixed-gear, single-engine piston aircraft, reaching a speed of 235 knots (435 km/h) true air speed at 25,000 feet (7,600 m).";
+		description = "Caesar BTT 是固定起落架单发活塞机中速度最快的机型之一，在 25,000 英尺（7,600 m）高度可达到 235 节（435 km/h）真空速。";
 		buyPrice = 1256000;
 		virtualSpace = 140;
 		whitelistedItems[] = { "StolenCargo" };
@@ -2212,7 +2212,7 @@ class CfgVehicles {
 	class C_Plane_Civil_01_racing_F : C_Plane_Civil_01_F { buyPrice = 1375000; };
 
 	class B_T_VTOL_01_infantry_F : BasePlane {
-		description = "The V-44X Blackfish's third-generation tilt-rotor VTOL technology allows this long endurance aircraft to conveniently utilize a wide range of airfields and runways.";
+		description = "V-44X Blackfish 采用第三代倾转旋翼 VTOL 技术，使这款长航时飞机能够方便地使用多种机场和跑道。";
 		buyPrice = 75500000;
 		virtualSpace = 650;
 	};
@@ -2222,7 +2222,7 @@ class CfgVehicles {
 	};
 
 	class O_T_VTOL_02_infantry_F : BasePlane {
-		description = "The most promising prototype built by CSAT engineers presents an extremely progressive design with many unique features and top-notch bleeding-edge technologies.";
+		description = "这款由 CSAT 工程师打造的前沿原型机采用极具未来感的设计，融合了多项独特特性与尖端技术。";
 		buyPrice = 115650000;
 		virtualSpace = 180;
 	};
@@ -2232,30 +2232,30 @@ class CfgVehicles {
 	};
 
 	class I_Plane_Fighter_03_CAS_F : BasePlane {
-		description = "The A-143 Buzzard is a single seat, light, multipurpose combat aircraft able to carry a wide range of equipment and weaponry.";
+		description = "A-143 Buzzard 是一款单座轻型多用途战机，能够挂载多种装备与武器。";
 		buyPrice = 73350000;
 	};
 	class I_Plane_Fighter_04_F : BasePlane { 
-		description = "The A-149 Gryphon is a fourth-generation, single-seat, single-engine, and all-weather tactical fighter jet.";
+		description = "A-149 Gryphon 是一款第四代单座单发全天候战术战斗机。";
 		buyPrice = 75500000; 
 	};
 	
 	class B_Plane_CAS_01_F : BasePlane { 
-		description = "The A-164 Wipeout is a single-seat aircraft used for close air support and air interdiction.";
+		description = "A-164 Wipeout 是一款单座攻击机，主要用于近距空中支援与空中阻绝任务。";
 		buyPrice = 90500000; 
 	};
 	class B_Plane_Fighter_01_F : BasePlane { 
-		description = "The F/A-181 Black Wasp II is a fifth-generation, single-seat, twin-engine, all-weather tactical fighter jet.";
+		description = "F/A-181 Black Wasp II 是一款第五代单座双发全天候战术战斗机。";
 		buyPrice = 105500000; 
 	};
 	class B_Plane_Fighter_01_Stealth_F : B_Plane_Fighter_01_F { buyPrice = 115600000; };
 
 	class O_Plane_CAS_02_F : BasePlane { 
-		description = "The To-199 Neophron is a new addition to CSAT air forces. An agile single-seat aircraft is used for close air support but can also take down air threats.";
+		description = "To-199 Neophron 是 CSAT 空军的新锐机型。这款机动灵活的单座战机既能执行近距空中支援，也具备对空作战能力。";
 		buyPrice = 86500000; 
 	};
 	class O_Plane_Fighter_02_F : BasePlane { 
-		description = "The To-201 Shikra is a fifth-generation, single-seat, twin-engine, all-weather tactical fighter jet.";
+		description = "To-201 Shikra 是一款第五代单座双发全天候战术战斗机。";
 		buyPrice = 115500000;
 	};
 	class O_Plane_Fighter_02_Stealth_F : O_Plane_Fighter_02_F { buyPrice = 130500000; };

@@ -23,14 +23,14 @@ if (_action isEqualTo 0) then {
 		_time = _time + getNumber (_missionCfg >> "flipTime");
 	};
 
-	if ([format["Flipping %1", _name], _time, [_vehicle], { !(isNull (_this select 0)) && { alive (_this select 0) } && { (player distance (_this select 0)) <= 5 } }, {
+	if ([format["正在扶正 %1", _name], _time, [_vehicle], { !(isNull (_this select 0)) && { alive (_this select 0) } && { (player distance (_this select 0)) <= 5 } }, {
 		_this params [ "_vehicle" ];
 
 		if (isNull _vehicle || { (player distance _vehicle) > 5 }) exitWith {};
 
 		[_vehicle, 1] remoteExecCall ["ULP_fnc_flipVehicle", _vehicle];
 		
-		["You have flipped this vehicle..."] call ULP_fnc_hint;
+		["你已将这辆载具扶正..."] call ULP_fnc_hint;
 	}, {}] call ULP_UI_fnc_startProgress) then {
 		closeDialog 0;
 	};

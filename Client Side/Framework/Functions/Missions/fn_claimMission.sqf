@@ -18,12 +18,12 @@ private _typeCfg = missionConfigFile >> "CfgMissions" >> _type;
 if !(isClass _typeCfg) exitWith { false };
 
 if !([player, getArray (_typeCfg >> "factions")] call ULP_fnc_isFaction) exitWith {
-	["Your faction can't do this mission..."] call ULP_fnc_hint;
+	["你的阵营无法执行这个任务..."] call ULP_fnc_hint;
 	false
 };
 
 if !(call compile getText(_typeCfg >> "conditions")) exitWith {
-	["You don't meet the requirements to do this mission..."] call ULP_fnc_hint;
+	["你目前不满足执行这个任务的条件..."] call ULP_fnc_hint;
 	false
 };
 

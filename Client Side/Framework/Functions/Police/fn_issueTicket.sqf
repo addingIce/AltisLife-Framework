@@ -12,7 +12,7 @@ _this params [
 if (isNull _unit  || { [player] call ULP_fnc_isSurrendered } || { [player] call ULP_fnc_isRestrained } || { isDowned(player) } || { isDowned(_unit) }) exitWith {};
 
 if !([player, ["Police"]] call ULP_fnc_isFaction) exitWith {
-	["You must be a police officer to issue a penalty notice!"] call ULP_fnc_hint;
+	["只有 Police 才能开具罚单！"] call ULP_fnc_hint;
 };
 
 [
@@ -27,11 +27,11 @@ if !([player, ["Police"]] call ULP_fnc_isFaction) exitWith {
 		["TicketRecieved", [player, _fine]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
 		["IssuedFine", [[player, true] call ULP_fnc_getName, [_unit, true] call ULP_fnc_getName, format ["%1%2", "£", [_fine] call ULP_fnc_numberText]]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 
-		[format["You have issued <t color='#B92DE0'>%1</t> a penalty notice of <t color='#B92DE0'>%2</t>", [_unit, true] call ULP_fnc_getName, format ["%1%2", "£", [_fine] call ULP_fnc_numberText]]] call ULP_fnc_hint;
+		[format["你已向 <t color='#B92DE0'>%1</t> 开出一张金额为 <t color='#B92DE0'>%2</t> 的罚单。", [_unit, true] call ULP_fnc_getName, format ["%1%2", "£", [_fine] call ULP_fnc_numberText]]] call ULP_fnc_hint;
 		
 		[player, missionConfigFile >> "CfgReputation" >> "Types" >> "IssueTicket"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
 
-		[30, "Issued Ticket"] call ULP_fnc_addXP;
+		[30, "开具罚单"] call ULP_fnc_addXP;
 		
 		["FirstTicket"] call ULP_fnc_achieve;
 

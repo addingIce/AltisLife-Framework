@@ -26,14 +26,14 @@ if (_engineOn) then {
 
 		if (BANK < _fine) exitWith {
 			if (time >= _vehicle getVariable ["clamp_notify", 0]) then {
-				[format ["Your vehicle has been clamped by <t color='#B92DE0'>%1</t> and you can't afford the <t color='#B92DE0'>%2%3</t> fine...", _finer, "£", [_fine] call ULP_fnc_numberText]] call ULP_fnc_hint;
+				[format ["你的载具已被 <t color='#B92DE0'>%1</t> 夹轮，而且你付不起 <t color='#B92DE0'>%2%3</t> 的罚金...", _finer, "£", [_fine] call ULP_fnc_numberText]] call ULP_fnc_hint;
 			};
 			_vehicle setVariable ["clamp_notify", time + 3];
 		};
 
 		[
-			(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "Vehicle Fine", ["Pay", "Cancel"],
-			format ["%1 has clamped your vehicle and given you a fine of %2%3", _finer, "£", [_fine] call ULP_fnc_numberText], [_vehicle, _fine, _steamid],
+			(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "车辆罚单", ["支付", "取消"],
+			format ["%1 已对你的载具执行夹轮，并开出了 %2%3 的罚金。", _finer, "£", [_fine] call ULP_fnc_numberText], [_vehicle, _fine, _steamid],
 			{	
 				_this params [ "_vehicle", "_fine", "_steamid" ];
 
@@ -41,14 +41,14 @@ if (_engineOn) then {
 					_vehicle engineOn true;
 					_vehicle setVariable ["clamp_fine", nil, true];
 
-					[format ["You have paid the fine of <t color='#B92DE0'>%1%2</t> and your vehicle has had the clamp removed...", "£", [_fine] call ULP_fnc_numberText]] call ULP_fnc_hint;
+					[format ["你已支付 <t color='#B92DE0'>%1%2</t> 的罚金，载具上的夹轮已被移除...", "£", [_fine] call ULP_fnc_numberText]] call ULP_fnc_hint;
 
 					private _unit = [_steamid] call ULP_fnc_playerByUID;
 					if (!(isNull _unit) && { [player, ["Police", "Hato"]] call ULP_fnc_isFaction }) then {
 						["ClampFinePaid", [profileName, _vehicle, _fine]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
 					};
 				} else {
-					["You don't have enough money on you to pay the fine..."] call ULP_fnc_hint;
+					["你身上的钱不够支付这笔罚金..."] call ULP_fnc_hint;
 				};
 			}, {}, false
 		] call ULP_fnc_confirm;

@@ -11,12 +11,12 @@ class MessageToolbox : Life_RscToolbox {
 	columns = 2;
 	fade = 0;
 	strings[] = {
-		"Contacts",
-		"Inbox"
+		"联系人",
+		"收件箱"
 	};
 	tooltips[] = {
-		"Contacts",
-		"Inbox"
+		"联系人",
+		"收件箱"
 	};
 };
 
@@ -43,7 +43,7 @@ class ReplyBackground: Life_RscText {
 class ReplyPlaceholder : Life_RscText {
 	style = "0x10";
     idc = 23042;
-	text = "Type your reply here...";
+	text = "在这里输入回复内容...";
 	colorText[] = {1, 1, 1, 0.4};
     SAFEZONE_X(UI_X);
 	SAFEZONE_Y((UI_Y + (MARGIN_Y * 3)) + (((UI_HEIGHT - (MARGIN_Y * 3)) * 0.7) + (MARGIN_Y / 2)));
@@ -53,7 +53,7 @@ class ReplyPlaceholder : Life_RscText {
 
 class MessagePlaceholder : ReplyPlaceholder {
     idc = 23043;
-	text = "Type your message here...";
+	text = "在这里输入消息内容...";
     SAFEZONE_X(UI_X);
 	SAFEZONE_Y(UI_Y + (MARGIN_Y * 3));
 	SAFEZONE_W(((UI_WIDTH - (MARGIN_X / 2)) * 0.7) - (MARGIN_X / 2));
@@ -85,7 +85,7 @@ class ContactsList: Life_RscListBox {
 
 class SendMessage : ULP_RscButtonClean {
 	idc = 23039;
-	text = "<t align = 'center'>Send Message</t>";
+	text = "<t align = 'center'>发送消息</t>";
 	SAFEZONE_X(UI_X + (((UI_WIDTH - (MARGIN_X / 2)) * 0.7) + MARGIN_X));
 	SAFEZONE_Y((UI_Y + (MARGIN_Y * 3)) + (UI_HEIGHT - (MARGIN_Y * 3)) - (MARGIN_Y * 2));
 	SAFEZONE_W(((UI_WIDTH - (MARGIN_X / 2)) * 0.3) - (MARGIN_X / 2));
@@ -139,17 +139,17 @@ class InboxListHeader: Life_RscListNBox {
 
 	class Items {
 		class Type {
-			text = "Message Type";
+			text = "消息类型";
 			value = -1;
 			data = "data";
 		};
 		class Sender {
-			text = "Sender";
+			text = "发送者";
 			value = -1;
 			data = "data";
 		};
 		class Read {
-			text = "Read";
+			text = "已读";
 			value = -1;
 			data = "data";
 		};
@@ -184,7 +184,7 @@ class InboxList : Life_RscListNBox {
 
 class DeleteMessage : ULP_RscButtonClean {
 	idc = 23050;
-	text = "<t align = 'center'>Delete</t>";
+	text = "<t align = 'center'>删除</t>";
 	onButtonClick = "_this call ULP_fnc_deleteMessage;";
 	SAFEZONE_X(UI_X + (((UI_WIDTH - (MARGIN_X / 2)) * 0.5) + MARGIN_X));
 	SAFEZONE_Y((UI_Y + (MARGIN_Y * 3)) + (UI_HEIGHT - (MARGIN_Y * 3)) - (MARGIN_Y * 2));

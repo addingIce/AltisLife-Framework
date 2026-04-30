@@ -33,14 +33,14 @@ private _texture = _texList lbData (lbCurSel _texList);
 private _textureCfg = _missionCfg >> "Textures" >> _texture;
 if (isClass _textureCfg) then {
 	if !([configName _missionCfg, _texture] call ULP_fnc_isTextureUnlocked) then {
-		[format ["The texture <t color='#B92DE0'>%1</t> is currently locked, you'll have to unlock it before you can use it!", getText (_textureCfg >> "displayName")]] call ULP_fnc_hint;
+		[format ["涂装 <t color='#B92DE0'>%1</t> 目前仍处于锁定状态，解锁后才能使用！", getText (_textureCfg >> "displayName")]] call ULP_fnc_hint;
 		breakOut "fn_buyVehicle";
 	};
 };
 
 [
-	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "Confirmation", ["Yes", "No"],
-	format ["<t color='#B92DE0'>%1</t> requires DLC that you don't have, are you sure you want to purchase?", _name], 
+	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "确认", ["是", "否"],
+	format ["<t color='#B92DE0'>%1</t> 需要你尚未拥有的 DLC，确定仍要购买吗？", _name],
 	[_display, _missionCfg, _buyPrice, _texture],
 	{	
 		_this params [ "_display", "_missionCfg", "_buyPrice", "_texture" ];
@@ -59,7 +59,7 @@ if (isClass _textureCfg) then {
 		} forEach _spawns;
 
 		if (isNil "_spawn") exitWith {
-			["There are no available spawn points!"] call ULP_fnc_hint;
+			["当前没有可用的出生点！"] call ULP_fnc_hint;
 		};
 
 		private _faction = [player] call ULP_fnc_getFaction;
@@ -89,8 +89,8 @@ if (isClass _textureCfg) then {
 						if (["CompanyCars"] call ULP_fnc_hasGroupPerk) then { _limit = _limit * 2 };
 						
 						[_price, false, "Limit Refund"] call ULP_fnc_addMoney;
-						[([format ["Your purchase was unable to be made as you've reached the max garagable limit for %1 of <t color='#B92DE0'>%2</t>", _name, [_limit] call ULP_fnc_numberText], 
-							format ["You've been refunded <t color='#B92DE0'>%1%2</t> for %3 as you've reached the max garagable limit of <t color='#B92DE0'>%4</t>...", "£", [_price] call ULP_fnc_numberText, _name, [_limit] call ULP_fnc_numberText]] select (_price > 0))] call ULP_fnc_hint;
+						[([format ["你无法完成这次购买，因为 %1 的可入库上限已达到 <t color='#B92DE0'>%2</t>。", _name, [_limit] call ULP_fnc_numberText],
+							format ["由于 %3 的可入库上限已达到 <t color='#B92DE0'>%4</t>，系统已向你退还 <t color='#B92DE0'>%1%2</t>...", "£", [_price] call ULP_fnc_numberText, _name, [_limit] call ULP_fnc_numberText]] select (_price > 0))] call ULP_fnc_hint;
 					};
 
 					private _vehicle = _params call ULP_fnc_createVehicle;
@@ -123,6 +123,6 @@ if (isClass _textureCfg) then {
 			closeDialog 0;
 		};
 
-		[format["You can't afford to pay for this vehicle. You need £%1.", [_buyPrice] call ULP_fnc_numberText]] call ULP_fnc_hint;
+		[format["你的资金不足，购买这辆载具需要 £%1。", [_buyPrice] call ULP_fnc_numberText]] call ULP_fnc_hint;
 	}, {}, false, _hasDlc
 ] call ULP_fnc_confirm;

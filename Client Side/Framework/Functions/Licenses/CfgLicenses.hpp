@@ -1,7 +1,7 @@
 class CfgLicenses {
     class BaseLicense {
         factions[] = { "Civilian", "Dunamis" };
-        description = "The base requirement for the processing of goods";
+        description = "进行货物加工所需的基础许可";
         class Settings {
             isVisible = false;
             isRemovable = false;
@@ -10,8 +10,8 @@ class CfgLicenses {
     };
 
     class Driving : BaseLicense {
-        displayName = "Driving Licence";
-        description = "The base requirement for purchasing a car/van";
+        displayName = "驾驶执照（Driving Licence）";
+        description = "购买汽车或厢式车的基础条件";
         buyPrice = 1000;
         class Settings {
             isVisible = true;
@@ -20,111 +20,111 @@ class CfgLicenses {
     };
 
     class Trucking : Driving {
-        displayName = "Trucking Licence";
-        description = "The base requirement for purchasing a goods vehicle";
+        displayName = "货运执照（Trucking Licence）";
+        description = "购买货运车辆的基础条件";
         buyPrice = 50000;
         class Settings : Settings {};
         conditions = "[""Driving""] call ULP_fnc_hasLicense && { !([] call ULP_fnc_isOnTutorial) }";
     };
 
     class Boating : Trucking {
-        displayName = "Boating Licence";
-        description = "The base requirement for purchasing a boat";
+        displayName = "船舶执照（Boating Licence）";
+        description = "购买船只的基础条件";
         buyPrice = 6500;
         class Settings : Settings {};
     };
 
     class Piloting : Trucking {
-        displayName = "Piloting Licence";
-        description = "The base requirement for purchasing a helicopter/plane";
+        displayName = "飞行执照（Piloting Licence）";
+        description = "购买直升机或飞机的基础条件";
         buyPrice = 500000;
         class Settings : Settings {};
     };
 
     class Home : Driving {
-        displayName = "Homeowner's Approval";
-        description = "The base requirement for purchasing a property";
+        displayName = "房产购买许可（Homeowner's Approval）";
+        description = "购买房产的基础条件";
         buyPrice = 3000000;
         class Settings : Settings {};
     };
 
     class Taxi : Driving {
-        displayName = "Taxi Altis Worker";
-        description = "Approved to operate as a taxi driver on Altis";
+        displayName = "Taxi Altis 从业许可（Taxi Altis Worker）";
+        description = "获准在阿尔蒂斯从事出租车司机工作";
         buyPrice = 25000;
         onBought = "[""Employment""] call ULP_fnc_achieve;";
         class Settings : Settings {};
     };
 
     class Solicitor : Taxi {
-        displayName = "Altis Solicitors";
-        description = "Approved to operate as a solicitor on Altis";
+        displayName = "Altis Solicitors 执业许可（Altis Solicitors）";
+        description = "获准在阿尔蒂斯从事律师工作";
         buyPrice = 30000;
         class Settings : Settings {};
     };
 
     class News : Taxi {
-        displayName = "AAN World News Reporter";
-        description = "Approved to operate as a news reporter on Altis";
+        displayName = "AAN World News 记者证（AAN World News Reporter）";
+        description = "获准在阿尔蒂斯从事新闻记者工作";
         buyPrice = 30000;
         class Settings : Settings {};
     };
 
     class IDAP : Driving {
-        displayName = "IDAP Volunteer";
-        description = "Volunteered yourself to work with IDAP";
+        displayName = "IDAP 志愿者（IDAP Volunteer）";
+        description = "已报名成为 IDAP 志愿者";
         buyPrice = 0;
         class Settings : Settings {};
     };
 
     class Handgun : Driving {
-        displayName = "Handgun Certificate";
-        description = "Certification permitting the ownership of a handgun";
+        displayName = "手枪持有证（Handgun Certificate）";
+        description = "允许持有手枪的许可证明";
         buyPrice = 85000;
         class Settings : Settings {};
     };
 
     class SMG : Driving {
-        displayName = "SMG Certificate";
-        description = "Certification permitting the ownership of a SMG";
+        displayName = "冲锋枪持有证（SMG Certificate）";
+        description = "允许持有冲锋枪的许可证明";
         buyPrice = 100000;
         class Settings : Settings {};
     };
 
     class Security : Driving {
-        displayName = "Security Contractor";
-        description = "Certification as a Security Contractor for a company";
+        displayName = "企业安保许可（Security Contractor）";
+        description = "获准以企业安保承包商身份执业";
         buyPrice = 350000;
         class Settings : Settings {};
         conditions = "[""Security""] call ULP_fnc_hasGroupPerk";
     };
 
     class Protection : Driving {
-        displayName = "Protection Officer";
-        description = "Certification as a Protection Officer for a political party";
+        displayName = "政要保护许可（Protection Officer）";
+        description = "获准以政党保护官身份执业";
         buyPrice = 350000;
         class Settings : Settings {};
         conditions = "[""Protection""] call ULP_fnc_hasGroupPerk";
     };
 
     class Hunting : Driving {
-        displayName = "Hunting Certificate";
-        description = "Certification permitting the hunting of wild animals";
+        displayName = "狩猎许可（Hunting Certificate）";
+        description = "允许猎捕野生动物的许可证明";
         buyPrice = 1140000;
         class Settings : Settings {};
     };
 
     class Rebel : BaseLicense {
-        displayName = "Rebel Access";
-        description = "Purchased access to utilise rebel supplies on Altis";
+        displayName = "Rebel 访问权限（Rebel Access）";
+        description = "已购买使用阿尔蒂斯 Rebel 物资的权限";
         buyPrice = 5000000;
         onBought = "[""JoinRebel""] call ULP_fnc_achieve;";
         class Settings {};
     };
 
     class Blackmarket : BaseLicense {
-        displayName = "Blackmarket Access";
-        description = "Purchased access to utilise blackmarket supplies on Altis";
+        displayName = "黑市访问权限（Blackmarket Access）";
+        description = "已购买使用阿尔蒂斯黑市物资的权限";
         buyPrice = 10000000;
         class Settings {};
         conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Blackmarketer""] call ULP_fnc_hasPerk || [""Blackmarket""] call ULP_fnc_hasGroupPerk }";
@@ -132,91 +132,91 @@ class CfgLicenses {
 
     // Processing Sites
     class Schnapps : BaseLicense {
-        displayName = "Schnapps Processing";
+        displayName = "Schnapps 加工许可（Schnapps Processing）";
         buyPrice = 15000;
         class Settings {};
     };
 
     class Tobacco : BaseLicense {
-        displayName = "Tobacco Processing";
+        displayName = "烟草加工许可（Tobacco Processing）";
         buyPrice = 30000;
         class Settings {};
     };
 
     class Copper : BaseLicense {
-        displayName = "Copper Processing";
+        displayName = "铜矿加工许可（Copper Processing）";
         buyPrice = 25000;
         class Settings {};
     };
 
     class Silver : BaseLicense {
-        displayName = "Silver Processing";
+        displayName = "银矿加工许可（Silver Processing）";
         buyPrice = 40000;
         class Settings {};
     };
 
     class Iron : BaseLicense {
-        displayName = "Iron Processing";
+        displayName = "铁矿加工许可（Iron Processing）";
         buyPrice = 200000;
         class Settings {};
     };
 
     class Salt : BaseLicense {
-        displayName = "Salt Processing";
+        displayName = "盐加工许可（Salt Processing）";
         buyPrice = 150000;
         class Settings {};
     };
 
     class Sand : BaseLicense {
-        displayName = "Sand Processing";
+        displayName = "沙料加工许可（Sand Processing）";
         buyPrice = 90000;
         class Settings {};
     };
 
     class Oil : BaseLicense {
-        displayName = "Oil Processing";
+        displayName = "石油加工许可（Oil Processing）";
         buyPrice = 800000;
         class Settings {};
     };
 
     class Diamond : BaseLicense {
-        displayName = "Diamond Processing";
+        displayName = "钻石加工许可（Diamond Processing）";
         buyPrice = 750000;
         class Settings {};
     };
 
     class Uranium : BaseLicense {
-        displayName = "Uranium Processing";
+        displayName = "铀矿加工许可（Uranium Processing）";
         buyPrice = 2000000;
         class Settings {};
     };
 
     class Weed : BaseLicense {
-        displayName = "Weed Processing";
+        displayName = "大麻加工许可（Weed Processing）";
         buyPrice = 120000;
         class Settings {};
     };
 
     class Heroin : BaseLicense {
-        displayName = "Heroin Processing";
+        displayName = "海洛因加工许可（Heroin Processing）";
         buyPrice = 350000;
         class Settings {};
     };
 
     class Cocaine : BaseLicense {
-        displayName = "Cocaine Processing";
+        displayName = "可卡因加工许可（Cocaine Processing）";
         buyPrice = 800000;
         class Settings {};
     };
 
     class Meth : BaseLicense {
-        displayName = "Meth Processing";
+        displayName = "冰毒加工许可（Meth Processing）";
         buyPrice = 1000000;
         class Settings {};
     };
 
     class Weapons : BaseLicense {
-        displayName = "Weapons Processing";
+        displayName = "武器加工许可（Weapons Processing）";
         buyPrice = 2500000;
         class Settings {};
     };

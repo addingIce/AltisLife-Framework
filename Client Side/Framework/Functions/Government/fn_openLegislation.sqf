@@ -5,7 +5,7 @@
 scopeName "fn_openLegislation";
 
 if !([] call ULP_fnc_isGovernor) exitWith {
-	["Only the governor can access this system..."] call ULP_fnc_hint;
+	["只有 Governor 总督可以使用这个系统。"] call ULP_fnc_hint;
 };
 
 if (createDialog "DialogLegislation") then {

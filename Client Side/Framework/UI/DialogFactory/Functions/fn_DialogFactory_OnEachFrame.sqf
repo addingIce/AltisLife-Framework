@@ -22,10 +22,10 @@ if !(_factoryOrder isEqualTo []) then {
 
 	private _itemCfg = missionConfigFile >> "CfgVirtualItems" >> configName _productCfg;
 
-	_ctrlText ctrlSetText format ["Producing %1 %2(s)", _quantity, getText (_itemCfg >> "displayName")];
+	_ctrlText ctrlSetText format ["正在生产 %1 个 %2", _quantity, getText (_itemCfg >> "displayName")];
 	_ctrlProgress progressSetPosition ((serverTime - _startTime) / getNumber (_productCfg >> "tickTime"));
 } else {
-	_ctrlText ctrlSetText "No current order...";
+	_ctrlText ctrlSetText "当前没有生产订单...";
 };
 
 private _index = lbCurSel _list;

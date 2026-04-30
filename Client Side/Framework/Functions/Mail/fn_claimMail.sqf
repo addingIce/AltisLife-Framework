@@ -18,7 +18,7 @@ private _list = _display displayCtrl 5303;
 
 private _selected = _list lnbData [lnbCurSelRow _list, 0];
 if (_selected isEqualTo "") exitWith {
-	["You must select an item to claim from your mail box"] call ULP_fnc_hint;
+	["你必须先从邮箱中选择一个要领取的物品。"] call ULP_fnc_hint;
 };
 
 _button ctrlEnable false;
@@ -48,7 +48,7 @@ switch (_type) do {
 		private _texture = _data param [1, ""];
 
 		if (_totalAmount isEqualTo 0 && { [_className, _texture] call ULP_fnc_isTextureUnlocked }) exitWith {
-			["You already have this texture unlocked"] call ULP_fnc_hint;
+			["这款涂装你已经解锁过了。"] call ULP_fnc_hint;
 			player setVariable ["claiming_mail", nil];
 			_button ctrlEnable true;
 			breakOut "fn_claimMail";
@@ -77,7 +77,7 @@ switch (_type) do {
 	case "VirtualItem": {
 		private _itemCfg = missionConfigFile >> "CfgVirtualItems" >> _className;
 
-		if !(isClass _itemCfg) exitWith { ["An error occured while claiming your items"] call ULP_fnc_hint; };
+		if !(isClass _itemCfg) exitWith { ["领取物品时发生错误。"] call ULP_fnc_hint; };
 
 		private _weight = getNumber (_itemCfg >> "weight");
 
@@ -90,7 +90,7 @@ switch (_type) do {
 		_claimedAmount = _maxQuantity min _totalAmount;
 
 		if (_claimedAmount <= 0 || { !([_className, _claimedAmount, false] call ULP_fnc_handleItem) } ) exitWith {
-			["You don't have enough space to take any of these items"] call ULP_fnc_hint;
+			["你的空间不足，无法领取这些物品。"] call ULP_fnc_hint;
 			player setVariable ["claiming_mail", nil];
 			_button ctrlEnable true;
 			breakOut "fn_claimMail";
@@ -115,16 +115,16 @@ switch (_type) do {
 };
 
 if (_claimedAmount <= 0) exitWith {
-	["You don't have enough space to take any of these items"] call ULP_fnc_hint;
+	["你的空间不足，无法领取这些物品。"] call ULP_fnc_hint;
 	player setVariable ["claiming_mail", nil];
 	_button ctrlEnable true;
 };
 
 [getPlayerUID player, "Mail", [_id, _type, _className, _data, _totalAmount, _claimedAmount]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 
-[format ["You claimed %1", [
-	format ["%1 of these items but couldn't carry all of them", _claimedAmount], 
-	"all of these items"
+[format ["你已领取%1", [
+	format ["其中 %1 件已成功领取，但你没法一次带走全部物品", _claimedAmount],
+	"全部物品"
 ] select (_claimedAmount isEqualTo _totalAmount)]] call ULP_fnc_hint;
 
 _display setVariable ["mail_claimed", (["MailClaimed", {

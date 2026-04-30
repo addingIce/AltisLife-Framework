@@ -26,7 +26,7 @@ if (_targets isEqualType "") then {
 };
 
 if ([getNumber (_type >> "confirmSend")] call ULP_fnc_bool) then {
-	[format ["Message Sent"]] call ULP_fnc_hint;
+	["消息已发送"] call ULP_fnc_hint;
 };
 
 [_type, _message, [format[getText (_type >> "sender"), [player] call ULP_fnc_getName], getPlayerUID player]] remoteExecCall ["ULP_fnc_receiveMessage", _targets];

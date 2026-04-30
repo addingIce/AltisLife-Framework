@@ -1,29 +1,29 @@
 class CfgDebriefing {
     class Abort {
-        title = "Left the Game";
-        subtitle = "Thanks For Playing!";
-        description = "Your data has been synced and you've returned to the lobby.";
+        title = "已离开游戏";
+        subtitle = "感谢游玩！";
+        description = "你的数据已同步，并已返回大厅。";
         pictureBackground = "";
         picture = "\A3\ui_f\data\GUI\Cfg\Hints\Doors_ca.paa";
         pictureColor[] = {1,1,1,1};
     };
     class InitFailed : Abort {
-        title = "Unable to Join";
-        subtitle = "Player data query failed";
-        description = "Please contact a member of staff for assistance";
+        title = "无法加入";
+        subtitle = "玩家数据查询失败";
+        description = "请联系管理人员寻求帮助";
     };
     class CheatCheck : InitFailed {
-        title = "Unable to Join";
-        subtitle = "Failed to validate state";
+        title = "无法加入";
+        subtitle = "状态校验失败";
     };
     class NotWhitelisted : Abort {
-        title = "Unable to Join";
-        subtitle = "You are not currently whitelisted";
-        description = "Please contact a member of this faction's command for more information";
+        title = "无法加入";
+        subtitle = "你当前不在白名单中";
+        description = "请联系该阵营的管理人员了解详情";
     };
     class Blacklisted : Abort {
-        title = "Unable to Join";
-        subtitle = "You are currently blacklisted";
-        description = "Please contact a member of this faction's command for more information";
+        title = "无法加入";
+        subtitle = "你当前已被列入黑名单";
+        description = "请联系该阵营的管理人员了解详情";
     };
 };

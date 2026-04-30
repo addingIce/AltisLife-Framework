@@ -1,4 +1,4 @@
-overviewText = "A roleplaying gamemode developed by Scarso and Lewis for mantlenetwork.co.uk!";
+overviewText = "由 Scarso 与 Lewis 为 mantlenetwork.co.uk 打造的角色扮演模式！";
 disableRandomization[]= { "All" };
 
 // Should change to something unique to your server
@@ -20,14 +20,14 @@ class Header {
 class CfgWorlds {
 	class Any {
 		author = "Scarso and Lewis";
-		description = "MantleNetwork.co.uk Altis Life";
+		description = "MantleNetwork.co.uk Altis Life 角色扮演服务器";
 		pictureMap = "";
 		pictureShot = "data\load.paa";
 		loadingTexts[] = { 
-			"Watch one of our investors @ youtube.com/lttropical",
-			"Watch out for Tom Skyline, he's a known felon",
-			"The word is mightier than the bullet - speak before shooting",
-			"Real eyes, realise, real lies"
+			"欢迎来到 Mantle Network 的 Altis Life 世界",
+			"遇事先沟通，开枪前先开口",
+			"记得查看服务器规则，避免不必要的处罚",
+			"祝你在 Altis 岛玩得开心，安全发财"
 		};
 	};
 };

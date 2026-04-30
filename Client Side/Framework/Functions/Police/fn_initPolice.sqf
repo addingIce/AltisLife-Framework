@@ -17,10 +17,10 @@ scopeName "fn_initPolice";
 	if (_name isEqualTo "" || { _amount < 0 }) exitWith {};
 
 	if (_paid) then {
-		[format ["<t color='#B92DE0'>%1</t> has paid their penalty notice of <t color='#B92DE0'>%2%3</t>", _name, "£", [_amount] call ULP_fnc_numberText]] call ULP_fnc_hint;
-		[round (_amount / 2), true, format ["%1's Fine", _name]] call ULP_fnc_addMoney;
+		[format ["<t color='#B92DE0'>%1</t> 已支付金额为 <t color='#B92DE0'>%2%3</t> 的罚单。", _name, "£", [_amount] call ULP_fnc_numberText]] call ULP_fnc_hint;
+		[round (_amount / 2), true, format ["%1 的罚单", _name]] call ULP_fnc_addMoney;
 	} else {
-		[format ["<t color='#B92DE0'>%1</t> has refused to or couldn't pay their penalty notice...", _name]] call ULP_fnc_hint;
+		[format ["<t color='#B92DE0'>%1</t> 拒绝支付或无力支付罚单。", _name]] call ULP_fnc_hint;
 	};
 }] call ULP_fnc_addEventHandler;
 
@@ -33,8 +33,8 @@ scopeName "fn_initPolice";
 	if (isNull _unit || { _amount < 0 }) exitWith {};
 
 	[
-		(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "Penalty Notice", ["Pay", "Refuse"],
-		format ["%1 has issued you a penalty notice of %2%3", [_unit, true] call ULP_fnc_getName, "£", [_amount] call ULP_fnc_numberText], [_unit, _amount],
+		(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "罚单", ["支付", "拒绝"],
+		format ["%1 向你开出了一张金额为 %2%3 的罚单。", [_unit, true] call ULP_fnc_getName, "£", [_amount] call ULP_fnc_numberText], [_unit, _amount],
 		{	
 			_this params [ "_unit", "_amount" ];
 
@@ -42,12 +42,12 @@ scopeName "fn_initPolice";
 
 			private _name = [player, true] call ULP_fnc_getName;
 
-			if ([_amount, true, "Penalty Notice"] call ULP_fnc_removeMoney) then {
-				[format ["You have paid the fixed penalty notice of <t color='#B92DE0'>%1%2</t>", "£", [_amount] call ULP_fnc_numberText]] call ULP_fnc_hint;
+			if ([_amount, true, "罚单"] call ULP_fnc_removeMoney) then {
+				[format ["你已支付金额为 <t color='#B92DE0'>%1%2</t> 的罚单。", "£", [_amount] call ULP_fnc_numberText]] call ULP_fnc_hint;
 				["TicketPaid", [_name, _amount, true]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
 				["FinePaid", [_name, format ["%1%2", "£", [_amount] call ULP_fnc_numberText]]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 			} else {
-				["You don't have enough money to pay this penalty notice..."] call ULP_fnc_hint;
+				["你的资金不足，无法支付这张罚单。"] call ULP_fnc_hint;
 				["TicketPaid", [_name, _amount, false]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
 				["FinePoor", [_name, format ["%1%2", "£", [_amount] call ULP_fnc_numberText]]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 			};
@@ -79,15 +79,15 @@ scopeName "fn_initPolice";
 	private _name = [_unit, true] call ULP_fnc_getName;
 
 	if (_licenses isEqualTo []) exitWith {
-		[format ["%1 has no licenses...", _name]] call ULP_fnc_hint;
+		[format ["%1 没有任何执照。", _name]] call ULP_fnc_hint;
 	};
 
 	if (_shown) then {
 		if (_refused) exitWith {
-			[format ["%1 refused to show you their liceneses...", _name]] call ULP_fnc_hint;
+			[format ["%1 拒绝向你出示执照。", _name]] call ULP_fnc_hint;
 		};
 
-		[format ["<t color='#FF0000'><t size='1.7' align='center'>%1</t></t><br/><t color='#FFD700'><t size='1.5' align='center'>Licenses</t></t><br/><t align='center'>%2</t>", _name, (_licenses apply {
+		[format ["<t color='#FF0000'><t size='1.7' align='center'>%1</t></t><br/><t color='#FFD700'><t size='1.5' align='center'>执照</t></t><br/><t align='center'>%2</t>", _name, (_licenses apply {
 			if (isClass (missionConfigFile >> "CfgLicenses" >> _x >> "displayName"))  exitWith {
 				getText (missionConfigFile >> "CfgLicenses" >> _x >> "displayName")
 			};
@@ -101,7 +101,7 @@ scopeName "fn_initPolice";
 
 			_display setVariable ["unit", _unit];
 			
-			(_display displayCtrl 5101) ctrlSetText format ["%1's Licenses", _name];
+			(_display displayCtrl 5101) ctrlSetText format ["%1 的执照", _name];
 
 			private _list = _display displayCtrl 5102;
 			lbClear _list;
@@ -115,7 +115,7 @@ scopeName "fn_initPolice";
 				};
 			} forEach _licenses;
 		} else {
-			[format ["Something went wrong when trying to display %1's licenses...", _name]] call ULP_fnc_hint;
+			[format ["显示 %1 的执照时出现错误。", _name]] call ULP_fnc_hint;
 		};
 	};
 }] call ULP_fnc_addEventHandler;
@@ -131,8 +131,8 @@ scopeName "fn_initPolice";
 		["LicensesShown", [player, ULP_Licenses, false]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
 	} else {
 		[
-			(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "Confirmation", ["Accept", "Decline"],
-			format ["%1 has requested to see your licenses, do you accept?", [_unit, true] call ULP_fnc_getName], [_unit],
+			(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "确认", ["同意", "拒绝"],
+			format ["%1 请求查看你的执照，你是否同意？", [_unit, true] call ULP_fnc_getName], [_unit],
 			{
 				private _unit = _this param [0, objNull];
 				if (isNull _unit) exitWith {};
@@ -156,5 +156,5 @@ scopeName "fn_initPolice";
 	
 	ULP_Licenses deleteAt (ULP_Licenses find _license);
 
-	[format ["%1 has seized your %2", [_unit, true] call ULP_fnc_getName, getText (missionConfigFile >> "CfgLicenses" >> _license >> "displayName")]] call ULP_fnc_hint;
+	[format ["%1 没收了你的 %2。", [_unit, true] call ULP_fnc_getName, getText (missionConfigFile >> "CfgLicenses" >> _license >> "displayName")]] call ULP_fnc_hint;
 }] call ULP_fnc_addEventHandler;

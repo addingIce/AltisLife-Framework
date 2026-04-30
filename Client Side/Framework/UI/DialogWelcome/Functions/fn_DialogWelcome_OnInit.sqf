@@ -18,10 +18,10 @@ private _tutorialButton = _display displayCtrl 6003;
 
 _info ctrlSetStructuredText parsetext format [
 	"<br /><img image = 'Data\Tags\logo.paa' shadow='0' align='center' size='4.5' /><br /><br />
-	Welcome to Mantle's Altis Life.<br /><br />
-	Launched in January 2025, our server utilises a fully custom framework to bring a fresh feel to Altis Life in 2025. We're a roleplay server so if you're new we encourage you to read our rules. Failing to follow the rules will see you removed from the server.<br /><br />
-	You can get yourself a <t color='#B92DE0'>£500,000</t> starting bonus by signing up to our website and linking your steam account.<br /><br />
-	• <a href='https://mantlenetwork.co.uk/' color='#D96600'>Website</a><br />
+	欢迎来到 Mantle 的 Altis Life。<br /><br />
+	我们的服务器于 2025 年 1 月上线，基于完全自研框架打造，力求带来更有新鲜感的 Altis Life 体验。这里是一个角色扮演服务器，如果你是新玩家，建议先阅读服务器规则；违反规则可能会导致你被移出服务器。<br /><br />
+	前往官网注册并绑定 Steam 账号后，你可以领取一笔 <t color='#B92DE0'>£500,000</t> 的新手奖励。<br /><br />
+	• <a href='https://mantlenetwork.co.uk/' color='#D96600'>官网</a><br />
 	• <a href='https://mantlenetwork.co.uk/discord' color='#D96600'>Discord</a>"
 ];
 
@@ -36,9 +36,9 @@ if ([] call ULP_fnc_isHobo && { [player, ["Civilian"]] call ULP_fnc_isFaction } 
 		if (isNull _continueButton) exitWith { [_thisEventHandler] call ULP_fnc_removeEachFrame; };
 
 		if (time < _delay) then {
-			_continueButton ctrlSetStructuredText parseText format["<t align = 'center'>Continue (%1)</t>", [_delay - time, "SS.MS"] call BIS_fnc_secondsToString];
+			_continueButton ctrlSetStructuredText parseText format["<t align = 'center'>继续（%1）</t>", [_delay - time, "SS.MS"] call BIS_fnc_secondsToString];
 		} else {
-			_continueButton ctrlSetStructuredText parseText "<t align = 'center'>Continue</t>";
+			_continueButton ctrlSetStructuredText parseText "<t align = 'center'>继续</t>";
 			_continueButton ctrlEnable true;
 			[_thisEventHandler] call ULP_fnc_removeEachFrame;
 		};

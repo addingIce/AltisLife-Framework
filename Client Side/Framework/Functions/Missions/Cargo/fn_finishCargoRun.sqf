@@ -34,14 +34,14 @@ private _item = getText (_missionCfg >> "cargoItem");
 (getArray (_missionCfg >> "vehicleRequirement")) params [ "", "_distance" ];
 
 if (isNull _vehicle || { !(alive _vehicle) } || { (player distance _vehicle) > _distance }) exitWith {
-	["Your original vehicle has been destroyed or you are too far away from it"] call ULP_fnc_hint;
+	["你原本使用的载具已被摧毁，或你离它太远了。"] call ULP_fnc_hint;
 	false
 };
 
 private _countRemoved = [_vehicle, _item] call ULP_fnc_wipeItemFromCargo;
 
 if !(_countRemoved isEqualTo _expectedQuantity) exitWith {
-	["Your vehicle didn't have the expected amount of cargo, no reward shall be issued."] call ULP_fnc_hint;
+	["你的载具中没有预期数量的货物，因此不会发放奖励。"] call ULP_fnc_hint;
 	false
 };
 
@@ -67,9 +67,9 @@ _gangTax = _gangTax * _countRemoved;
 
 if ([] call ULP_fnc_isGroup && { _gangTax > 0 }) then {
 	[[] call ULP_fnc_groupId, _gangTax, true] remoteExecCall ["ULP_SRV_fnc_updateGroupFunds", RSERV];
-	[format ["You've been given your cut of <t color='#B92DE0'>%1%2</t> for the cargo, earned some group xp and <t color='#B92DE0'>%1%3</t> was taken as tax by your group", "£", [_sellPrice] call ULP_fnc_numberText, [_gangTax] call ULP_fnc_numberText]] call ULP_fnc_hint;
+	[format ["你已获得这批货物的分成 <t color='#B92DE0'>%1%2</t>，同时拿到了一些队伍经验；其中 <t color='#B92DE0'>%1%3</t> 被队伍作为税金扣除。", "£", [_sellPrice] call ULP_fnc_numberText, [_gangTax] call ULP_fnc_numberText]] call ULP_fnc_hint;
 } else {
-	[format ["You've been given your cut of <t color='#B92DE0'>%1%2</t> for the cargo and earned some group xp", "£", [_sellPrice] call ULP_fnc_numberText]] call ULP_fnc_hint;
+	[format ["你已获得这批货物的分成 <t color='#B92DE0'>%1%2</t>，并拿到了一些队伍经验。", "£", [_sellPrice] call ULP_fnc_numberText]] call ULP_fnc_hint;
 };
 
 [_sellPrice, false, "Cargo Mission Cut"] call ULP_fnc_addMoney;

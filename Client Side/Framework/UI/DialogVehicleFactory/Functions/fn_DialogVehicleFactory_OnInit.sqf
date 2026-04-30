@@ -21,13 +21,13 @@ private _requiredPower = getNumber (_factoryCfg >> "requiredPower");
 private _factoryPower = _factory getVariable ["power", 0];
 
 if (_factoryPower < _requiredPower) exitWith {
-	[format ["This factory requires <t color='#B92DE0'>tier %1</t> power, currently it has <t color='#B92DE0'>tier %2</t> power.", _requiredPower, _factoryPower]] call ULP_fnc_hint;
+	[format ["这座工厂需要 <t color='#B92DE0'>%1 级</t>电力，目前只有 <t color='#B92DE0'>%2 级</t>。", _requiredPower, _factoryPower]] call ULP_fnc_hint;
 	_display closeDisplay 2;
 };
 
 _display setVariable ["factory", _factory];
 
-(_display displayCtrl 6201) ctrlSetText format ["%1 | Power Tier: %2", getText (_factoryCfg >> "displayName"), _factoryPower];
+(_display displayCtrl 6201) ctrlSetText format ["%1 | 电力等级：%2", getText (_factoryCfg >> "displayName"), _factoryPower];
 
 private _list = _display displayCtrl 6202;
 

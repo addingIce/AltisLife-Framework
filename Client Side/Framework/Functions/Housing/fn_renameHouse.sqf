@@ -18,25 +18,25 @@ _this params [
 if (isNull _house) exitWith { false };
 
 if !([_house, player, false] call ULP_fnc_isHouseOwner) exitWith {
-	["Only the house owner can change the house name!"] call ULP_fnc_hint;
+	["只有房主才能修改房屋名称！"] call ULP_fnc_hint;
 	false
 };
 
 // Stop spam...
 if (time < (_house getVariable ["building_last_renamed", 0])) exitWith {
-	["You've changed the name of this house recently, please wait..."] call ULP_fnc_hint;
+	["你刚刚修改过这栋房屋的名称，请稍后再试。"] call ULP_fnc_hint;
 	false
 };
 _house setVariable ["building_last_renamed", time + 5];
 
 if (_house getVariable ["selling", false]) exitWith {
-	["This house is being sold..."] call ULP_fnc_hint;
+	["这栋房屋正在出售中..."] call ULP_fnc_hint;
 	false
 };
 
 [
-	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "Enter House Name", ["Enter", "Cancel"],
-	format ["Type name here...", _name], [_house, [_params, _onRename]],
+	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "输入房屋名称", ["确认", "取消"],
+	"在这里输入房屋名称...", [_house, [_params, _onRename]],
 	{	
 		_this params [
 			["_house", objNull, [objNull]],
@@ -49,15 +49,15 @@ if (_house getVariable ["selling", false]) exitWith {
 		if (isNull _house) exitWith {};
 
 		if (_house getVariable ["selling", false]) exitWith {
-			["This house is already being sold!"] call ULP_fnc_hint;
+			["这栋房屋已经在出售中了！"] call ULP_fnc_hint;
 		};
 
 		if ((count _name) > getNumber (missionConfigFile >> "CfgHousing" >> "nameLength")) exitWith {
-			["This name is too long!"] call ULP_fnc_hint;
+			["这个名称太长了！"] call ULP_fnc_hint;
 		};
 
 		if ((_house getVariable ["building_name", ""]) isEqualTo _name) exitWith {
-			["You can't set the house name to the same as it's current value!"] call ULP_fnc_hint;
+			["新的房屋名称不能和当前名称相同！"] call ULP_fnc_hint;
 		};
 
 		_house setVariable ["building_name", ([_name, nil] select (_name isEqualTo "")), true];
@@ -73,7 +73,7 @@ if (_house getVariable ["selling", false]) exitWith {
 		};
 
 		[_house getVariable ["building_id", -1], _name] remoteExecCall ["ULP_SRV_fnc_setHouseName", RSERV];
-		[format ["You've renamed this house to <t color='#B92DE0'>%1</t>.", _name]] call ULP_fnc_hint;
+		[format ["你已将这栋房屋重命名为 <t color='#B92DE0'>%1</t>。", _name]] call ULP_fnc_hint;
 
 		(_fnc select 0) call (_fnc select 1);
 	}, false

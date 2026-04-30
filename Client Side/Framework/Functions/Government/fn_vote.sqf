@@ -19,33 +19,33 @@ private _list = _display displayCtrl 5202;
 
 private _candidate = (_list lbData (lbCurSel _list));
 if (_candidate isEqualTo "") exitWith {
-	["You must select someone you wish to vote for..."] call ULP_fnc_hint;
+	["你必须先选择一位要投票的候选人。"] call ULP_fnc_hint;
 };
 
 closeDialog 0;
 
 if !(missionNamespace getVariable ["ULP_SRV_Setting_Election", false]) exitWith {
-	["No election is currently taking place..."] call ULP_fnc_hint;
+	["当前没有正在进行的选举。"] call ULP_fnc_hint;
 };
 
 // Easy way to avoid spam, they'd have to relog to get past and server side would block multiple votes
 if (player getVariable ["voted", false]) exitWith {
-	["You've already voted in this election!"] call ULP_fnc_hint;
+	["你已经在本次选举中投过票了！"] call ULP_fnc_hint;
 };
 
 if (player getVariable ["voting", false]) exitWith {
-	["Your vote is already being processed!"] call ULP_fnc_hint;
+	["你的投票请求正在处理中！"] call ULP_fnc_hint;
 };
 
 player setVariable ["voting", true];
 
 ["ElectionVoteSubmitted", {
-	private _message = _this param [0, "You have successfully cast your vote in the election..."];
+	private _message = _this param [0, "你已成功完成投票。"];
 	[_message] call ULP_fnc_hint;
 
 	player setVariable ["voting", nil];
 
-	if (_message isEqualTo "You have successfully cast your vote in the election...") then {
+	if (_message isEqualTo "你已成功完成投票。") then {
 		player setVariable ["voted", true];
 
 		[player, missionConfigFile >> "CfgReputation" >> "Types" >> "Vote"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
@@ -54,5 +54,5 @@ player setVariable ["voting", true];
 	};
 }, true] call ULP_fnc_addEventHandler;
 
-["Casting Vote..."] call ULP_fnc_hint;
+["正在提交投票..."] call ULP_fnc_hint;
 [_pollingStation, player, _candidate] remoteExecCall ["ULP_SRV_fnc_submitVote", RSERV];

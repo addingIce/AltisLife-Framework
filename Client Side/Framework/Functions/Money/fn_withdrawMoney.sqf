@@ -19,12 +19,12 @@ if (isNull _display) exitWith {};
 private _group = _display getVariable ["group", false];
 
 if (_group && { !(["withdraw"] call ULP_fnc_canGroupRank) }) exitWith {
-	["You don't have permission to withdraw from group funds!"] call ULP_fnc_hint;
+	["你没有权限从队伍资金中取款！"] call ULP_fnc_hint;
 };
 
 private _amount = ([BANK, [] call ULP_fnc_groupFunds] select (_group));
 if (_amount <= 0) exitWith {
-	["You don't have anything to withdraw!"] call ULP_fnc_hint;
+	["你现在没有可提取的资金！"] call ULP_fnc_hint;
 };
 
 [
@@ -37,16 +37,16 @@ if (_amount <= 0) exitWith {
 		];
 
 		if (_group) then {
-			[format ["Attempting to withdraw %1%2...", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
+			[format ["正在尝试提取 %1%2...", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
 			[player, _value] remoteExecCall ["ULP_SRV_fnc_handleGroupFunds", RSERV];
 		} else {
 			if (_value > BANK) exitWith {
-				[format["You don't have <t color='#B92DE0'>%1%2</t> to withdraw!", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
+				[format["你的账户里没有 <t color='#B92DE0'>%1%2</t> 可供提取！", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
 			};
 
 			if ([_value, true, "Bank Withdrawal"] call ULP_fnc_removeMoney) then {
 				[_value, false, "Bank Withdrawal"] call ULP_fnc_addMoney;
-				[format["You have withdrawn <t color='#B92DE0'>%1%2</t>.", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
+				[format["你已提取 <t color='#B92DE0'>%1%2</t>。", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
 			};
 		};
 	}, false

@@ -14,7 +14,7 @@ if (!isClass _stage || { !([] call ULP_fnc_isOnTutorial) }) exitWith {};
 private _displayName = getText (_stage >> "displayName");
 private _description = getText (_stage >> "description");
 
-[format ["<t color='#008000' size='1.5px'>Tutorial<br/></t><t color='#ffffff' size='1px'>%1", _description]] call ULP_fnc_hint;
+[format ["<t color='#008000' size='1.5px'>教程<br/></t><t color='#ffffff' size='1px'>%1", _description]] call ULP_fnc_hint;
 
 private _condition = compile getText (_stage >> "condition");
 

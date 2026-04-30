@@ -1,71 +1,71 @@
 class CfgProfessions {
 	class Repairing {
-		displayName = "Repairing";
+		displayName = "维修";
 		icon = "Data\UI\Professions\repairing.paa";
-		effectDescription = "Decreases the time it takes to repair by %1%2";
+		effectDescription = "减少维修所需时间 %1%2";
 		effectCalculation = "5 * (_this select 0)"; // (_this select 0) refers to the level of this profession and (_this select 1) is the current xp.
 		xpLevel = 100;
 		maxLevel = 5;
 	};
 
 	class Fishing : Repairing {
-		displayName = "Fishing";
+		displayName = "捕鱼";
 		icon = "Data\UI\Professions\fishing.paa";
-		effectDescription = "Decreases the time it takes to catch fish by %1%2";
+		effectDescription = "减少捕鱼所需时间 %1%2";
 	};
 
 	class Gathering : Repairing {
-		displayName = "Gathering";
+		displayName = "采集";
 		icon = "Data\UI\Professions\gathering.paa";
-		effectDescription = "Decreases the time it takes to gather by %1%2";
+		effectDescription = "减少采集所需时间 %1%2";
 		effectCalculation = "5 * (_this select 0)";
 		maxLevel = 10;
 	};
 
 	class Mining : Repairing {
-		displayName = "Mining";
+		displayName = "采矿";
 		icon = "Data\UI\Professions\mining.paa";
-		effectDescription = "Decreases the time it takes to mine by %1%2";
+		effectDescription = "减少采矿所需时间 %1%2";
 		effectCalculation = "5 * (_this select 0)";
 		maxLevel = 10;
 	};
 
 	class Processing : Repairing {
-		displayName = "Processing";
+		displayName = "加工";
 		icon = "Data\UI\Professions\processing.paa";
-		effectDescription = "Decreases the time it takes to process by %1%2";
+		effectDescription = "减少加工所需时间 %1%2";
 		effectCalculation = "5 * (_this select 0)";
 	};
 
 	class Cooking : Repairing {
-		displayName = "Cooking";
+		displayName = "烹饪";
 		icon = "Data\UI\Professions\cooking.paa";
-		effectDescription = "Decreases the time it takes to cook by %1%2";
+		effectDescription = "减少烹饪所需时间 %1%2";
 		effectCalculation = "5 * (_this select 0)";
 	};
 
 	class Smelting : Repairing {
-		displayName = "Smelting";
+		displayName = "冶炼";
 		icon = "Data\UI\Professions\smelting.paa";
-		effectDescription = "Decreases the time it takes to smelt by %1%2";
+		effectDescription = "减少冶炼所需时间 %1%2";
 		effectCalculation = "5 * (_this select 0)";
 	};
 
 	class Archeology : Repairing {
-		displayName = "Archeology";
+		displayName = "考古";
 		icon = "Data\UI\Professions\archeology.paa";
-		effectDescription = "Decreases the time it takes to survey and dig by %1%2";
+		effectDescription = "减少勘探和挖掘所需时间 %1%2";
 	};
 
 	class Crafting : Repairing {
-		displayName = "Crafting";
+		displayName = "制作";
 		icon = "Data\UI\Professions\crafting.paa";
-		effectDescription = "Decreases the time it takes to craft by %1%2";
+		effectDescription = "减少制作所需时间 %1%2";
 	};
 
 	class Reviving : Repairing {
-		displayName = "Reviving";
+		displayName = "救治";
 		icon = "Data\UI\Professions\reviving.paa";
-		effectDescription = "Decreases the time it takes to revive by %1%2";
+		effectDescription = "减少复苏所需时间 %1%2";
 	};
 };

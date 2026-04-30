@@ -19,7 +19,7 @@ if !(isClass _factoryCfg) exitWith {};
 private _product = _display getVariable ["selected_product", ""];
 private _productCfg = _factoryCfg >> "Products" >> _product;
 
-if (_product isEqualTo "" || { !isClass _productCfg }) exitWith { ["You must select a product to place an order for"] call ULP_fnc_hint; };
+if (_product isEqualTo "" || { !isClass _productCfg }) exitWith { ["你必须先选择一个要下单生产的产品。"] call ULP_fnc_hint; };
 
 private _cargo = _factory getVariable ["ULP_VirtualCargo", createHashMap];
 private _materials = getArray (_productCfg >> "materials");
@@ -36,7 +36,7 @@ private _possibleConversions = [];
 private _maxPossibleQuantity = selectMin _possibleConversions;
 
 if (_maxPossibleQuantity isEqualTo 0) exitWith {
-	["The factory doesn't have enough materials to place an order for this product. You can press <t color='#B92DE0'>T</t> to place items into it."] call ULP_fnc_hint;
+	["工厂没有足够的材料来生产这个产品。你可以按 <t color='#B92DE0'>T</t> 往里面放入材料。"] call ULP_fnc_hint;
 };
 
 ["FactoryStarted", { 

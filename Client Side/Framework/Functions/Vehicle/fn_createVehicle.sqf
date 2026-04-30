@@ -45,7 +45,7 @@ if !(_upgrades isEqualTo createHashMap) then {
 [_vehicle] call ULP_fnc_initVehicle;
 
 if (_hint) then {
-	["Your vehicle is now ready..."] call ULP_fnc_hint;
+	["你的载具已经准备好了..."] call ULP_fnc_hint;
 };
 
 _vehicle

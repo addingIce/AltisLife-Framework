@@ -15,14 +15,14 @@ _this params [
 ];
 
 if (isNull _unit || { [] call ULP_fnc_isRestrained } || { [] call ULP_fnc_isSurrendered } || { isDowned(player) } || { isDowned(_unit) } || { !_bank && ((player distance _unit) > 3) }) exitWith {
-	["You have to be close, unrestrained and not surrendering to give money..."] call ULP_fnc_hint;
+	["转账或给钱时，你必须靠近对方，且自己未被束缚、未投降..."] call ULP_fnc_hint;
 	false
 };
 
 private _max = [CASH, BANK] select (_bank);
 
 if (_max < 1) exitWith {
-	["You have no money to give at this time..."] call ULP_fnc_hint;
+	["你现在没有可转出的资金..."] call ULP_fnc_hint;
 	false
 };
 

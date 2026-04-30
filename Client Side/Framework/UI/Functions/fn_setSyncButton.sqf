@@ -24,9 +24,9 @@ _syncDelay = ULP_Last_Sync + _syncDelay;
 
 	if (time < _syncDelay) then {
 		_saveButton ctrlEnable false; // Force disables it again, this fixes it not being disabled when button is pressed...
-		_saveButton ctrlSetText format["SYNC DATA (%1)", [_syncDelay - time, "MM:SS"] call BIS_fnc_secondsToString];
+		_saveButton ctrlSetText format["同步数据（%1）", [_syncDelay - time, "MM:SS"] call BIS_fnc_secondsToString];
 	} else {
-		_saveButton ctrlSetText "SYNC DATA";
+		_saveButton ctrlSetText "同步数据";
 		_saveButton ctrlEnable true;
 		[_thisEventHandler] call ULP_fnc_removeEachFrame;
 	};

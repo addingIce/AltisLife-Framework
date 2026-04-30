@@ -1,64 +1,64 @@
 class CfgTutorial {
 	class Stages {
 		class GetCash {
-			displayName = "Acquire £100k Cash";
-			description = "Use an ATM to acquire £100k cash";
+			displayName = "准备 £100k 现金";
+			description = "使用 ATM 取出 £100k 现金";
 			location[] = { 3640.48, 13082.8, 0 };
 			nextStage = "BuyBackpack";
 			condition = "ULP_234_Cash >= 100000 || { [""Driving""] call ULP_fnc_hasLicense }";
 		};
 		class BuyBackpack {
-			displayName = "Buy Backpack";
-			description = "Buy a backpack at the clothing store";
+			displayName = "购买背包";
+			description = "前往服装店购买一个背包";
 			location[] = { 3630.21, 13077.2, 0 };
 			nextStage = "BuyLicense";
 			condition = "!((backpack player) isEqualTo """") || { [""Driving""] call ULP_fnc_hasLicense }";
 		};
 		class BuyLicense {
-			displayName = "Buy Driving License";
-			description = "Buy a driving license at the DVLA";
+			displayName = "购买驾驶执照";
+			description = "前往 DVLA 购买驾驶执照";
 			location[] = { 3649.38, 13093.8, 0 };
 			nextStage = "BuyCar";
 			condition = "[""Driving""] call ULP_fnc_hasLicense";
 		};
 		class BuyCar {
-			displayName = "Buy Car";
-			description = "Buy a offroad at the car shop";
+			displayName = "购买车辆";
+			description = "前往车店购买一辆 Offroad";
 			location[] = { 3693.8, 13155, 0 };
 			nextStage = "StoreCash";
 			condition = "!(ULP_Keys isEqualTo [])";
 		};
 		class StoreCash {
-			displayName = "Store Cash";
-			description = "Drive your car to the ATM and store the remaining cash. You can unlock your vehicle using <t color='#B92DE0'>U</t>";
+			displayName = "存入现金";
+			description = "把车开到 ATM 附近，并把剩余现金存进去。你可以按 <t color='#B92DE0'>U</t> 解锁载具";
 			location[] = { 3640.48, 13082.8, 0 };
 			nextStage = "GoAppleField";
 			condition = "ULP_234_Cash isEqualTo 0";
 		};
 		class GoAppleField {
-			displayName = "Go to Apple Field";
-			description = "Go to the Apple Field";
+			displayName = "前往苹果园";
+			description = "前往 Apple Field 苹果园";
 			location[] = { 4193.83, 12993.5, 0 };
 			nextStage = "GatherApples";
 			condition = "(player distance [4193.83,12993.5, 0]) <= 20";
 		};
 		class GatherApples {
-			displayName = "Gather Apples";
-			description = "Use <t color='#B92DE0'>Left Windows</t> key to gather apples. You can rebind this interaction key under <t color='#B92DE0'>Custom Control 10</t>";
+			displayName = "采集苹果";
+			description = "按 <t color='#B92DE0'>Left Windows</t> 键采集苹果。这个交互键可以在 <t color='#B92DE0'>Custom Control 10</t> 里重新绑定";
 			location[] = { 4193.83, 12993.5, 0 };
 			nextStage = "GoMarket";
 			condition = """FreshApple"" in ULP_Inventory";
 		};
 		class GoMarket {
-			displayName = "Go to General Market";
-			description = "Go to the General Market";
+			displayName = "前往综合市场";
+			description = "前往 General Market 综合市场";
 			location[] = { 3629, 13095, 0 };
 			nextStage = "SellApples";
 			condition = "(player distance [3629, 13095, 0]) <= 10";
 		};
 		class SellApples {
-			displayName = "Sell Apples";
-			description = "Sell the apples you gathered to the market";
+			displayName = "出售苹果";
+			description = "把你采集到的苹果卖给市场";
 			location[] = { 3629, 13095, 0 };
 			condition = "!(""FreshApple"" in ULP_Inventory)";
 		};

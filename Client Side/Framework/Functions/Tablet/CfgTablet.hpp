@@ -23,7 +23,7 @@ class CfgTablet {
 
 	class Profile : BaseScreen {
 		idc = 23002;
-		pageTitle = "Profile";
+		pageTitle = "个人资料";
 		pageIdcs[] = {
 			23024, 23025, 23026, 23027, 23028
 		};
@@ -31,7 +31,7 @@ class CfgTablet {
 	};
 
 	class Professions : Profile {
-		pageTitle = "Profile - Professions";
+		pageTitle = "个人资料 - 职业";
 		pageIdcs[] = {
 			23024, 23025, 23026, 23027, 23028, 23029, 23030
 		};
@@ -39,7 +39,7 @@ class CfgTablet {
 	};
 
 	class Achievements : Profile {
-		pageTitle = "Profile - Achievements";
+		pageTitle = "个人资料 - 成就";
 		pageIdcs[] = {
 			23024, 23025, 23026, 23027, 23028, 23029, 23030
 		};
@@ -47,7 +47,7 @@ class CfgTablet {
 	};
 
 	class Loyalty : Profile {
-		pageTitle = "Profile - Personal Goals";
+		pageTitle = "个人资料 - 个人目标";
 		pageIdcs[] = {
 			23024, 23025, 23026, 23027, 23028, 23029, 23030
 		};
@@ -55,7 +55,7 @@ class CfgTablet {
 	};
 
 	class PlayerTag : Profile {
-		pageTitle = "Profile - Player Tag";
+		pageTitle = "个人资料 - 玩家标签";
 		pageIdcs[] = {
 			23024, 23025, 23026, 23027, 23028, 23029, 23053, 23054, 23055, 23056, 23057, 23058, 23069, 23070, 23071, 23072, 23073, 23074, 23075
 		};
@@ -65,7 +65,7 @@ class CfgTablet {
 
 	class Inventory : BaseScreen {
 		idc= 23003;
-		pageTitle = "Inventory";
+		pageTitle = "背包";
 		pageIdcs[] = {
 			23014, 23015, 23016, 23017, 23018, 23019, 23091
 		};
@@ -77,20 +77,20 @@ class CfgTablet {
 	};
 
 	class Licenses : Inventory {
-		pageTitle = "Licenses";
+		pageTitle = "执照";
 		pageIdcs[] = { 23014, 23016, 23017, 23091 };
 		onload = "_this call ULP_fnc_licenses";
 	};
 
 	class Crafting : Inventory {
-		pageTitle = "Crafting";
+		pageTitle = "制作";
 		pageIdcs[] = { 23014, 23017, 23077, 23078, 23091 };
 		onload = "_this call ULP_fnc_crafting";
 	};
 
 	class Messaging : BaseScreen {
 		idc= 23004;
-		pageTitle = "Messaging";
+		pageTitle = "消息";
 		pageIdcs[] = {
 			23036, 23037, 23038, 23039, 23040, 23041, 23042, 23043, 23044, 23045, 23046, 23047, 23048, 23049, 23050
 		};
@@ -99,7 +99,7 @@ class CfgTablet {
 
 	class Group : BaseScreen {
 		idc= 23005;
-		pageTitle = "Group";
+		pageTitle = "队伍";
 		pageIdcs[] = {
 			23061
 		};
@@ -107,7 +107,7 @@ class CfgTablet {
 	};
 	
 	class GroupOverview : Group {
-		pageTitle = "Group - Overview";
+		pageTitle = "队伍 - 概览";
 		pageIdcs[] = {
 			23061, 23062, 23063, 23064, 23065, 23066, 23067, 23068, 23076, 23079, 23080, 23081, 23089
 		};
@@ -116,7 +116,7 @@ class CfgTablet {
 	};
 
 	class GroupProgression : Group {
-		pageTitle = "Group - Progression";
+		pageTitle = "队伍 - 成长";
 		pageIdcs[] = {
 			23061, 23082, 23083, 23084, 23085, 23086
 		};
@@ -124,7 +124,7 @@ class CfgTablet {
 	};
 
 	class GroupAlliances : Group {
-		pageTitle = "Group - Alliances";
+		pageTitle = "队伍 - 联盟";
 		pageIdcs[] = {
 			23061, 23099, 23100, 23101, 23102, 23103, 23104
 		};
@@ -133,7 +133,7 @@ class CfgTablet {
 	};
 
 	class GroupSettings : Group {
-		pageTitle = "Group - Settings";
+		pageTitle = "队伍 - 设置";
 		pageIdcs[] = {
 			23061, 23087, 23088, 23093, 23094, 23095, 23096, 23097, 23098
 		};
@@ -142,7 +142,7 @@ class CfgTablet {
 
 	class Keys : BaseScreen {
 		idc= 23006;
-		pageTitle = "Keys";
+		pageTitle = "钥匙";
 		pageIdcs[] = {
 			23021, 23022
 		};
@@ -151,13 +151,13 @@ class CfgTablet {
 
 	class Dispute : Home {
 		idc= 23007;
-		pageTitle = "Dispute";
+		pageTitle = "申诉";
 		onload = "_this call ULP_fnc_dispute";
 	};
 
 	class Market : BaseScreen {
 		idc= 23008;
-		pageTitle = "Market";
+		pageTitle = "市场";
 		pageIdcs[] = {
 			23032, 23033, 23034, 23035
 		};
@@ -166,7 +166,7 @@ class CfgTablet {
 
 	class Goals : BaseScreen {
 		idc= 23009;
-		pageTitle = "Community Goals";
+		pageTitle = "社区目标";
 		pageIdcs[] = { 23090 };
 		onLoad = "_this call ULP_fnc_communityGoals";
 		onUnload = "[""CommunityGoalsReceived"", _this getVariable [""community_goals_received"", -1]] call ULP_fnc_removeEventHandler;";
@@ -174,7 +174,7 @@ class CfgTablet {
 
 	class Perks : BaseScreen {
 		idc= 23010;
-		pageTitle = "Perks";
+		pageTitle = "技能";
 		pageIdcs[] = {
 			23059, 23060
 		};
@@ -184,7 +184,7 @@ class CfgTablet {
 
 	class Settings {
 		idc= 23011;
-		pageTitle = "Settings";
+		pageTitle = "设置";
 		pageIdcs[] = {
 			23023
 		};

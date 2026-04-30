@@ -25,7 +25,7 @@ if !(_type in ULP_Missions) exitWith {
 ];
 
 if ((player distance (taskDestination _task)) > 10) exitWith {
-	["You're not close enough to complete this task!"] call ULP_fnc_hint;
+	["你离任务完成点还不够近！"] call ULP_fnc_hint;
 };
 
 private _onFinished = getText (_typeCfg >> "onFinished");
@@ -49,7 +49,7 @@ if (["PoliticalSavings"] call ULP_fnc_hasGroupPerk) then {
 	_groupReward = _reward * 0.25;
 
 	[[] call ULP_fnc_groupId, _groupReward, true] remoteExecCall ["ULP_SRV_fnc_updateGroupFunds", RSERV];
-	[format ["Due to your group level, <t color='#B92DE0'>%1%2</t> has been given as a bonus and added to your group funds", "£", [_groupReward] call ULP_fnc_numberText]] call ULP_fnc_hint;
+	[format ["由于你的队伍等级加成，额外获得的 <t color='#B92DE0'>%1%2</t> 已存入队伍资金。", "£", [_groupReward] call ULP_fnc_numberText]] call ULP_fnc_hint;
 };
 
 private _xp = getNumber (_typeCfg >> "Rewards" >> "xpReward");

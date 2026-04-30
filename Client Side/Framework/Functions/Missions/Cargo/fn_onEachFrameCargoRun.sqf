@@ -19,7 +19,7 @@ if (isNull _vehicle || { !(alive _vehicle) }) exitWith {
 
 	ULP_Missions deleteAt _type;
 
-	["Your vehicle was lost and your cargo mission has failed."] call ULP_fnc_hint;
+	["你的载具已经丢失，本次货运任务失败。"] call ULP_fnc_hint;
 
 	[_thisEventHandler] call ULP_fnc_removeEachFrame;
 };

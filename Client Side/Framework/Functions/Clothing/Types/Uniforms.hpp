@@ -9,18 +9,18 @@ class U_C_Farmer : U_C_Poor_1 {};
 class U_C_Mechanic_01_F : U_C_Poor_1 {};
 
 class U_C_Poloshirt_blue : U_C_Poor_1 {
-	displayName = "Commoner Clothes";
+	displayName = "平民服装（Commoner Clothes）";
 	price = 100;
 	class Textures {
 		class U_C_Poloshirt_blue { 
-			displayName = "Blue"; 
+			displayName = "蓝色（Blue）";
 			condition = "true";
 		};
-		class U_C_Poloshirt_burgundy : U_C_Poloshirt_blue { displayName = "Burgundy"; };
-		class U_C_Poloshirt_stripped : U_C_Poloshirt_blue { displayName = "Stripped"; };
-		class U_C_Poloshirt_tricolour : U_C_Poloshirt_blue { displayName = "Tricolor"; };
-		class U_C_Poloshirt_salmon : U_C_Poloshirt_blue { displayName = "Salmon"; };
-		class U_C_Poloshirt_redwhite : U_C_Poloshirt_blue { displayName = "Redwhite"; };
+		class U_C_Poloshirt_burgundy : U_C_Poloshirt_blue { displayName = "酒红色（Burgundy）"; };
+		class U_C_Poloshirt_stripped : U_C_Poloshirt_blue { displayName = "条纹款（Stripped）"; };
+		class U_C_Poloshirt_tricolour : U_C_Poloshirt_blue { displayName = "三色款（Tricolor）"; };
+		class U_C_Poloshirt_salmon : U_C_Poloshirt_blue { displayName = "鲑红色（Salmon）"; };
+		class U_C_Poloshirt_redwhite : U_C_Poloshirt_blue { displayName = "红白配色（Redwhite）"; };
 	};
 };
 class U_C_Poloshirt_burgundy : U_C_Poloshirt_blue {};
@@ -30,42 +30,42 @@ class U_C_Poloshirt_salmon : U_C_Poloshirt_blue {};
 class U_C_Poloshirt_redwhite : U_C_Poloshirt_blue {};
 
 class U_C_WorkerOveralls : U_C_Poor_1 {
-	displayName = "Worker Overalls";
+	displayName = "工人连体服（Worker Overalls）";
 	price = 150;
 	virtualSpace = 4;
 	class Textures {
 		class U_C_WorkerOveralls { 
-			displayName = "Used"; 
+			displayName = "旧款（Used）";
 			condition = "true";
 		};
 		class White : U_C_WorkerOveralls { 
-			displayName = "White"; 
+			displayName = "白色（White）";
 			textures[] = { "\A3\characters_f\common\data\coveralls_grey_co.paa" };
 		};
 		class Gray : U_C_WorkerOveralls { 
-			displayName = "Gray"; 
+			displayName = "灰色（Gray）";
 			textures[] = { "\A3\characters_f\common\data\coveralls_black_co.paa" };
 		};
 		class Rust : U_C_WorkerOveralls { 
-			displayName = "Rust"; 
+			displayName = "锈色（Rust）";
 			textures[] = { "\A3\characters_f\common\data\coveralls_bandit_co.paa" };
 		};
 		class Camo : U_C_WorkerOveralls { 
-			displayName = "Camo"; 
+			displayName = "迷彩（Camo）";
 			textures[] = { "\A3\characters_f\common\data\coveralls_urbancamo_co.paa" };
 		};
 	};
 };
 
 class U_C_ConstructionCoverall_Black_F : U_C_WorkerOveralls {
-	displayName = "Construction Overalls";
+	displayName = "施工连体服（Construction Overalls）";
 	class Textures {
 		class U_C_ConstructionCoverall_Black_F { 
-			displayName = "Black"; 
+			displayName = "黑色（Black）";
 			condition = "true";
 		};
-		class U_C_ConstructionCoverall_Red_F : U_C_ConstructionCoverall_Black_F { displayName = "Red"; };
-		class U_C_ConstructionCoverall_Blue_F : U_C_ConstructionCoverall_Black_F { displayName = "Blue"; };
+		class U_C_ConstructionCoverall_Red_F : U_C_ConstructionCoverall_Black_F { displayName = "红色（Red）"; };
+		class U_C_ConstructionCoverall_Blue_F : U_C_ConstructionCoverall_Black_F { displayName = "蓝色（Blue）"; };
 		class U_C_ConstructionCoverall_Vrana_F : U_C_ConstructionCoverall_Black_F { 
 			displayName = "Vrana"; 
 			condition = "[] call ULP_fnc_donatorLevel >= 2";
@@ -77,21 +77,21 @@ class U_C_ConstructionCoverall_Blue_F : U_C_WorkerOveralls {};
 class U_C_ConstructionCoverall_Vrana_F : U_C_WorkerOveralls {};
 
 class U_C_Man_casual_1_F : U_C_Poor_1 {
-	displayName = "Casual Clothes";
+	displayName = "休闲服（Casual Clothes）";
 	price = 100;
 	class Textures {
 		class U_C_Man_casual_1_F { 
-			displayName = "Navy"; 
+			displayName = "海军蓝（Navy）";
 			condition = "true";
 		};
-		class U_C_Man_casual_2_F : U_C_Man_casual_1_F { displayName = "Blue"; };
-		class U_C_Man_casual_3_F : U_C_Man_casual_1_F { displayName = "Green"; };
+		class U_C_Man_casual_2_F : U_C_Man_casual_1_F { displayName = "蓝色（Blue）"; };
+		class U_C_Man_casual_3_F : U_C_Man_casual_1_F { displayName = "绿色（Green）"; };
 		class Brown : U_C_Man_casual_1_F { 
-			displayName = "Brown"; 
+			displayName = "棕色（Brown）";
 			textures[] = { "A3\Characters_F\Civil\Data\ig_poloshirt_2_co.paa" };
 		};
 		class Gray : U_C_Man_casual_1_F { 
-			displayName = "Gray"; 
+			displayName = "灰色（Gray）";
 			textures[] = { "A3\Characters_F\Civil\Data\ig_poloshirt_1_co.paa" };
 		};
 	};
@@ -100,18 +100,18 @@ class U_C_Man_casual_2_F : U_C_Man_casual_1_F{};
 class U_C_Man_casual_3_F : U_C_Man_casual_1_F{};
 
 class U_C_ArtTShirt_01_v1_F : U_C_Poor_1 {
-	displayName = "Casual T-Shirts";
+	displayName = "休闲 T 恤（Casual T-Shirts）";
 	price = 100;
 	class Textures {
 		class U_C_ArtTShirt_01_v1_F { 
-			displayName = "Art of War"; 
+			displayName = "战争艺术（Art of War）";
 			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
-		class U_C_ArtTShirt_01_v2_F : U_C_ArtTShirt_01_v1_F { displayName = "Drones"; };
+		class U_C_ArtTShirt_01_v2_F : U_C_ArtTShirt_01_v1_F { displayName = "无人机（Drones）"; };
 		class U_C_ArtTShirt_01_v3_F : U_C_ArtTShirt_01_v1_F { displayName = "Waltham Robotics"; };
-		class U_C_ArtTShirt_01_v4_F : U_C_ArtTShirt_01_v1_F { displayName = "Exhibition"; };
+		class U_C_ArtTShirt_01_v4_F : U_C_ArtTShirt_01_v1_F { displayName = "展览款（Exhibition）"; };
 		class U_C_ArtTShirt_01_v5_F : U_C_ArtTShirt_01_v1_F { displayName = "Robogeddon"; };
-		class U_C_ArtTShirt_01_v6_F : U_C_ArtTShirt_01_v1_F { displayName = "Abstract"; };
+		class U_C_ArtTShirt_01_v6_F : U_C_ArtTShirt_01_v1_F { displayName = "抽象款（Abstract）"; };
 	};
 };
 class U_C_ArtTShirt_01_v2_F : U_C_ArtTShirt_01_v1_F{};
@@ -121,47 +121,47 @@ class U_C_ArtTShirt_01_v5_F : U_C_ArtTShirt_01_v1_F{};
 class U_C_ArtTShirt_01_v6_F : U_C_ArtTShirt_01_v1_F{};
 
 class U_C_Man_casual_6_F : U_C_Poor_1 {
-	displayName = "Summer Clothes";
+	displayName = "夏装（Summer Clothes）";
 	price = 100;
 	class Textures {
 		class U_C_Man_casual_6_F { 
-			displayName = "Red"; 
+			displayName = "红色（Red）";
 			condition = "true";
 		};
-		class U_C_Man_casual_5_F : U_C_Man_casual_6_F { displayName = "Yellow"; };
-		class U_C_Man_casual_4_F : U_C_Man_casual_6_F { displayName = "Sky"; };
+		class U_C_Man_casual_5_F : U_C_Man_casual_6_F { displayName = "黄色（Yellow）"; };
+		class U_C_Man_casual_4_F : U_C_Man_casual_6_F { displayName = "天蓝色（Sky）"; };
 	};
 };
 class U_C_Man_casual_5_F : U_C_Man_casual_6_F{};
 class U_C_Man_casual_4_F : U_C_Man_casual_6_F{};
 
 class U_C_man_sport_1_F : U_C_Poor_1 {
-	displayName = "Sport Clothes";
+	displayName = "运动服（Sport Clothes）";
 	price = 100;
 	class Textures {
 		class U_C_man_sport_1_F { 
-			displayName = "Beach"; 
+			displayName = "海滩款（Beach）";
 			condition = "true";
 		};
-		class U_C_man_sport_2_F : U_C_man_sport_1_F { displayName = "Orange"; };
-		class U_C_man_sport_3_F : U_C_man_sport_1_F { displayName = "Blue"; };
+		class U_C_man_sport_2_F : U_C_man_sport_1_F { displayName = "橙色（Orange）"; };
+		class U_C_man_sport_3_F : U_C_man_sport_1_F { displayName = "蓝色（Blue）"; };
 	};
 };
 class U_C_man_sport_2_F : U_C_man_sport_1_F{};
 class U_C_man_sport_3_F : U_C_man_sport_1_F{};
 
 class U_C_Scientist : U_C_Poor_1 {
-	displayName = "Scientist Clothes";
+	displayName = "科学家服装（Scientist Clothes）";
 	price = 100;
 	class Textures {
 		class U_C_Scientist { 
-			displayName = "White Overalls"; 
+			displayName = "白色连体服（White Overalls）";
 			condition = "true";
 		};
-		class U_C_Uniform_Scientist_01_F : U_C_Scientist { displayName = "White"; };
-		class U_C_Uniform_Scientist_01_formal_F : U_C_Scientist { displayName = "Blue"; };
-		class U_C_Uniform_Scientist_02_F : U_C_Scientist { displayName = "Black"; };
-		class U_C_Uniform_Scientist_02_formal_F : U_C_Scientist { displayName = "Red"; };
+		class U_C_Uniform_Scientist_01_F : U_C_Scientist { displayName = "白色（White）"; };
+		class U_C_Uniform_Scientist_01_formal_F : U_C_Scientist { displayName = "蓝色（Blue）"; };
+		class U_C_Uniform_Scientist_02_F : U_C_Scientist { displayName = "黑色（Black）"; };
+		class U_C_Uniform_Scientist_02_formal_F : U_C_Scientist { displayName = "红色（Red）"; };
 	};
 };
 class U_C_Uniform_Scientist_01_F : U_C_Scientist{};
@@ -170,17 +170,17 @@ class U_C_Uniform_Scientist_02_F : U_C_Scientist{};
 class U_C_Uniform_Scientist_02_formal_F : U_C_Scientist{};
 
 class U_I_C_Soldier_Bandit_1_F : U_C_Poor_1 {
-	displayName = "Bandit Clothes";
+	displayName = "匪徒服装（Bandit Clothes）";
 	price = 150;
 	virtualSpace = 4;
 	class Textures {
 		class U_I_C_Soldier_Bandit_1_F { 
-			displayName = "Polo Shirt"; 
+			displayName = "Polo 衫（Polo Shirt）";
 			condition = "true";
 		};
-		class U_I_C_Soldier_Bandit_2_F : U_I_C_Soldier_Bandit_1_F { displayName = "Skull"; };
-		class U_I_C_Soldier_Bandit_4_F : U_I_C_Soldier_Bandit_1_F { displayName = "Checkered"; };
-		class U_I_C_Soldier_Bandit_5_F : U_I_C_Soldier_Bandit_1_F { displayName = "Tank Top"; };
+		class U_I_C_Soldier_Bandit_2_F : U_I_C_Soldier_Bandit_1_F { displayName = "骷髅款（Skull）"; };
+		class U_I_C_Soldier_Bandit_4_F : U_I_C_Soldier_Bandit_1_F { displayName = "棋盘格（Checkered）"; };
+		class U_I_C_Soldier_Bandit_5_F : U_I_C_Soldier_Bandit_1_F { displayName = "背心款（Tank Top）"; };
 	};
 };
 class U_I_C_Soldier_Bandit_2_F : U_I_C_Soldier_Bandit_1_F{};
@@ -188,86 +188,86 @@ class U_I_C_Soldier_Bandit_4_F : U_I_C_Soldier_Bandit_1_F{};
 class U_I_C_Soldier_Bandit_5_F : U_I_C_Soldier_Bandit_1_F{};
 
 class U_I_C_Soldier_Bandit_3_F : U_C_Poor_1 { 
-	displayName = "Casual Outfit"; 
+	displayName = "休闲套装（Casual Outfit）";
 	price = 150;
 	virtualSpace = 4;
 	class Textures {
 		class U_I_C_Soldier_Bandit_3_F { 
-			displayName = "Brown"; 
+			displayName = "棕色（Brown）";
 			condition = "true";
 		};
 		class Black : U_I_C_Soldier_Bandit_3_F { 
-			displayName = "Black";
+			displayName = "黑色（Black）";
 			condition = "[] call ULP_fnc_donatorLevel >= 2";  
 			textures[] = { "\A3\Characters_F_exp\Syndikat\Data\U_I_C_Soldier_Bandit_2_F_2_co.paa" };
 		};
 		class Red : Black { 
-			displayName = "Red"; 
+			displayName = "红色（Red）";
 			textures[] = { "\A3\Characters_F_exp\Civil\Data\U_C_Man_casual_6_F_1_co.paa" };
 		};
 		class Blue : Black { 
-			displayName = "Blue"; 
+			displayName = "蓝色（Blue）";
 			textures[] = { "\A3\Characters_F_exp\Civil\Data\U_C_Man_casual_4_F_1_co.paa" };
 		};
 		class Yellow : Black { 
-			displayName = "Yellow"; 
+			displayName = "黄色（Yellow）";
 			textures[] = { "\A3\Characters_F_exp\Civil\Data\U_C_Man_casual_5_F_1_co.paa" };
 		};
 	};
 };
 
 class U_IG_Guerilla1_1 : U_C_Poor_1 {
-	displayName = "Guerilla Clothes";
+	displayName = "游击服装（Guerilla Clothes）";
 	price = 150;
 	virtualSpace = 4;
 	class Textures {
 		class U_IG_Guerilla1_1 { 
-			displayName = "Garment (Brown)"; 
+			displayName = "棕色外衣（Garment (Brown)）";
 			condition = "true";
 		};
-		class U_IG_Guerilla1_2_F : U_IG_Guerilla1_1 { displayName = "Garment (Olive)"; };
-		class U_IG_Guerilla2_1 : U_IG_Guerilla1_1 { displayName = "Plain, Dark"; };
-		class U_IG_Guerilla2_2 : U_IG_Guerilla1_1 { displayName = "Pattern"; };
-		class U_IG_Guerilla2_3 : U_IG_Guerilla1_1 { displayName = "Plain, Light"; };
-		class U_IG_Guerilla3_1 : U_IG_Guerilla1_1 { displayName = "Smocks (Dark)"; };
-		class U_IG_Guerilla3_2 : U_IG_Guerilla1_1 { displayName = "Smocks (Light)"; };
+		class U_IG_Guerilla1_2_F : U_IG_Guerilla1_1 { displayName = "橄榄色外衣（Garment (Olive)）"; };
+		class U_IG_Guerilla2_1 : U_IG_Guerilla1_1 { displayName = "纯色深款（Plain, Dark）"; };
+		class U_IG_Guerilla2_2 : U_IG_Guerilla1_1 { displayName = "花纹款（Pattern）"; };
+		class U_IG_Guerilla2_3 : U_IG_Guerilla1_1 { displayName = "纯色浅款（Plain, Light）"; };
+		class U_IG_Guerilla3_1 : U_IG_Guerilla1_1 { displayName = "罩衫深款（Smocks (Dark)）"; };
+		class U_IG_Guerilla3_2 : U_IG_Guerilla1_1 { displayName = "罩衫浅款（Smocks (Light)）"; };
 		class Blackwing : U_IG_Guerilla1_1 {
 			displayName = "Blackwing";
 			textures[] = { "\a3\characters_f_gamma\Civil\Data\c_cloth1_black.paa" };
 			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		class Black : Blackwing {
-			displayName = "Black";
+			displayName = "黑色（Black）";
 			textures[] = { "\a3\characters_f_gamma\Civil\Data\c_cloth1_black.paa" };
 		};
 		class Red : Blackwing {
-			displayName = "Red";
+			displayName = "红色（Red）";
 			textures[] = { "A3\Characters_F\Civil\Data\c_cloth1_bandit_co.paa" };
 		};
 		class Blue : Blackwing {
-			displayName = "Blue";
+			displayName = "蓝色（Blue）";
 			textures[] = { "A3\Characters_F\Civil\Data\c_cloth1_co.paa" };
 		};
 		class Orange : Blackwing {
-			displayName = "Orange";
+			displayName = "橙色（Orange）";
 			textures[] = { "A3\Characters_F\Civil\Data\c_cloth1_v3_co.paa" };
 		};
 		class Yellow : Blackwing {
-			displayName = "Yellow";
+			displayName = "黄色（Yellow）";
 			textures[] = { "A3\Characters_F\Civil\Data\c_cloth1_v2_co.paa" };
 		};
 		class Brown : Blackwing {
-			displayName = "Brown";
+			displayName = "棕色（Brown）";
 			textures[] = { "\a3\characters_f_gamma\Civil\Data\c_cloth1_brown.paa" };
 		};
-		class U_IG_leader : U_IG_Guerilla1_1 { displayName = "Uniform"; };
+		class U_IG_leader : U_IG_Guerilla1_1 { displayName = "制服款（Uniform）"; };
 	};
 };
 class U_IG_Guerilla1_2_F : U_IG_Guerilla1_1 {};
 class U_IG_Guerilla2_1 : U_IG_Guerilla1_1 {
 	class Textures {
 		class U_IG_Guerilla2_1 { 
-			displayName = "Plain, Dark";
+			displayName = "纯色深款（Plain, Dark）";
 			condition = "true";
 		};
 		// class DMS : U_IG_Guerilla2_1 {
@@ -284,25 +284,25 @@ class U_IG_Guerilla3_2 : U_IG_Guerilla1_1 {};
 class U_IG_leader : U_IG_Guerilla1_1 {};
 
 class U_C_HunterBody_grn : U_C_Poor_1 {
-	displayName = "Hunting Clothes";
+	displayName = "狩猎服（Hunting Clothes）";
 	price = 200;
 	virtualSpace = 4;
 	class Textures {};
 };
 
 class U_C_E_LooterJacket_01_F : U_C_Poor_1 {
-	displayName = "Looter Clothes";
+	displayName = "拾荒者服装（Looter Clothes）";
 	price = 150;
 	class Textures {
 		class U_C_E_LooterJacket_01_F { 
-			displayName = "Leather Jacket"; 
+			displayName = "皮夹克（Leather Jacket）";
 			condition = "true";
 		};
-		class U_I_L_Uniform_01_tshirt_black_F : U_C_E_LooterJacket_01_F { displayName = "T-Shirt, Black"; };
-		class U_I_L_Uniform_01_tshirt_sport_F : U_C_E_LooterJacket_01_F { displayName = "T-Shirt, Sport"; };
-		class U_I_L_Uniform_01_tshirt_olive_F : U_C_E_LooterJacket_01_F { displayName = "T-Shirt, Olive"; };
+		class U_I_L_Uniform_01_tshirt_black_F : U_C_E_LooterJacket_01_F { displayName = "黑色 T 恤款（T-Shirt, Black）"; };
+		class U_I_L_Uniform_01_tshirt_sport_F : U_C_E_LooterJacket_01_F { displayName = "运动 T 恤款（T-Shirt, Sport）"; };
+		class U_I_L_Uniform_01_tshirt_olive_F : U_C_E_LooterJacket_01_F { displayName = "橄榄色 T 恤款（T-Shirt, Olive）"; };
 		class U_I_L_Uniform_01_tshirt_skull_F : U_C_E_LooterJacket_01_F { 
-			displayName = "T-Shirt, Skull"; 
+			displayName = "骷髅 T 恤款（T-Shirt, Skull）";
 			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 	};
@@ -313,7 +313,7 @@ class U_I_L_Uniform_01_tshirt_sport_F : U_C_E_LooterJacket_01_F {};
 class U_I_L_Uniform_01_tshirt_olive_F : U_C_E_LooterJacket_01_F {};
 
 class U_O_R_Gorka_01_black_F : U_C_Poor_1 {
-	displayName = "Tracksuit";
+	displayName = "运动套装（Tracksuit）";
 	price = 25000;
 	reputation = true;
 	virtualSpace = 8;
@@ -332,35 +332,35 @@ class U_O_R_Gorka_01_black_F : U_C_Poor_1 {
 
 		// Medic
 		class Paramedic {
-			displayName = "Paramedic";
+			displayName = "护理员（Paramedic）";
 			textures[] = { "Data\Textures\Uniforms\Medic\tracksuit.paa" };
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_HART"", 1] call ULP_fnc_hasAccess || { [""Medic_Main"", 2] call ULP_fnc_hasAccess } }";
 		};
 		class Doctor {
-			displayName = "Medical Advisor";
+			displayName = "医疗顾问（Medical Advisor）";
 			textures[] = { "Data\Textures\Uniforms\Medic\tracksuit.paa" }; // TODO
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_HART"", 1] call ULP_fnc_hasAccess || { [""Medic_Main"", 4] call ULP_fnc_hasAccess } }";
 		};
 		class Commander {
-			displayName = "Incident Commander";
+			displayName = "事件指挥官（Incident Commander）";
 			textures[] = { "Data\Textures\Uniforms\Medic\tracksuit.paa" }; // TODO
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_HART"", 1] call ULP_fnc_hasAccess || { [""Medic_Main"", 5] call ULP_fnc_hasAccess } }";
 		};
 
 		// Highways
 		class Hato {
-			displayName = "Traffic Officer";
+			displayName = "交通执勤员（Traffic Officer）";
 			textures[] = { "Data\Textures\Uniforms\Hato\tracksuit.paa" };
 			condition = "[player, [""Hato""]] call ULP_fnc_isFaction";
 		};
 
 		// Civilian
 		class U_O_R_Gorka_01_black_F {
-			displayName = "Black"; 
+			displayName = "黑色（Black）";
 			condition = "true";
 		};
-		class U_O_R_Gorka_01_brown_F : U_O_R_Gorka_01_black_F { displayName = "Brown"; };
-		class U_O_R_Gorka_01_camo_F : U_O_R_Gorka_01_black_F { displayName = "Camo"; };
+		class U_O_R_Gorka_01_brown_F : U_O_R_Gorka_01_black_F { displayName = "棕色（Brown）"; };
+		class U_O_R_Gorka_01_camo_F : U_O_R_Gorka_01_black_F { displayName = "迷彩（Camo）"; };
 
 		// Groups
 		class Sentinel : U_O_R_Gorka_01_black_F {
@@ -374,18 +374,18 @@ class U_O_R_Gorka_01_brown_F : U_O_R_Gorka_01_black_F {};
 class U_O_R_Gorka_01_camo_F : U_O_R_Gorka_01_black_F {};
 
 class U_I_C_Soldier_Para_1_F : U_O_R_Gorka_01_black_F {
-	displayName = "Paramilitary Clothes";
+	displayName = "准军事服装（Paramilitary Clothes）";
 	price = 150;
 	class Textures {
 		class U_I_C_Soldier_Para_1_F { 
-			displayName = "Tee"; 
+			displayName = "T 恤款（Tee）";
 			condition = "true";
 		};
-		class U_I_C_Soldier_Para_2_F : U_I_C_Soldier_Para_1_F { displayName = "Jacket"; };
-		class U_I_C_Soldier_Para_3_F : U_I_C_Soldier_Para_1_F { displayName = "Shirt"; };
-		class U_I_C_Soldier_Para_4_F : U_I_C_Soldier_Para_1_F { displayName = "Tank Top"; };
+		class U_I_C_Soldier_Para_2_F : U_I_C_Soldier_Para_1_F { displayName = "夹克款（Jacket）"; };
+		class U_I_C_Soldier_Para_3_F : U_I_C_Soldier_Para_1_F { displayName = "衬衫款（Shirt）"; };
+		class U_I_C_Soldier_Para_4_F : U_I_C_Soldier_Para_1_F { displayName = "背心款（Tank Top）"; };
 		class U_I_C_Soldier_Para_5_F : U_I_C_Soldier_Para_1_F { 
-			displayName = "Shorts"; 
+			displayName = "短裤款（Shorts）";
 			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		// class DMS1 : U_I_C_Soldier_Para_1_F {
@@ -409,7 +409,7 @@ class U_I_C_Soldier_Para_1_F : U_O_R_Gorka_01_black_F {
 class U_I_C_Soldier_Para_2_F : U_I_C_Soldier_Para_1_F {
 	class Textures {
 		class U_I_C_Soldier_Para_2_F { 
-			displayName = "Jacket"; 
+			displayName = "夹克款（Jacket）";
 			condition = "true";
 		};
 		// class DMS : U_I_C_Soldier_Para_2_F {
@@ -426,7 +426,7 @@ class U_I_C_Soldier_Para_3_F : U_I_C_Soldier_Para_1_F {};
 class U_I_C_Soldier_Para_4_F : U_I_C_Soldier_Para_1_F {
 	class Textures {
 		class U_I_C_Soldier_Para_4_F { 
-			displayName = "Tank Top"; 
+			displayName = "背心款（Tank Top）";
 			condition = "true";
 		};
 		// class DMS : U_I_C_Soldier_Para_4_F {
@@ -442,20 +442,20 @@ class U_I_C_Soldier_Para_4_F : U_I_C_Soldier_Para_1_F {
 class U_I_C_Soldier_Para_5_F : U_I_C_Soldier_Para_1_F {};
 
 class U_I_E_Uniform_01_F : U_O_R_Gorka_01_black_F {
-	displayName = "Geometric Clothes";
+	displayName = "几何风服装（Geometric Clothes）";
 	price = 150;
 	class Textures {
 		class U_I_E_Uniform_01_F { 
-			displayName = "Jacket"; 
+			displayName = "夹克款（Jacket）";
 			condition = "true";
 		};
-		class U_I_E_Uniform_01_shortsleeve_F : U_I_E_Uniform_01_F { displayName = "Jacket (Rolled)"; };
-		class U_I_L_Uniform_01_camo_F : U_I_E_Uniform_01_F { displayName = "Camo"; };
-		class U_I_E_Uniform_01_sweater_F : U_I_E_Uniform_01_F { displayName = "Sweater"; };
-		class U_I_L_Uniform_01_deserter_F : U_I_E_Uniform_01_F { displayName = "T-Shirt"; };
-		class U_I_E_Uniform_01_tanktop_F : U_I_E_Uniform_01_F { displayName = "Tank Top"; };
+		class U_I_E_Uniform_01_shortsleeve_F : U_I_E_Uniform_01_F { displayName = "卷袖夹克款（Jacket (Rolled)）"; };
+		class U_I_L_Uniform_01_camo_F : U_I_E_Uniform_01_F { displayName = "迷彩款（Camo）"; };
+		class U_I_E_Uniform_01_sweater_F : U_I_E_Uniform_01_F { displayName = "毛衣款（Sweater）"; };
+		class U_I_L_Uniform_01_deserter_F : U_I_E_Uniform_01_F { displayName = "T 恤款（T-Shirt）"; };
+		class U_I_E_Uniform_01_tanktop_F : U_I_E_Uniform_01_F { displayName = "背心款（Tank Top）"; };
 		class U_I_E_Uniform_01_officer_F : U_I_E_Uniform_01_F { 
-			displayName = "Officer"; 
+			displayName = "军官款（Officer）";
 			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		// class DMS : U_I_E_Uniform_01_F {
@@ -476,7 +476,7 @@ class U_I_E_Uniform_01_tanktop_F : U_I_E_Uniform_01_F {};
 class U_I_E_Uniform_01_officer_F : U_I_E_Uniform_01_F {};
 
 class U_B_Wetsuit : U_O_R_Gorka_01_black_F {
-	displayName = "Wetsuits";
+	displayName = "潜水服（Wetsuits）";
 	price = 2500;
 	virtualSpace = 0;
 	class Textures {
@@ -489,36 +489,36 @@ class U_B_Wetsuit : U_O_R_Gorka_01_black_F {
 
 		// Civilian
 		class U_B_Wetsuit { 
-			displayName = "Black"; 
+			displayName = "黑色（Black）";
 			condition = "true";
 		};
-		class U_O_Wetsuit : U_B_Wetsuit { displayName = "Brown"; };
-		class U_I_Wetsuit : U_B_Wetsuit { displayName = "Green"; };
+		class U_O_Wetsuit : U_B_Wetsuit { displayName = "棕色（Brown）"; };
+		class U_I_Wetsuit : U_B_Wetsuit { displayName = "绿色（Green）"; };
 	};
 };
 class U_O_Wetsuit : U_B_Wetsuit{};
 class U_I_Wetsuit : U_B_Wetsuit{};
 
 class U_Marshal : U_C_Poor_1 {
-	displayName = "Protection Uniform";
+	displayName = "安保制服（Protection Uniform）";
 	price = 1000;
 	class Textures {};
 };
 
 class U_C_Driver_1_black : U_C_Poor_1 {
-	displayName = "Driver Clothes";
+	displayName = "赛车服（Driver Clothes）";
 	price = 500;
 	class Textures {
 		class U_C_Driver_1_black { 
-			displayName = "Black"; 
+			displayName = "黑色（Black）";
 			condition = "true";
 		};
-		class U_C_Driver_1_blue : U_C_Driver_1_black { displayName = "Blue"; };
-		class U_C_Driver_1_green : U_C_Driver_1_black { displayName = "Green"; };
-		class U_C_Driver_1_red : U_C_Driver_1_black { displayName = "Red"; };
-		class U_C_Driver_1_white : U_C_Driver_1_black { displayName = "White"; };
-		class U_C_Driver_1_yellow : U_C_Driver_1_black { displayName = "Yellow"; };
-		class U_C_Driver_1_orange : U_C_Driver_1_black { displayName = "Orange"; };
+		class U_C_Driver_1_blue : U_C_Driver_1_black { displayName = "蓝色（Blue）"; };
+		class U_C_Driver_1_green : U_C_Driver_1_black { displayName = "绿色（Green）"; };
+		class U_C_Driver_1_red : U_C_Driver_1_black { displayName = "红色（Red）"; };
+		class U_C_Driver_1_white : U_C_Driver_1_black { displayName = "白色（White）"; };
+		class U_C_Driver_1_yellow : U_C_Driver_1_black { displayName = "黄色（Yellow）"; };
+		class U_C_Driver_1_orange : U_C_Driver_1_black { displayName = "橙色（Orange）"; };
 		class U_C_Driver_1 : U_C_Driver_1_black { 
 			displayName = "Fuel"; 
 			condition = "[] call ULP_fnc_donatorLevel >= 2";
@@ -540,18 +540,18 @@ class U_C_Driver_3 : U_C_Driver_1_black{};
 class U_C_Driver_4 : U_C_Driver_1_black{};
 
 class U_C_IDAP_Man_shorts_F : U_C_Poor_1 {
-	displayName = "IDAP Clothes";
+	displayName = "IDAP 服装（IDAP Clothes）";
 	price = 500;
 	class Textures {
 		class U_C_IDAP_Man_shorts_F { 
-			displayName = "Polo, Shorts"; 
+			displayName = "Polo 衫短裤款（Polo, Shorts）";
 			condition = "[""IDAP""] call ULP_fnc_hasLicense";
 		};
-		class U_C_IDAP_Man_casual_F : U_C_IDAP_Man_shorts_F { displayName = "Polo"; };
-		class U_C_IDAP_Man_cargo_F : U_C_IDAP_Man_shorts_F { displayName = "Cargo"; };
-		class U_C_IDAP_Man_Tee_F : U_C_IDAP_Man_shorts_F { displayName = "Tee"; };
-		class U_C_IDAP_Man_Jeans_F : U_C_IDAP_Man_shorts_F { displayName = "Jeans"; };
-		class U_C_IDAP_Man_TeeShorts_F : U_C_IDAP_Man_shorts_F { displayName = "Tee, Shorts"; };
+		class U_C_IDAP_Man_casual_F : U_C_IDAP_Man_shorts_F { displayName = "Polo 衫款（Polo）"; };
+		class U_C_IDAP_Man_cargo_F : U_C_IDAP_Man_shorts_F { displayName = "工装裤款（Cargo）"; };
+		class U_C_IDAP_Man_Tee_F : U_C_IDAP_Man_shorts_F { displayName = "T 恤款（Tee）"; };
+		class U_C_IDAP_Man_Jeans_F : U_C_IDAP_Man_shorts_F { displayName = "牛仔裤款（Jeans）"; };
+		class U_C_IDAP_Man_TeeShorts_F : U_C_IDAP_Man_shorts_F { displayName = "T 恤短裤款（Tee, Shorts）"; };
 	};
 };
 class U_C_IDAP_Man_casual_F : U_C_IDAP_Man_shorts_F{};
@@ -574,61 +574,61 @@ class U_C_Journalist : U_C_Poor_1 {
 };
 
 class U_Rangemaster : U_C_Poor_1 {
-	displayName = "Patrol Uniform";
+	displayName = "巡逻制服（Patrol Uniform）";
 	price = 100;
 	class Textures {
 		class CC {
-			displayName = "Chief Constable";
+			displayName = "总警司（Chief Constable）";
 			textures[] = { "Data\Textures\Uniforms\Police\Ranks\CC.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 11] call ULP_fnc_hasAccess }";
 		};
 		class DCC {
-			displayName = "Deputy Chief Constable";
+			displayName = "副总警司（Deputy Chief Constable）";
 			textures[] = { "Data\Textures\Uniforms\Police\Ranks\DCC.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 10] call ULP_fnc_hasAccess }";
 		};
 		class CSU {
-			displayName = "Chief Superindendent";
+			displayName = "总警监（Chief Superindendent）";
 			textures[] = { "Data\Textures\Uniforms\Police\Ranks\CSU.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 9] call ULP_fnc_hasAccess }";
 		};
 		class SU {
-			displayName = "Superindendent";
+			displayName = "警监（Superindendent）";
 			textures[] = { "Data\Textures\Uniforms\Police\Ranks\SU.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 8] call ULP_fnc_hasAccess }";
 		};
 		class CI {
-			displayName = "Chief Inspector";
+			displayName = "总督察（Chief Inspector）";
 			textures[] = { "Data\Textures\Uniforms\Police\Ranks\CI.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 7] call ULP_fnc_hasAccess }";
 		};
 		class PI {
-			displayName = "Police Inspector";
+			displayName = "警察督察（Police Inspector）";
 			textures[] = { "Data\Textures\Uniforms\Police\Ranks\PI.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 6] call ULP_fnc_hasAccess }";
 		};
 		class PS {
-			displayName = "Police Sergeant";
+			displayName = "警长（Police Sergeant）";
 			textures[] = { "Data\Textures\Uniforms\Police\Ranks\PS.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 5] call ULP_fnc_hasAccess }";
 		};
 		class SC {
-			displayName = "Senior Police Constable";
+			displayName = "高级警员（Senior Police Constable）";
 			textures[] = { "Data\Textures\Uniforms\Police\Ranks\SC.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 4] call ULP_fnc_hasAccess }";
 		};
 		class PC {
-			displayName = "Police Constable";
+			displayName = "警员（Police Constable）";
 			textures[] = { "Data\Textures\Uniforms\Police\Ranks\PC.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 2] call ULP_fnc_hasAccess }";
 		};
 		class PCSO {
-			displayName = "Police Community Support Officer";
+			displayName = "社区支援警员（Police Community Support Officer）";
 			textures[] = { "Data\Textures\Uniforms\Police\Ranks\PCSO.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction";
 		};
 		class SEG {
-			displayName = "Special Escort Group";
+			displayName = "特别护送组（Special Escort Group）";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\SEG.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SEG"", 1] call ULP_fnc_hasAccess }";
 		};
@@ -636,22 +636,22 @@ class U_Rangemaster : U_C_Poor_1 {
 };
 
 class U_Competitor : U_C_Poor_1 {
-	displayName = "Response Uniform";
+	displayName = "响应制服（Response Uniform）";
 	price = 100;
 	virtualSpace = 12;
 	class Textures {
 		class DR {
-			displayName = "Consultant";
+			displayName = "顾问医师（Consultant）";
 			textures[] = { "Data\Textures\Uniforms\Medic\main_03.paa" };
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 5] call ULP_fnc_hasAccess }";
 		};
 		class PAR {
-			displayName = "Doctor";
+			displayName = "医生（Doctor）";
 			textures[] = { "Data\Textures\Uniforms\Medic\main_02.paa" };
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 4] call ULP_fnc_hasAccess }";
 		};
 		class STU {
-			displayName = "Student";
+			displayName = "实习学员（Student）";
 			textures[] = { "Data\Textures\Uniforms\Medic\main_01.paa" };
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 1] call ULP_fnc_hasAccess }";
 		};
@@ -659,11 +659,11 @@ class U_Competitor : U_C_Poor_1 {
 };
 
 class U_B_GEN_Commander_F : U_C_Poor_1 {
-	displayName = "Patrol Jumper";
+	displayName = "巡逻毛衣（Patrol Jumper）";
 	price = 200;
 	class Textures {
 		class College {
-			displayName = "College of Policing";
+			displayName = "警务学院（College of Policing）";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\COL.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_COL"", 1] call ULP_fnc_hasAccess }";
 		};
@@ -671,7 +671,7 @@ class U_B_GEN_Commander_F : U_C_Poor_1 {
 };
 
 class U_BG_Guerrilla_6_1 : U_B_GEN_Commander_F {
-	displayName = "Worn Jumper";
+	displayName = "旧款毛衣（Worn Jumper）";
 	class Textures {
 		// Police
 		class NCA {
@@ -682,43 +682,43 @@ class U_BG_Guerrilla_6_1 : U_B_GEN_Commander_F {
 
 		// Civilian
 		class U_BG_Guerrilla_6_1 { 
-			displayName = "Green";
+			displayName = "绿色（Green）";
 			condition = "true"; 
 		};
 	};
 };
 
 class U_OrestesBody : U_C_Poor_1 {
-	displayName = "New Look";
+	displayName = "新潮造型（New Look）";
 	price = 1000;
 	class Textures {};
 };
 
 class U_NikosBody : U_C_Poor_1 {
-	displayName = "Casual Look";
+	displayName = "休闲造型（Casual Look）";
 	price = 1000;
 	class Textures {};
 };
 
 class U_NikosAgedBody : U_C_Poor_1 {
-	displayName = "Fine Suit";
+	displayName = "精致西装（Fine Suit）";
 	price = 3500;
 	class Textures {};
 };
 
 class U_C_FormalSuit_01_tshirt_black_F : U_C_Poor_1 {
-	displayName = "Formal Suit, T-Shirt";
+	displayName = "正式西装 T 恤款（Formal Suit, T-Shirt）";
 	price = 5000;
 	class Textures {
 		class U_C_FormalSuit_01_tshirt_black_F { 
-			displayName = "Black"; 
+			displayName = "黑色（Black）";
 			condition = "true";
 		};
-		class U_C_FormalSuit_01_tshirt_gray_F : U_C_FormalSuit_01_tshirt_black_F { displayName = "Gray"; };
+		class U_C_FormalSuit_01_tshirt_gray_F : U_C_FormalSuit_01_tshirt_black_F { displayName = "灰色（Gray）"; };
 
 		// Group
 		class Ridge : U_C_FormalSuit_01_tshirt_gray_F {
-			displayName = "Ridge Formal Uniform";
+			displayName = "Ridge 正式制服（Ridge Formal Uniform）";
 			textures[] = { "Data\Textures\Groups\Ridge\U_C_FormalSuit_01_tshirt_gray_F.paa" };
 			condition = "[1] call ULP_fnc_isGroupPremium";
 		};
@@ -727,17 +727,17 @@ class U_C_FormalSuit_01_tshirt_black_F : U_C_Poor_1 {
 class U_C_FormalSuit_01_tshirt_gray_F : U_C_FormalSuit_01_tshirt_black_F {};
 
 class U_C_FormalSuit_01_black_F : U_C_Poor_1 {
-	displayName = "Formal Suit";
+	displayName = "正式西装（Formal Suit）";
 	price = 6000;
 	class Textures {
 		class U_C_FormalSuit_01_black_F { 
-			displayName = "Black"; 
+			displayName = "黑色（Black）";
 			condition = "true";
 		};
-		class U_C_FormalSuit_01_gray_F : U_C_FormalSuit_01_black_F { displayName = "Gray"; };
-		class U_C_FormalSuit_01_blue_F : U_C_FormalSuit_01_black_F { displayName = "Blue"; };
+		class U_C_FormalSuit_01_gray_F : U_C_FormalSuit_01_black_F { displayName = "灰色（Gray）"; };
+		class U_C_FormalSuit_01_blue_F : U_C_FormalSuit_01_black_F { displayName = "蓝色（Blue）"; };
 		class U_C_FormalSuit_01_khaki_F : U_C_FormalSuit_01_black_F { 
-			displayName = "Khaki";
+			displayName = "卡其色（Khaki）";
 			condition = "[] call ULP_fnc_donatorLevel >= 2";  
 		};
 	};
@@ -747,11 +747,11 @@ class U_C_FormalSuit_01_blue_F : U_C_FormalSuit_01_black_F {};
 class U_C_FormalSuit_01_khaki_F : U_C_FormalSuit_01_black_F {};
 
 class U_I_ParadeUniform_01_AAF_decorated_F : U_C_Poor_1 {
-	displayName = "Command Parade Uniform";
+	displayName = "指挥礼服（Command Parade Uniform）";
 	price = 10000;
 	class Textures {
 		class Command { 
-			displayName = "Parade Uniform";
+			displayName = "礼服（Parade Uniform）";
 			textures[] = { 
 				"Data\Textures\Uniforms\Police\parade_01.paa",
 				"Data\Textures\Uniforms\Police\parade_02.paa",
@@ -762,10 +762,10 @@ class U_I_ParadeUniform_01_AAF_decorated_F : U_C_Poor_1 {
 	};
 };
 class U_I_ParadeUniform_01_AAF_F : U_I_ParadeUniform_01_AAF_decorated_F {
-	displayName = "Parade Uniform";
+	displayName = "礼服（Parade Uniform）";
 	class Textures {
 		class Main { 
-			displayName = "Parade Uniform";
+			displayName = "礼服（Parade Uniform）";
 			condition = "true";
 			textures[] = { 
 				"Data\Textures\Uniforms\Police\parade_01.paa",
@@ -782,7 +782,7 @@ class U_B_survival_uniform : U_C_Poor_1 {
 	class Textures {
 		// Civilian
 		class U_B_survival_uniform { 
-			displayName = "MTP"; 
+			displayName = "MTP 迷彩（MTP）";
 			condition = "true";
 		};
 
@@ -801,12 +801,12 @@ class U_B_survival_uniform : U_C_Poor_1 {
 };
 
 class U_B_CombatUniform_mcam_worn : U_B_survival_uniform {
-	displayName = "Traffic Uniform";
+	displayName = "交通制服（Traffic Uniform）";
 	price = 1000;
 	virtualSpace = 4;
 	class Textures {
 		class RPU {
-			displayName = "Traffic Uniform";
+			displayName = "交通制服（Traffic Uniform）";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\RPU_main.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_RPU"", 1] call ULP_fnc_hasAccess }";
 		};
@@ -814,13 +814,13 @@ class U_B_CombatUniform_mcam_worn : U_B_survival_uniform {
 };
 
 class U_I_CombatUniform : U_B_survival_uniform {
-	displayName = "Combat Fatigues";
+	displayName = "战斗作训服（Combat Fatigues）";
 	price = 1500;
 	virtualSpace = 4;
 	class Textures {
 		// Civilian
 		class U_I_CombatUniform { 
-			displayName = "AAF (Base)"; 
+			displayName = "AAF 基础款（AAF (Base)）";
 			condition = "true";
 		};
 
@@ -834,11 +834,11 @@ class U_I_CombatUniform : U_B_survival_uniform {
 };
 
 class U_I_CombatUniform_shortsleeve : U_I_CombatUniform {
-	displayName = "Combat Fatigues (Rolled)";
+	displayName = "卷袖战斗作训服（Combat Fatigues (Rolled)）";
 	class Textures {
 		// Civilian
 		class U_I_CombatUniform_shortsleeve { 
-			displayName = "AAF (Rolled)"; 
+			displayName = "AAF 卷袖款（AAF (Rolled)）";
 			condition = "true";
 		};
 
@@ -852,17 +852,17 @@ class U_I_CombatUniform_shortsleeve : U_I_CombatUniform {
 };
 
 class U_B_CombatUniform_mcam : U_B_survival_uniform {
-	displayName = "Combat Clothes";
+	displayName = "战斗服（Combat Clothes）";
 	price = 1500;
 	virtualSpace = 4;
 	class Textures {
 		// Civilian
 		class U_B_CombatUniform_mcam { 
-			displayName = "MTP"; 
+			displayName = "MTP 迷彩（MTP）";
 			condition = "true";
 		};
-		class U_B_CombatUniform_mcam_wdl_f : U_B_CombatUniform_mcam { displayName = "WDL"; };
-		class U_B_T_Solider_F : U_B_CombatUniform_mcam { displayName = "Tropic"; };
+		class U_B_CombatUniform_mcam_wdl_f : U_B_CombatUniform_mcam { displayName = "林地迷彩（WDL）"; };
+		class U_B_T_Solider_F : U_B_CombatUniform_mcam { displayName = "热带迷彩（Tropic）"; };
 
 		// Group
 		class Ridge : U_B_CombatUniform_mcam {
@@ -881,15 +881,15 @@ class U_B_CombatUniform_mcam_wdl_f : U_B_CombatUniform_mcam {};
 class U_B_T_Solider_F : U_B_CombatUniform_mcam {};
 
 class U_B_CombatUniform_mcam_vest : U_B_CombatUniform_mcam {
-	displayName = "Combat Clothes (Rolled)";
+	displayName = "卷袖战斗服（Combat Clothes (Rolled)）";
 	class Textures {
 		// Civilian
 		class U_B_CombatUniform_mcam_vest { 
-			displayName = "MTP"; 
+			displayName = "MTP 迷彩（MTP）";
 			condition = "true";
 		};
-		class U_B_CombatUniform_vest_mcam_wdl_f : U_B_CombatUniform_mcam_vest { displayName = "WDL"; };
-		class U_B_T_Solider_SL_F : U_B_CombatUniform_mcam_vest { displayName = "Tropic"; };
+		class U_B_CombatUniform_vest_mcam_wdl_f : U_B_CombatUniform_mcam_vest { displayName = "林地迷彩（WDL）"; };
+		class U_B_T_Solider_SL_F : U_B_CombatUniform_mcam_vest { displayName = "热带迷彩（Tropic）"; };
 
 		// Group
 		class Ridge : U_B_CombatUniform_mcam_vest {
@@ -908,15 +908,15 @@ class U_B_CombatUniform_vest_mcam_wdl_f : U_B_CombatUniform_mcam {};
 class U_B_T_Solider_SL_F : U_B_CombatUniform_mcam {};
 
 class U_B_CombatUniform_mcam_tshirt : U_B_CombatUniform_mcam {
-	displayName = "Combat Clothes (Tee)";
+	displayName = "T 恤战斗服（Combat Clothes (Tee)）";
 	class Textures {
 		// Civilian
 		class U_B_CombatUniform_mcam_tshirt { 
-			displayName = "MTP (Base)"; 
+			displayName = "MTP 基础款（MTP (Base)）";
 			condition = "true";
 		};
-		class U_B_CombatUniform_tshirt_mcam_wdL_f : U_B_CombatUniform_mcam_tshirt { displayName = "WDL"; };
-		class U_B_T_Solider_AR_F : U_B_CombatUniform_mcam_tshirt { displayName = "Tropic"; };
+		class U_B_CombatUniform_tshirt_mcam_wdL_f : U_B_CombatUniform_mcam_tshirt { displayName = "林地迷彩（WDL）"; };
+		class U_B_T_Solider_AR_F : U_B_CombatUniform_mcam_tshirt { displayName = "热带迷彩（Tropic）"; };
 
 		// Group
 		class Ridge : U_B_CombatUniform_mcam_tshirt {
@@ -935,7 +935,7 @@ class U_B_CombatUniform_tshirt_mcam_wdL_f : U_B_CombatUniform_mcam {};
 class U_B_T_Solider_AR_F : U_B_CombatUniform_mcam {};
 
 class U_B_CTRG_Soldier_F : U_B_survival_uniform {
-	displayName = "Stealth Uniform";
+	displayName = "隐匿制服（Stealth Uniform）";
 	price = 35000;
 	virtualSpace = 4;
 	class Textures {
@@ -953,11 +953,11 @@ class U_B_CTRG_Soldier_F : U_B_survival_uniform {
 
 		// Civilian
 		class U_B_CTRG_Soldier_F {
-			displayName = "Tropic";
+			displayName = "热带迷彩（Tropic）";
 			condition = "true";
 		};
-		class U_B_CTRG_Soldier_Arid_F : U_B_CTRG_Soldier_F { displayName = "Arid"; };
-		class U_B_CTRG_Soldier_urb_1_F : U_B_CTRG_Soldier_F { displayName = "Urban"; };
+		class U_B_CTRG_Soldier_Arid_F : U_B_CTRG_Soldier_F { displayName = "干旱迷彩（Arid）"; };
+		class U_B_CTRG_Soldier_urb_1_F : U_B_CTRG_Soldier_F { displayName = "城市迷彩（Urban）"; };
 
 		// Group
 		class Ridge : U_B_CTRG_Soldier_F {
@@ -976,7 +976,7 @@ class U_B_CTRG_Soldier_Arid_F : U_B_CTRG_Soldier_F {};
 class U_B_CTRG_Soldier_urb_1_F : U_B_CTRG_Soldier_F {};
 
 class U_B_CTRG_Soldier_3_F : U_B_CTRG_Soldier_F {
-	displayName = "Stealth Uniform (Rolled)";
+	displayName = "卷袖隐匿制服（Stealth Uniform (Rolled)）";
 	class Textures {
 		// Police
 		class SCO19 {
@@ -992,11 +992,11 @@ class U_B_CTRG_Soldier_3_F : U_B_CTRG_Soldier_F {
 
 		// Civilian
 		class U_B_CTRG_Soldier_3_F { 
-			displayName = "Tropic"; 
+			displayName = "热带迷彩（Tropic）";
 			condition = "true";
 		};
-		class U_B_CTRG_Soldier_3_Arid_F : U_B_CTRG_Soldier_3_F { displayName = "Arid"; };
-		class U_B_CTRG_Soldier_urb_3_F : U_B_CTRG_Soldier_3_F { displayName = "Urban"; };
+		class U_B_CTRG_Soldier_3_Arid_F : U_B_CTRG_Soldier_3_F { displayName = "干旱迷彩（Arid）"; };
+		class U_B_CTRG_Soldier_urb_3_F : U_B_CTRG_Soldier_3_F { displayName = "城市迷彩（Urban）"; };
 
 		// Group
 		class Ridge : U_B_CTRG_Soldier_3_F {
@@ -1015,7 +1015,7 @@ class U_B_CTRG_Soldier_3_Arid_F : U_B_CTRG_Soldier_3_F {};
 class U_B_CTRG_Soldier_urb_3_F : U_B_CTRG_Soldier_3_F {};
 
 class U_B_CTRG_Soldier_2_Arid_F : U_B_CTRG_Soldier_F {
-	displayName = "Stealth Uniform (Tee)";
+	displayName = "T 恤隐匿制服（Stealth Uniform (Tee)）";
 	class Textures {
 		// Police
 		class SCO19 {
@@ -1031,11 +1031,11 @@ class U_B_CTRG_Soldier_2_Arid_F : U_B_CTRG_Soldier_F {
 
 		// Civilian
 		class U_B_CTRG_Soldier_2_Arid_F { 
-			displayName = "Arid"; 
+			displayName = "干旱迷彩（Arid）";
 			condition = "true";
 		};
-		class U_B_CTRG_Soldier_2_F : U_B_CTRG_Soldier_2_Arid_F { displayName = "Tropic"; };
-		class U_B_CTRG_Soldier_urb_2_F : U_B_CTRG_Soldier_2_Arid_F { displayName = "Urban"; };
+		class U_B_CTRG_Soldier_2_F : U_B_CTRG_Soldier_2_Arid_F { displayName = "热带迷彩（Tropic）"; };
+		class U_B_CTRG_Soldier_urb_2_F : U_B_CTRG_Soldier_2_Arid_F { displayName = "城市迷彩（Urban）"; };
 
 		// Group
 		class Ridge : U_B_CTRG_Soldier_2_Arid_F {
@@ -1054,7 +1054,7 @@ class U_B_CTRG_Soldier_2_F : U_B_CTRG_Soldier_2_Arid_F {};
 class U_B_CTRG_Soldier_urb_2_F : U_B_CTRG_Soldier_2_Arid_F {};
 
 class U_B_GhillieSuit : U_B_survival_uniform {
-	displayName = "Half-Ghillies";
+	displayName = "半身吉利服（Half-Ghillies）";
 	price = 65000;
 	virtualSpace = 4;
 	isMask = true;
@@ -1073,12 +1073,12 @@ class U_B_GhillieSuit : U_B_survival_uniform {
 
 		// Civilian
 		class U_B_GhillieSuit { 
-			displayName = "MTP"; 
+			displayName = "MTP 迷彩（MTP）";
 			condition = "true";
 		};
-		class U_O_GhillieSuit : U_B_GhillieSuit { displayName = "Hex"; };
-		class U_I_GhillieSuit : U_B_GhillieSuit { displayName = "Digi"; };
-		class U_B_T_Sniper_F : U_B_GhillieSuit { displayName = "Tropic"; };
+		class U_O_GhillieSuit : U_B_GhillieSuit { displayName = "六角迷彩（Hex）"; };
+		class U_I_GhillieSuit : U_B_GhillieSuit { displayName = "数码迷彩（Digi）"; };
+		class U_B_T_Sniper_F : U_B_GhillieSuit { displayName = "热带迷彩（Tropic）"; };
 
 		// Group
 		class Ridge : U_B_GhillieSuit {
@@ -1098,16 +1098,16 @@ class U_I_GhillieSuit : U_B_GhillieSuit {};
 class U_B_T_Sniper_F : U_B_GhillieSuit {};
 
 class U_B_FullGhillie_ard : U_B_GhillieSuit {
-	displayName = "Full-Ghillies";
+	displayName = "全身吉利服（Full-Ghillies）";
 	price = 100000;
 	class Textures {
 		class U_B_FullGhillie_ard { 
-			displayName = "Arid"; 
+			displayName = "干旱迷彩（Arid）";
 			condition = "true";
 		};
-		class U_B_FullGhillie_sard : U_B_FullGhillie_ard { displayName = "Semi-Arid"; };
-		class U_B_FullGhillie_lsh : U_B_FullGhillie_ard { displayName = "Lush"; };
-		class U_B_T_FullGhillie_tna_F : U_B_FullGhillie_ard { displayName = "Jungle"; };
+		class U_B_FullGhillie_sard : U_B_FullGhillie_ard { displayName = "半干旱迷彩（Semi-Arid）"; };
+		class U_B_FullGhillie_lsh : U_B_FullGhillie_ard { displayName = "繁茂地形（Lush）"; };
+		class U_B_T_FullGhillie_tna_F : U_B_FullGhillie_ard { displayName = "丛林迷彩（Jungle）"; };
 	};
 };
 class U_B_FullGhillie_sard : U_B_FullGhillie_ard {};
@@ -1115,36 +1115,36 @@ class U_B_FullGhillie_lsh : U_B_FullGhillie_ard {};
 class U_B_T_FullGhillie_tna_F : U_B_FullGhillie_ard {};
 
 class U_B_HeliPilotCoveralls : U_B_survival_uniform {
-	displayName = "Flight Clothes";
+	displayName = "飞行服（Flight Clothes）";
 	price = 3000;
 	virtualSpace = 4;
 	class Textures {
 		class U_B_HeliPilotCoveralls { 
-			displayName = "Green"; 
+			displayName = "绿色（Green）";
 			condition = "true";
 		};
-		class U_I_HeliPilotCoveralls : U_B_HeliPilotCoveralls { displayName = "Tan"; };
-		class U_I_E_Uniform_01_coveralls_F : U_B_HeliPilotCoveralls { displayName = "Geometric"; };
+		class U_I_HeliPilotCoveralls : U_B_HeliPilotCoveralls { displayName = "棕褐色（Tan）"; };
+		class U_I_E_Uniform_01_coveralls_F : U_B_HeliPilotCoveralls { displayName = "几何纹（Geometric）"; };
 	};
 };
 class U_I_HeliPilotCoveralls : U_B_HeliPilotCoveralls {};
 class U_I_E_Uniform_01_coveralls_F : U_B_HeliPilotCoveralls {};
 
 class U_O_PilotCoveralls : U_B_survival_uniform {
-	displayName = "Flight Clothes";
+	displayName = "飞行服（Flight Clothes）";
 	price = 20000;
 	virtualSpace = 8;
 	class Textures {
 		// Police
 		class NPAS {
-			displayName = "NPAS Uniform";
+			displayName = "NPAS 制服（NPAS Uniform）";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\NPAS.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_NPAS"", 1] call ULP_fnc_hasAccess }";
 		};
 
 		// Medic
 		class AAA {
-			displayName = "AAA Uniform";
+			displayName = "AAA 制服（AAA Uniform）";
 			textures[] = { "Data\Textures\Uniforms\Medic\aa.paa" };
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_AA"", 1] call ULP_fnc_hasAccess }";
 		};
@@ -1152,20 +1152,20 @@ class U_O_PilotCoveralls : U_B_survival_uniform {
 };
 
 class U_C_CBRN_Suit_01_White_F : U_B_survival_uniform {
-	displayName = "CBRN Suits";
+	displayName = "CBRN 防化服（CBRN Suits）";
 	price = 50000;
 	isGas = true;
 	class Textures {
 		class U_C_CBRN_Suit_01_White_F { 
-			displayName = "White"; 
+			displayName = "白色（White）";
 			condition = "true";
 		};
-		class U_C_CBRN_Suit_01_Blue_F : U_C_CBRN_Suit_01_White_F { displayName = "Blue"; };
-		class U_B_CBRN_Suit_01_MTP_F : U_C_CBRN_Suit_01_White_F { displayName = "MTP"; };
-		class U_B_CBRN_Suit_01_Wdl_F : U_C_CBRN_Suit_01_White_F { displayName = "WDL"; };
-		class U_I_CBRN_Suit_01_AAF_F : U_C_CBRN_Suit_01_White_F { displayName = "DIGI"; };
+		class U_C_CBRN_Suit_01_Blue_F : U_C_CBRN_Suit_01_White_F { displayName = "蓝色（Blue）"; };
+		class U_B_CBRN_Suit_01_MTP_F : U_C_CBRN_Suit_01_White_F { displayName = "MTP 迷彩（MTP）"; };
+		class U_B_CBRN_Suit_01_Wdl_F : U_C_CBRN_Suit_01_White_F { displayName = "林地迷彩（WDL）"; };
+		class U_I_CBRN_Suit_01_AAF_F : U_C_CBRN_Suit_01_White_F { displayName = "数码迷彩（DIGI）"; };
 		class U_I_E_CBRN_Suit_01_EAF_F : U_C_CBRN_Suit_01_White_F { displayName = "LDF"; };
-		class U_I_CBRN_Suit_01_Tropic_F : U_C_CBRN_Suit_01_White_F { displayName = "Tropic"; };
+		class U_I_CBRN_Suit_01_Tropic_F : U_C_CBRN_Suit_01_White_F { displayName = "热带迷彩（Tropic）"; };
 	};
 };
 class U_C_CBRN_Suit_01_Blue_F : U_C_CBRN_Suit_01_White_F {};
@@ -1176,36 +1176,36 @@ class U_I_E_CBRN_Suit_01_EAF_F : U_C_CBRN_Suit_01_White_F {};
 class U_I_CBRN_Suit_01_Tropic_F : U_C_CBRN_Suit_01_White_F {};
 
 class U_C_Protagonist_VR : U_B_survival_uniform {
-	displayName = "Staff Suits";
+	displayName = "员工套装（Staff Suits）";
 	price = 1000000;
 	virtualSpace = 100;
 	isGas = true;
 	class Textures {
 		class U_C_Protagonist_VR { 
-			displayName = "Purple"; 
+			displayName = "紫色（Purple）";
 			condition = "true";
 		};
 		class Black : U_C_Protagonist_VR {
-			displayName = "Black"; 
+			displayName = "黑色（Black）";
 			textures[] = { "\A3\Characters_F\Common\Data\basicbody_black_co.paa" };
 		};
 		class Gray : U_C_Protagonist_VR { 
-			displayName = "Gray"; 
+			displayName = "灰色（Gray）";
 			textures[] = { "\A3\Characters_F\Common\Data\basicbody_grey_co.paa" };
 		};
-		class U_O_Protagonist_VR : U_C_Protagonist_VR { displayName = "Red"; };
-		class U_B_Protagonist_VR : U_C_Protagonist_VR { displayName = "Blue"; };
+		class U_O_Protagonist_VR : U_C_Protagonist_VR { displayName = "红色（Red）"; };
+		class U_B_Protagonist_VR : U_C_Protagonist_VR { displayName = "蓝色（Blue）"; };
 		class DullBlue : U_C_Protagonist_VR { 
-			displayName = "Dull Blue"; 
+			displayName = "暗蓝色（Dull Blue）";
 			textures[] = { "\A3\Characters_F\Common\Data\basicbody_blue_co.paa" };
 		};
-		class U_I_Protagonist_VR : U_C_Protagonist_VR { displayName = "Green"; };
+		class U_I_Protagonist_VR : U_C_Protagonist_VR { displayName = "绿色（Green）"; };
 		class DullGreen : U_C_Protagonist_VR { 
-			displayName = "Dull Green"; 
+			displayName = "暗绿色（Dull Green）";
 			textures[] = { "\A3\Characters_F\Common\Data\basicbody_green_co.paa" };
 		};
 		class Brown : U_C_Protagonist_VR { 
-			displayName = "Brown"; 
+			displayName = "棕色（Brown）";
 			textures[] = { "\A3\Characters_F\Common\Data\basicbody_brown_co.paa" };
 		};
 	};

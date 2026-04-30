@@ -41,17 +41,17 @@ class CfgSettings {
         screenTime = 10;
         
         class Hello {
-            items[] = {"""Welcome to""", """Mantle Network's Altis Life!"""};
+            items[] = {"""欢迎来到""", """Mantle Network 的 Altis Life！"""};
             condition = "true";
         };
         class Discord : Hello {
-            items[] = {"""Join us""", """discord.gg/mantlenetwork"""};
+            items[] = {"""加入我们""", """discord.gg/mantlenetwork"""};
         };
         class Development : Hello {
-            items[] = {"""Development Team""", """Scarso and Lewis"""};
+            items[] = {"""开发团队""", """Scarso 与 Lewis"""};
         };
         class Threat : Hello  {
-            title = "Threat Level";
+            title = "威胁等级";
             items[] = {"getArray (missionConfigFile >> ""CfgSettings"" >> ""threatLevels"") select (call (missionNamespace getVariable [""ULP_SRV_Setting_ThreatLevel"", {0}]))"};
         };
         class Governor  {
@@ -59,15 +59,15 @@ class CfgSettings {
             condition = "!((missionNamespace getVariable [""ULP_SRV_Setting_Governor"", []]) isEqualTo [])";
         };
         class Events {
-            title = "Active Events";
+            title = "当前活动";
             items[] = {
-                { """Gang Wars""", "missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false]" },
-                { """Elections""", "missionNamespace getVariable [""ULP_SRV_Setting_Election"", false]" }  
+                { """帮派战争""", "missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false]" },
+                { """选举""", "missionNamespace getVariable [""ULP_SRV_Setting_Election"", false]" }
             };
             condition = "missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false] || { missionNamespace getVariable [""ULP_SRV_Setting_Election"", false] }";
         };
         class Investors : Hello {
-            items[] = {"""Investors""", """Tropical, Tom Skyline, and Ryan Delta"""};
+            items[] = {"""投资人""", """Tropical、Tom Skyline 和 Ryan Delta"""};
         };
     };
 
@@ -92,7 +92,7 @@ class CfgSettings {
 
     allowedCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ";
 
-    threatLevels[] = { "Low", "Moderate", "Substantial", "Severe", "Critical" };
+    threatLevels[] = { "低", "中等", "较高", "严重", "极高" };
     
     repackingTime = 40;
     

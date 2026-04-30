@@ -18,4 +18,4 @@ private _groupMembersNearby = (units (group player)) select {
 if (_groupMembersNearby isEqualTo []) exitWith {};
 
 ["KeysGiven", [_vehicle, player]] remoteExecCall ["ULP_fnc_invokeEvent", _groupMembersNearby];
-["You have given keys for this vehicle to all group members within 100m."] call ULP_fnc_hint;
+["你已把这辆载具的钥匙分享给 100 米内的所有队伍成员。"] call ULP_fnc_hint;

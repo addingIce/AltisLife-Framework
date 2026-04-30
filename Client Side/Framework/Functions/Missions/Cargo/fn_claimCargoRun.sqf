@@ -19,7 +19,7 @@ private _missionCfg = missionConfigFile >> "CfgMissions" >> _missionType;
 if (isNull _trader || { !isClass _missionCfg }) exitWith {};
 
 if !(call compile getText (_missionCfg >> "condition")) exitWith {
-	["You don't meet the requirements for this run"] call ULP_fnc_hint;
+	["你目前不满足接取这趟货运的条件。"] call ULP_fnc_hint;
 };
 
 (getArray (_missionCfg >> "vehicleRequirement")) params [ "_vehicles", "_distance" ];
@@ -29,17 +29,17 @@ private _near = ((_trader nearEntities [_vehicles, _distance]) select {
 });
 
 if (_near isEqualTo []) exitWith {
-	["There are no vehicles you own nearby"] call ULP_fnc_hint;
+	["附近没有你拥有的载具。"] call ULP_fnc_hint;
 };
 
 if (_missionType in ULP_Missions) exitWith {
-	["You can only have one of these missions at a time"] call ULP_fnc_hint;
+	["这类任务一次只能同时持有一个。"] call ULP_fnc_hint;
 };
 
 [(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), (_near apply { 
 	([typeOf _x] call ULP_fnc_vehicleCfg) params [  "", "", "_picture", "_name" ]; 
 	[_picture, _name, _x call BIS_fnc_netId, 0];
-}), ["Fill", "Cancel"], [_trader, _missionCfg, _mission, _distance], {
+}), ["装货", "取消"], [_trader, _missionCfg, _mission, _distance], {
 	_this params [
 		["_trader", objNull, [objNull]],
 		["_missionCfg", configNull, [configNull]],
@@ -49,16 +49,16 @@ if (_missionType in ULP_Missions) exitWith {
 	];
 
 	if ((player distance _trader) > 5) exitWith {
-		["You've moved too far away"] call ULP_fnc_hint;
+		["你离得太远了。"] call ULP_fnc_hint;
 	};
 
 	if (isNull _display) exitWith {};
 	private _list = _display displayCtrl 4509;
 
 	private _vehicle = (_list lbData (lbCurSel _list)) call BIS_fnc_objectFromNetId;
-	if (isNull _vehicle) exitWith { ["You didn't select a vehicle to fill with cargo!"] call ULP_fnc_hint; };
+	if (isNull _vehicle) exitWith { ["你还没有选择要装货的载具！"] call ULP_fnc_hint; };
 
-	if !([_vehicle, getPos _trader, _distance] call ULP_fnc_isVehicleStationary) exitWith { ["Vehicle's engine must be turned off and close to the sign!"] call ULP_fnc_hint; };
+	if !([_vehicle, getPos _trader, _distance] call ULP_fnc_isVehicleStationary) exitWith { ["载具必须熄火，并停在标志牌附近！"] call ULP_fnc_hint; };
 
 	private _currentVehicleLoad = [_vehicle] call ULP_fnc_currentLoad;
 	private _maxVehicleLoad = [_vehicle] call ULP_fnc_maxLoad;
@@ -70,17 +70,17 @@ if (_missionType in ULP_Missions) exitWith {
 
 	private _maxQuantity = ( floor ((_maxVehicleLoad - _currentVehicleLoad) / _itemWeight) max 0 );
 
-	if (_maxQuantity <= 0) exitWith { ["This vehicle has no space and can't store even one cargo item!"] call ULP_fnc_hint; };
+	if (_maxQuantity <= 0) exitWith { ["这辆载具已经没有空间了，连一件货物都装不下！"] call ULP_fnc_hint; };
 
 	private _time = (_itemWeight * _maxQuantity) / getNumber (_missionCfg >> "timeDivisionAmount");
 
 	private _vehicleCfg = [typeOf _vehicle] call ULP_fnc_vehicleCfg;
 
 	if (_item in getArray ((_vehicleCfg select 1) >> "blacklistedItems") && !(_item in getArray ((_vehicleCfg select 1) >> "whitelistedItems"))) exitWith {
-		["This vehicle can't be used for this mission"] call ULP_fnc_hint;
+		["这辆载具不能用于这项任务。"] call ULP_fnc_hint;
 	};
 
-	[format["Filling %1 with Cargo", _vehicleCfg param [3, "a vehicle"]], _time, [_trader, _vehicle, _distance, _maxQuantity, _item, _missionCfg, _mission], 
+	[format["正在为 %1 装载货物", _vehicleCfg param [3, "载具"]], _time, [_trader, _vehicle, _distance, _maxQuantity, _item, _missionCfg, _mission],
 		{ (player distance (_this select 0)) <= 5 && { [(_this select 1), getPos (_this select 0), (_this select 2)] call ULP_fnc_isVehicleStationary } }, 
 		{
 			_this params [ "_trader", "_vehicle", "", "_maxQuantity", "_item", "_missionCfg", "_mission" ];
@@ -95,7 +95,7 @@ if (_missionType in ULP_Missions) exitWith {
 			private _cargoParams = [_vehicle, _item, _maxQuantity];
 
 			if !(_cargoParams call ULP_fnc_addToCargo) exitWith {
-				["This vehicle can't store expected amount of cargo items, make sure nothing is added while this process is happening!"] call ULP_fnc_hint;
+				["这辆载具无法装下预期数量的货物，请确保装货过程中没有其他人往里塞东西！"] call ULP_fnc_hint;
 			};
 
 			if !([_missionType, _mission] call ULP_fnc_claimMission) exitWith {
